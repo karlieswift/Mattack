@@ -1,0 +1,267 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss DRSL3 b=1e-05 start=0 end=20loss DRSL3 b=1e-05 start=0 end=20loss DRSL3 b=1e-05 start=0 end=20
+loss DRSL3 b=1e-05 start=0 end=20
+
+
+| distributed init (rank 2, world 4): env://| distributed init (rank 3, world 4): env://| distributed init (rank 0, world 4): env://| distributed init (rank 1, world 4): env://
+
+
+
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-19 22:24:25,929 [INFO] 
+=====  Running Parameters    =====
+2023-08-19 22:24:25,930 [INFO] {
+    "accum_grad_iters": 1,
+    "amp": true,
+    "batch_size_eval": 32,
+    "batch_size_train": 16,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "inference_method": "generate",
+    "init_lr": 1e-05,
+    "lr_layer_decay": 0.95,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 2,
+    "max_len": 10,
+    "min_len": 1,
+    "min_lr": 0,
+    "num_beams": 5,
+    "num_workers": 4,
+    "output_dir": "outputvqa/BLIP2/DRSL3_0_20",
+    "prompt": "Question: {} Short answer:",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "vqa",
+    "train_splits": [
+        "train"
+    ],
+    "warmup_lr": 1e-08,
+    "warmup_steps": 1000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-19 22:24:25,930 [INFO] 
+======  Dataset Attributes  ======
+2023-08-19 22:24:25,931 [INFO] 
+======== vg_vqa =======
+2023-08-19 22:24:25,931 [INFO] {
+    "build_info": {
+        "annotations": {
+            "train": {
+                "storage": "vg/annotations/vg_qa.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/datasets/visual_genome/vg_qa.json"
+            }
+        },
+        "images": {
+            "storage": "vg/images/"
+        }
+    },
+    "data_type": "images",
+    "text_processor": {
+        "train": {
+            "name": "blip_question"
+        }
+    },
+    "vis_processor": {
+        "train": {
+            "image_size": 400,
+            "name": "blip_image_train"
+        }
+    }
+}
+2023-08-19 22:24:25,931 [INFO] 
+======  Model Attributes  ======
+2023-08-19 22:24:25,931 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "finetuned": "",
+    "freeze_vit": true,
+    "image_size": 400,
+    "load_finetuned": false,
+    "load_pretrained": true,
+    "model_type": "pretrain_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth",
+    "prompt": "",
+    "use_grad_checkpoint": false,
+    "vit_model": "eva_clip_g",
+    "vit_precision": "fp32"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/vg/annotations/vg_qa.json
+2023-08-19 22:24:25,976 [INFO] Building datasets...
+BlipQuestionProcessor
+Position interpolate from 16x16 to 28x28
+2023-08-19 22:24:54,548 [INFO] freeze vision encoder
+https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-19 22:26:55,770 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-19 22:26:55,797 [INFO] Start training
+2023-08-19 22:27:16,820 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-19 22:27:16,828 [INFO] Loaded 145395 records for train split from the dataset.
+2023-08-19 22:27:16,893 [INFO] number of trainable parameters: 107133696
+2023-08-19 22:27:16,894 [INFO] Start training epoch 0, 2271 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+Train: data epoch: [0]  [   0/2271]  eta: 17:14:33  lr: 0.000000  loss: 2.7371  time: 27.3331  data: 0.0000  max mem: 13625
+2023-08-19 22:27:44,235 [INFO] Reducer buckets have been rebuilt in this iteration.
+Train: data epoch: [0]  [  50/2271]  eta: 4:20:30  lr: 0.000001  loss: 2.8008  time: 6.6167  data: 0.0000  max mem: 15154
+Train: data epoch: [0]  [ 100/2271]  eta: 4:07:04  lr: 0.000001  loss: 2.3759  time: 6.6038  data: 0.0000  max mem: 15252
+Train: data epoch: [0]  [ 150/2271]  eta: 3:58:49  lr: 0.000002  loss: 2.3439  time: 6.5916  data: 0.0000  max mem: 15356
+Train: data epoch: [0]  [ 200/2271]  eta: 3:51:35  lr: 0.000002  loss: 2.4332  time: 6.5951  data: 0.0000  max mem: 15356
+Train: data epoch: [0]  [ 250/2271]  eta: 3:45:00  lr: 0.000003  loss: 1.8600  time: 6.5685  data: 0.0000  max mem: 15356
+Train: data epoch: [0]  [ 300/2271]  eta: 3:38:43  lr: 0.000003  loss: 2.2205  time: 6.5285  data: 0.0000  max mem: 15356
+Train: data epoch: [0]  [ 350/2271]  eta: 3:32:44  lr: 0.000004  loss: 2.1539  time: 6.5433  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 400/2271]  eta: 3:26:56  lr: 0.000004  loss: 2.2379  time: 6.5517  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 450/2271]  eta: 3:21:12  lr: 0.000005  loss: 2.1218  time: 6.5825  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 500/2271]  eta: 3:15:29  lr: 0.000005  loss: 1.8690  time: 6.5647  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 550/2271]  eta: 3:09:44  lr: 0.000006  loss: 1.9360  time: 6.5202  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 600/2271]  eta: 3:04:07  lr: 0.000006  loss: 1.9430  time: 6.5698  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 650/2271]  eta: 2:58:29  lr: 0.000007  loss: 2.0737  time: 6.5570  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 700/2271]  eta: 2:52:53  lr: 0.000007  loss: 2.0096  time: 6.5401  data: 0.0000  max mem: 15398
+Train: data epoch: [0]  [ 750/2271]  eta: 2:47:17  lr: 0.000008  loss: 1.7734  time: 6.5303  data: 0.0000  max mem: 15412
+Train: data epoch: [0]  [ 800/2271]  eta: 2:41:41  lr: 0.000008  loss: 2.1920  time: 6.5179  data: 0.0000  max mem: 15412
+Train: data epoch: [0]  [ 850/2271]  eta: 2:36:08  lr: 0.000009  loss: 1.9295  time: 6.5545  data: 0.0000  max mem: 15412
+Train: data epoch: [0]  [ 900/2271]  eta: 2:30:35  lr: 0.000009  loss: 2.2933  time: 6.5271  data: 0.0000  max mem: 15412
+Train: data epoch: [0]  [ 950/2271]  eta: 2:25:03  lr: 0.000010  loss: 2.0050  time: 6.5859  data: 0.0000  max mem: 15412
+Train: data epoch: [0]  [1000/2271]  eta: 2:19:31  lr: 0.000010  loss: 2.1374  time: 6.5472  data: 0.0000  max mem: 15467
+Train: data epoch: [0]  [1050/2271]  eta: 2:13:59  lr: 0.000010  loss: 2.0651  time: 6.5418  data: 0.0000  max mem: 15467
+Train: data epoch: [0]  [1100/2271]  eta: 2:08:27  lr: 0.000010  loss: 2.0195  time: 6.5540  data: 0.0000  max mem: 15467
+Train: data epoch: [0]  [1150/2271]  eta: 2:02:55  lr: 0.000010  loss: 2.0106  time: 6.5406  data: 0.0000  max mem: 15467
+Train: data epoch: [0]  [1200/2271]  eta: 1:57:24  lr: 0.000010  loss: 2.2899  time: 6.5502  data: 0.0000  max mem: 15467
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/TorchProject/lavis/train.py:115 in <module>           │
+│                                                                              │
+│   112                                                                        │
+│   113                                                                        │
+│   114 if __name__ == "__main__":                                             │
+│ ❱ 115 │   main()                                                             │
+│   116                                                                        │
+│   117                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/train.py:111 in main               │
+│                                                                              │
+│   108 │   runner = get_runner_class(cfg)(                                    │
+│   109 │   │   cfg=cfg, job_id=job_id, task=task, model=model, datasets=datas │
+│   110 │   )                                                                  │
+│ ❱ 111 │   runner.train()                                                     │
+│   112                                                                        │
+│   113                                                                        │
+│   114 if __name__ == "__main__":                                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:372   │
+│ in train                                                                     │
+│                                                                              │
+│   369 │   │   │   # training phase                                           │
+│   370 │   │   │   if not self.evaluate_only:                                 │
+│   371 │   │   │   │   logging.info("Start training")                         │
+│ ❱ 372 │   │   │   │   train_stats = self.train_epoch(cur_epoch)              │
+│   373 │   │   │   │   self.log_stats(split_name="train", stats=train_stats)  │
+│   374 │   │   │                                                              │
+│   375 │   │   │   # evaluation phase                                         │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:431   │
+│ in train_epoch                                                               │
+│                                                                              │
+│   428 │   │   # train                                                        │
+│   429 │   │   self.model.train()                                             │
+│   430 │   │                                                                  │
+│ ❱ 431 │   │   return self.task.train_epoch(                                  │
+│   432 │   │   │   epoch=epoch,                                               │
+│   433 │   │   │   model=self.model,                                          │
+│   434 │   │   │   data_loader=self.train_loader,                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:114 in    │
+│ train_epoch                                                                  │
+│                                                                              │
+│   111 │   │   log_freq=50,                                                   │
+│   112 │   │   accum_grad_iters=1,                                            │
+│   113 │   ):                                                                 │
+│ ❱ 114 │   │   return self._train_inner_loop(                                 │
+│   115 │   │   │   epoch=epoch,                                               │
+│   116 │   │   │   iters_per_epoch=len(data_loader),                          │
+│   117 │   │   │   model=model,                                               │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:223 in    │
+│ _train_inner_loop                                                            │
+│                                                                              │
+│   220 │   │   │                                                              │
+│   221 │   │   │   # after_train_step()                                       │
+│   222 │   │   │   if use_amp:                                                │
+│ ❱ 223 │   │   │   │   scaler.scale(loss).backward()                          │
+│   224 │   │   │   else:                                                      │
+│   225 │   │   │   │   loss.backward()                                        │
+│   226                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ _tensor.py:307 in backward                                                   │
+│                                                                              │
+│    304 │   │   │   │   retain_graph=retain_graph,                            │
+│    305 │   │   │   │   create_graph=create_graph,                            │
+│    306 │   │   │   │   inputs=inputs)                                        │
+│ ❱  307 │   │   torch.autograd.backward(self, gradient, retain_graph, create_ │
+│    308 │                                                                     │
+│    309 │   def register_hook(self, hook):                                    │
+│    310 │   │   r"""Registers a backward hook.                                │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ autograd/__init__.py:154 in backward                                         │
+│                                                                              │
+│   151 │   if retain_graph is None:                                           │
+│   152 │   │   retain_graph = create_graph                                    │
+│   153 │                                                                      │
+│ ❱ 154 │   Variable._execution_engine.run_backward(                           │
+│   155 │   │   tensors, grad_tensors_, retain_graph, create_graph, inputs,    │
+│   156 │   │   allow_unreachable=True, accumulate_grad=True)  # allow_unreach │
+│   157                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: HIP out of memory. Tried to allocate 122.00 MiB (GPU 0; 15.98 GiB 
+total capacity; 15.00 GiB already allocated; 318.00 MiB free; 15.58 GiB reserved
+in total by PyTorch) If reserved memory is >> allocated memory try setting 
+max_split_size_mb to avoid fragmentation.  See documentation for Memory 
+Management and PYTORCH_HIP_ALLOC_CONF
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 19526 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 19527 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 19528 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 19525) of binary: /public/home/mswanghao/anaconda3/envs/LLM/bin/python
+Traceback (most recent call last):
+  File "/public/home/mswanghao/anaconda3/envs/LLM/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 719, in main
+    run(args)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 710, in run
+    elastic_launch(
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 259, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-08-20_00:44:38
+  host      : a12r1n03
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 19525)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

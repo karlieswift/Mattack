@@ -1,0 +1,832 @@
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss DRSL3 b=1e-05 start=0 end=10loss DRSL3 b=1e-05 start=0 end=10
+
+loss DRSL3 b=1e-05 start=0 end=10loss DRSL3 b=1e-05 start=0 end=10
+
+| distributed init (rank 1, world 4): env://| distributed init (rank 0, world 4): env://| distributed init (rank 2, world 4): env://
+
+
+| distributed init (rank 3, world 4): env://
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-16 00:18:39,836 [INFO] 
+=====  Running Parameters    =====
+2023-08-16 00:18:39,837 [INFO] {
+    "amp": true,
+    "batch_size_eval": 2,
+    "batch_size_train": 16,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "init_lr": 0.0001,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 1,
+    "min_lr": 1e-05,
+    "num_workers": 4,
+    "output_dir": "output/BLIP2/DRSL3_0_10Pretrain_stage2",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "image_text_pretrain",
+    "train_splits": [
+        "train"
+    ],
+    "warmup_lr": 1e-06,
+    "warmup_steps": 2000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-16 00:18:39,837 [INFO] 
+======  Dataset Attributes  ======
+2023-08-16 00:18:39,837 [INFO] 
+======== coco_caption =======
+2023-08-16 00:18:39,838 [INFO] {
+    "build_info": {
+        "annotations": {
+            "test": {
+                "md5": "3ff34b0ef2db02d01c37399f6a2a6cd1",
+                "storage": "coco/annotations/coco_karpathy_test.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_test.json"
+            },
+            "train": {
+                "md5": "aa31ac474cf6250ebb81d18348a07ed8",
+                "storage": "coco/annotations/coco_karpathy_train.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_train.json"
+            },
+            "val": {
+                "md5": "b273847456ef5580e33713b1f7de52a0",
+                "storage": "coco/annotations/coco_karpathy_val.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_val.json"
+            }
+        },
+        "images": {
+            "storage": "coco/images/"
+        }
+    },
+    "data_type": "images",
+    "dataset_card": "dataset_card/coco_caption.md",
+    "text_processor": {
+        "train": {
+            "name": "blip_caption"
+        }
+    },
+    "vis_processor": {
+        "train": {
+            "image_size": 224,
+            "name": "blip2_image_train"
+        }
+    }
+}
+2023-08-16 00:18:39,838 [INFO] 
+======  Model Attributes  ======
+2023-08-16 00:18:39,838 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "finetuned": "",
+    "freeze_vit": true,
+    "image_size": 224,
+    "load_finetuned": false,
+    "load_pretrained": true,
+    "model_type": "pretrain_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained.pth",
+    "prompt": "",
+    "use_grad_checkpoint": false,
+    "vit_precision": "fp16"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_train.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_val.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_test.json
+2023-08-16 00:18:39,885 [INFO] Building datasets...
+2023-08-16 00:19:21,737 [INFO] freeze vision encoder
+2023-08-16 00:22:47,194 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained.pth
+2023-08-16 00:22:47,233 [INFO] Start training
+2023-08-16 00:23:05,910 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-16 00:23:05,911 [INFO] Loaded 566747 records for train split from the dataset.
+2023-08-16 00:23:05,911 [INFO] Loaded 5000 records for val split from the dataset.
+2023-08-16 00:23:05,911 [INFO] Loaded 5000 records for test split from the dataset.
+2023-08-16 00:23:05,977 [INFO] number of trainable parameters: 107133696
+2023-08-16 00:23:05,979 [INFO] Start training epoch 0, 8855 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/TorchProject/lavis/train.py:116 in <module>           │
+│                                                                              │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│ ❱ 116 │   main()                                                             │
+│   117                                                                        │
+│   118                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/train.py:112 in main               │
+│                                                                              │
+│   109 │   runner = get_runner_class(cfg)(                                    │
+│   110 │   │   cfg=cfg, job_id=job_id, task=task, model=model, datasets=datas │
+│   111 │   )                                                                  │
+│ ❱ 112 │   runner.train()                                                     │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:372   │
+│ in train                                                                     │
+│                                                                              │
+│   369 │   │   │   # training phase                                           │
+│   370 │   │   │   if not self.evaluate_only:                                 │
+│   371 │   │   │   │   logging.info("Start training")                         │
+│ ❱ 372 │   │   │   │   train_stats = self.train_epoch(cur_epoch)              │
+│   373 │   │   │   │   self.log_stats(split_name="train", stats=train_stats)  │
+│   374 │   │   │                                                              │
+│   375 │   │   │   # evaluation phase                                         │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:431   │
+│ in train_epoch                                                               │
+│                                                                              │
+│   428 │   │   # train                                                        │
+│   429 │   │   self.model.train()                                             │
+│   430 │   │                                                                  │
+│ ❱ 431 │   │   return self.task.train_epoch(                                  │
+│   432 │   │   │   epoch=epoch,                                               │
+│   433 │   │   │   model=self.model,                                          │
+│   434 │   │   │   data_loader=self.train_loader,                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:114 in    │
+│ train_epoch                                                                  │
+│                                                                              │
+│   111 │   │   log_freq=50,                                                   │
+│   112 │   │   accum_grad_iters=1,                                            │
+│   113 │   ):                                                                 │
+│ ❱ 114 │   │   return self._train_inner_loop(                                 │
+│   115 │   │   │   epoch=epoch,                                               │
+│   116 │   │   │   iters_per_epoch=len(data_loader),                          │
+│   117 │   │   │   model=model,                                               │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:219 in    │
+│ _train_inner_loop                                                            │
+│                                                                              │
+│   216 │   │   │   lr_scheduler.step(cur_epoch=inner_epoch, cur_step=i)       │
+│   217 │   │   │                                                              │
+│   218 │   │   │   with torch.cuda.amp.autocast(enabled=use_amp):             │
+│ ❱ 219 │   │   │   │   loss, loss_dict = self.train_step(model=model, samples │
+│   220 │   │   │   │   loss /= accum_grad_iters #TODO: not affect loss_dict v │
+│   221 │   │   │                                                              │
+│   222 │   │   │   # after_train_step()                                       │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:64 in     │
+│ train_step                                                                   │
+│                                                                              │
+│    61 │   │   return datasets                                                │
+│    62 │                                                                      │
+│    63 │   def train_step(self, model, samples):                              │
+│ ❱  64 │   │   output = model(samples)                                        │
+│    65 │   │   loss_dict = {}                                                 │
+│    66 │   │   for k,v in output.items():                                     │
+│    67 │   │   │   if "loss" in k:                                            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/parallel/distributed.py:886 in forward                                    │
+│                                                                              │
+│    883 │   │   │                                                             │
+│    884 │   │   │   if self.device_ids:                                       │
+│    885 │   │   │   │   inputs, kwargs = self.to_kwargs(inputs, kwargs, self. │
+│ ❱  886 │   │   │   │   output = self.module(*inputs[0], **kwargs[0])         │
+│    887 │   │   │   else:                                                     │
+│    888 │   │   │   │   output = self.module(*inputs, **kwargs)               │
+│    889                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/models/blip2_models/blip2_op │
+│ t.py:154 in forward                                                          │
+│                                                                              │
+│   151 │   │   attention_mask = torch.cat([atts_opt, opt_tokens.attention_mas │
+│   152 │   │                                                                  │
+│   153 │   │   with self.maybe_autocast():                                    │
+│ ❱ 154 │   │   │   outputs = self.opt_model(                                  │
+│   155 │   │   │   │   inputs_embeds=inputs_embeds,                           │
+│   156 │   │   │   │   attention_mask=attention_mask,                         │
+│   157 │   │   │   │   return_dict=True,                                      │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:1028 in forward                            │
+│                                                                              │
+│   1025 │   │   │   │   start = myGlobal.get_value('start')                   │
+│   1026 │   │   │   │   end = myGlobal.get_value('end')                       │
+│   1027 │   │   │   │   loss_fct = DRSL31( b=b, start=start, end=end)         │
+│ ❱ 1028 │   │   │   loss = loss_fct(shift_logits.view(-1, self.config.vocab_s │
+│   1029 │   │                                                                 │
+│   1030 │   │   if not return_dict:                                           │
+│   1031 │   │   │   output = (logits,) + outputs[1:]                          │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:98 in forward                              │
+│                                                                              │
+│     95 │   │   x_mean = torch.sort(no_pred, descending=True)[0][:, self.star │
+│     96 │   │   # x_mean = no_pred.mean(dim=1).reshape(no_pred.shape[0], -1)  │
+│     97 │   │   x = -nn.functional.log_softmax(x_mean, dim=0).sum()           │
+│ ❱   98 │   │   loss = self.a * ce + self.b * x                               │
+│     99 │   │   return loss                                                   │
+│    100                                                                       │
+│    101                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TypeError: only integer tensors of a single element can be converted to an index
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/TorchProject/lavis/train.py:116 in <module>           │
+│                                                                              │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│ ❱ 116 │   main()                                                             │
+│   117                                                                        │
+│   118                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/train.py:112 in main               │
+│                                                                              │
+│   109 │   runner = get_runner_class(cfg)(                                    │
+│   110 │   │   cfg=cfg, job_id=job_id, task=task, model=model, datasets=datas │
+│   111 │   )                                                                  │
+│ ❱ 112 │   runner.train()                                                     │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:372   │
+│ in train                                                                     │
+│                                                                              │
+│   369 │   │   │   # training phase                                           │
+│   370 │   │   │   if not self.evaluate_only:                                 │
+│   371 │   │   │   │   logging.info("Start training")                         │
+│ ❱ 372 │   │   │   │   train_stats = self.train_epoch(cur_epoch)              │
+│   373 │   │   │   │   self.log_stats(split_name="train", stats=train_stats)  │
+│   374 │   │   │                                                              │
+│   375 │   │   │   # evaluation phase                                         │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:431   │
+│ in train_epoch                                                               │
+│                                                                              │
+│   428 │   │   # train                                                        │
+│   429 │   │   self.model.train()                                             │
+│   430 │   │                                                                  │
+│ ❱ 431 │   │   return self.task.train_epoch(                                  │
+│   432 │   │   │   epoch=epoch,                                               │
+│   433 │   │   │   model=self.model,                                          │
+│   434 │   │   │   data_loader=self.train_loader,                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:114 in    │
+│ train_epoch                                                                  │
+│                                                                              │
+│   111 │   │   log_freq=50,                                                   │
+│   112 │   │   accum_grad_iters=1,                                            │
+│   113 │   ):                                                                 │
+│ ❱ 114 │   │   return self._train_inner_loop(                                 │
+│   115 │   │   │   epoch=epoch,                                               │
+│   116 │   │   │   iters_per_epoch=len(data_loader),                          │
+│   117 │   │   │   model=model,                                               │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:219 in    │
+│ _train_inner_loop                                                            │
+│                                                                              │
+│   216 │   │   │   lr_scheduler.step(cur_epoch=inner_epoch, cur_step=i)       │
+│   217 │   │   │                                                              │
+│   218 │   │   │   with torch.cuda.amp.autocast(enabled=use_amp):             │
+│ ❱ 219 │   │   │   │   loss, loss_dict = self.train_step(model=model, samples │
+│   220 │   │   │   │   loss /= accum_grad_iters #TODO: not affect loss_dict v │
+│   221 │   │   │                                                              │
+│   222 │   │   │   # after_train_step()                                       │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:64 in     │
+│ train_step                                                                   │
+│                                                                              │
+│    61 │   │   return datasets                                                │
+│    62 │                                                                      │
+│    63 │   def train_step(self, model, samples):                              │
+│ ❱  64 │   │   output = model(samples)                                        │
+│    65 │   │   loss_dict = {}                                                 │
+│    66 │   │   for k,v in output.items():                                     │
+│    67 │   │   │   if "loss" in k:                                            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/parallel/distributed.py:886 in forward                                    │
+│                                                                              │
+│    883 │   │   │                                                             │
+│    884 │   │   │   if self.device_ids:                                       │
+│    885 │   │   │   │   inputs, kwargs = self.to_kwargs(inputs, kwargs, self. │
+│ ❱  886 │   │   │   │   output = self.module(*inputs[0], **kwargs[0])         │
+│    887 │   │   │   else:                                                     │
+│    888 │   │   │   │   output = self.module(*inputs, **kwargs)               │
+│    889                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/models/blip2_models/blip2_op │
+│ t.py:154 in forward                                                          │
+│                                                                              │
+│   151 │   │   attention_mask = torch.cat([atts_opt, opt_tokens.attention_mas │
+│   152 │   │                                                                  │
+│   153 │   │   with self.maybe_autocast():                                    │
+│ ❱ 154 │   │   │   outputs = self.opt_model(                                  │
+│   155 │   │   │   │   inputs_embeds=inputs_embeds,                           │
+│   156 │   │   │   │   attention_mask=attention_mask,                         │
+│   157 │   │   │   │   return_dict=True,                                      │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:1028 in forward                            │
+│                                                                              │
+│   1025 │   │   │   │   start = myGlobal.get_value('start')                   │
+│   1026 │   │   │   │   end = myGlobal.get_value('end')                       │
+│   1027 │   │   │   │   loss_fct = DRSL31( b=b, start=start, end=end)         │
+│ ❱ 1028 │   │   │   loss = loss_fct(shift_logits.view(-1, self.config.vocab_s │
+│   1029 │   │                                                                 │
+│   1030 │   │   if not return_dict:                                           │
+│   1031 │   │   │   output = (logits,) + outputs[1:]                          │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:98 in forward                              │
+│                                                                              │
+│     95 │   │   x_mean = torch.sort(no_pred, descending=True)[0][:, self.star │
+│     96 │   │   # x_mean = no_pred.mean(dim=1).reshape(no_pred.shape[0], -1)  │
+│     97 │   │   x = -nn.functional.log_softmax(x_mean, dim=0).sum()           │
+│ ❱   98 │   │   loss = self.a * ce + self.b * x                               │
+│     99 │   │   return loss                                                   │
+│    100                                                                       │
+│    101                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TypeError: only integer tensors of a single element can be converted to an index
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/TorchProject/lavis/train.py:116 in <module>           │
+│                                                                              │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│ ❱ 116 │   main()                                                             │
+│   117                                                                        │
+│   118                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/train.py:112 in main               │
+│                                                                              │
+│   109 │   runner = get_runner_class(cfg)(                                    │
+│   110 │   │   cfg=cfg, job_id=job_id, task=task, model=model, datasets=datas │
+│   111 │   )                                                                  │
+│ ❱ 112 │   runner.train()                                                     │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:372   │
+│ in train                                                                     │
+│                                                                              │
+│   369 │   │   │   # training phase                                           │
+│   370 │   │   │   if not self.evaluate_only:                                 │
+│   371 │   │   │   │   logging.info("Start training")                         │
+│ ❱ 372 │   │   │   │   train_stats = self.train_epoch(cur_epoch)              │
+│   373 │   │   │   │   self.log_stats(split_name="train", stats=train_stats)  │
+│   374 │   │   │                                                              │
+│   375 │   │   │   # evaluation phase                                         │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:431   │
+│ in train_epoch                                                               │
+│                                                                              │
+│   428 │   │   # train                                                        │
+│   429 │   │   self.model.train()                                             │
+│   430 │   │                                                                  │
+│ ❱ 431 │   │   return self.task.train_epoch(                                  │
+│   432 │   │   │   epoch=epoch,                                               │
+│   433 │   │   │   model=self.model,                                          │
+│   434 │   │   │   data_loader=self.train_loader,                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:114 in    │
+│ train_epoch                                                                  │
+│                                                                              │
+│   111 │   │   log_freq=50,                                                   │
+│   112 │   │   accum_grad_iters=1,                                            │
+│   113 │   ):                                                                 │
+│ ❱ 114 │   │   return self._train_inner_loop(                                 │
+│   115 │   │   │   epoch=epoch,                                               │
+│   116 │   │   │   iters_per_epoch=len(data_loader),                          │
+│   117 │   │   │   model=model,                                               │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:219 in    │
+│ _train_inner_loop                                                            │
+│                                                                              │
+│   216 │   │   │   lr_scheduler.step(cur_epoch=inner_epoch, cur_step=i)       │
+│   217 │   │   │                                                              │
+│   218 │   │   │   with torch.cuda.amp.autocast(enabled=use_amp):             │
+│ ❱ 219 │   │   │   │   loss, loss_dict = self.train_step(model=model, samples │
+│   220 │   │   │   │   loss /= accum_grad_iters #TODO: not affect loss_dict v │
+│   221 │   │   │                                                              │
+│   222 │   │   │   # after_train_step()                                       │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:64 in     │
+│ train_step                                                                   │
+│                                                                              │
+│    61 │   │   return datasets                                                │
+│    62 │                                                                      │
+│    63 │   def train_step(self, model, samples):                              │
+│ ❱  64 │   │   output = model(samples)                                        │
+│    65 │   │   loss_dict = {}                                                 │
+│    66 │   │   for k,v in output.items():                                     │
+│    67 │   │   │   if "loss" in k:                                            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/parallel/distributed.py:886 in forward                                    │
+│                                                                              │
+│    883 │   │   │                                                             │
+│    884 │   │   │   if self.device_ids:                                       │
+│    885 │   │   │   │   inputs, kwargs = self.to_kwargs(inputs, kwargs, self. │
+│ ❱  886 │   │   │   │   output = self.module(*inputs[0], **kwargs[0])         │
+│    887 │   │   │   else:                                                     │
+│    888 │   │   │   │   output = self.module(*inputs, **kwargs)               │
+│    889                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/models/blip2_models/blip2_op │
+│ t.py:154 in forward                                                          │
+│                                                                              │
+│   151 │   │   attention_mask = torch.cat([atts_opt, opt_tokens.attention_mas │
+│   152 │   │                                                                  │
+│   153 │   │   with self.maybe_autocast():                                    │
+│ ❱ 154 │   │   │   outputs = self.opt_model(                                  │
+│   155 │   │   │   │   inputs_embeds=inputs_embeds,                           │
+│   156 │   │   │   │   attention_mask=attention_mask,                         │
+│   157 │   │   │   │   return_dict=True,                                      │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:1028 in forward                            │
+│                                                                              │
+│   1025 │   │   │   │   start = myGlobal.get_value('start')                   │
+│   1026 │   │   │   │   end = myGlobal.get_value('end')                       │
+│   1027 │   │   │   │   loss_fct = DRSL31( b=b, start=start, end=end)         │
+│ ❱ 1028 │   │   │   loss = loss_fct(shift_logits.view(-1, self.config.vocab_s │
+│   1029 │   │                                                                 │
+│   1030 │   │   if not return_dict:                                           │
+│   1031 │   │   │   output = (logits,) + outputs[1:]                          │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:98 in forward                              │
+│                                                                              │
+│     95 │   │   x_mean = torch.sort(no_pred, descending=True)[0][:, self.star │
+│     96 │   │   # x_mean = no_pred.mean(dim=1).reshape(no_pred.shape[0], -1)  │
+│     97 │   │   x = -nn.functional.log_softmax(x_mean, dim=0).sum()           │
+│ ❱   98 │   │   loss = self.a * ce + self.b * x                               │
+│     99 │   │   return loss                                                   │
+│    100                                                                       │
+│    101                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TypeError: only integer tensors of a single element can be converted to an index
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/TorchProject/lavis/train.py:116 in <module>           │
+│                                                                              │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│ ❱ 116 │   main()                                                             │
+│   117                                                                        │
+│   118                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/train.py:112 in main               │
+│                                                                              │
+│   109 │   runner = get_runner_class(cfg)(                                    │
+│   110 │   │   cfg=cfg, job_id=job_id, task=task, model=model, datasets=datas │
+│   111 │   )                                                                  │
+│ ❱ 112 │   runner.train()                                                     │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:372   │
+│ in train                                                                     │
+│                                                                              │
+│   369 │   │   │   # training phase                                           │
+│   370 │   │   │   if not self.evaluate_only:                                 │
+│   371 │   │   │   │   logging.info("Start training")                         │
+│ ❱ 372 │   │   │   │   train_stats = self.train_epoch(cur_epoch)              │
+│   373 │   │   │   │   self.log_stats(split_name="train", stats=train_stats)  │
+│   374 │   │   │                                                              │
+│   375 │   │   │   # evaluation phase                                         │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:431   │
+│ in train_epoch                                                               │
+│                                                                              │
+│   428 │   │   # train                                                        │
+│   429 │   │   self.model.train()                                             │
+│   430 │   │                                                                  │
+│ ❱ 431 │   │   return self.task.train_epoch(                                  │
+│   432 │   │   │   epoch=epoch,                                               │
+│   433 │   │   │   model=self.model,                                          │
+│   434 │   │   │   data_loader=self.train_loader,                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:114 in    │
+│ train_epoch                                                                  │
+│                                                                              │
+│   111 │   │   log_freq=50,                                                   │
+│   112 │   │   accum_grad_iters=1,                                            │
+│   113 │   ):                                                                 │
+│ ❱ 114 │   │   return self._train_inner_loop(                                 │
+│   115 │   │   │   epoch=epoch,                                               │
+│   116 │   │   │   iters_per_epoch=len(data_loader),                          │
+│   117 │   │   │   model=model,                                               │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:219 in    │
+│ _train_inner_loop                                                            │
+│                                                                              │
+│   216 │   │   │   lr_scheduler.step(cur_epoch=inner_epoch, cur_step=i)       │
+│   217 │   │   │                                                              │
+│   218 │   │   │   with torch.cuda.amp.autocast(enabled=use_amp):             │
+│ ❱ 219 │   │   │   │   loss, loss_dict = self.train_step(model=model, samples │
+│   220 │   │   │   │   loss /= accum_grad_iters #TODO: not affect loss_dict v │
+│   221 │   │   │                                                              │
+│   222 │   │   │   # after_train_step()                                       │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/base_task.py:64 in     │
+│ train_step                                                                   │
+│                                                                              │
+│    61 │   │   return datasets                                                │
+│    62 │                                                                      │
+│    63 │   def train_step(self, model, samples):                              │
+│ ❱  64 │   │   output = model(samples)                                        │
+│    65 │   │   loss_dict = {}                                                 │
+│    66 │   │   for k,v in output.items():                                     │
+│    67 │   │   │   if "loss" in k:                                            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/parallel/distributed.py:886 in forward                                    │
+│                                                                              │
+│    883 │   │   │                                                             │
+│    884 │   │   │   if self.device_ids:                                       │
+│    885 │   │   │   │   inputs, kwargs = self.to_kwargs(inputs, kwargs, self. │
+│ ❱  886 │   │   │   │   output = self.module(*inputs[0], **kwargs[0])         │
+│    887 │   │   │   else:                                                     │
+│    888 │   │   │   │   output = self.module(*inputs, **kwargs)               │
+│    889                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/models/blip2_models/blip2_op │
+│ t.py:154 in forward                                                          │
+│                                                                              │
+│   151 │   │   attention_mask = torch.cat([atts_opt, opt_tokens.attention_mas │
+│   152 │   │                                                                  │
+│   153 │   │   with self.maybe_autocast():                                    │
+│ ❱ 154 │   │   │   outputs = self.opt_model(                                  │
+│   155 │   │   │   │   inputs_embeds=inputs_embeds,                           │
+│   156 │   │   │   │   attention_mask=attention_mask,                         │
+│   157 │   │   │   │   return_dict=True,                                      │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:1028 in forward                            │
+│                                                                              │
+│   1025 │   │   │   │   start = myGlobal.get_value('start')                   │
+│   1026 │   │   │   │   end = myGlobal.get_value('end')                       │
+│   1027 │   │   │   │   loss_fct = DRSL31( b=b, start=start, end=end)         │
+│ ❱ 1028 │   │   │   loss = loss_fct(shift_logits.view(-1, self.config.vocab_s │
+│   1029 │   │                                                                 │
+│   1030 │   │   if not return_dict:                                           │
+│   1031 │   │   │   output = (logits,) + outputs[1:]                          │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ nn/modules/module.py:1102 in _call_impl                                      │
+│                                                                              │
+│   1099 │   │   # this function, and just call forward.                       │
+│   1100 │   │   if not (self._backward_hooks or self._forward_hooks or self._ │
+│   1101 │   │   │   │   or _global_forward_hooks or _global_forward_pre_hooks │
+│ ❱ 1102 │   │   │   return forward_call(*input, **kwargs)                     │
+│   1103 │   │   # Do not call functions when jit is used                      │
+│   1104 │   │   full_backward_hooks, non_full_backward_hooks = [], []         │
+│   1105 │   │   if self._backward_hooks or _global_backward_hooks:            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/transf │
+│ ormers/models/opt/modeling_opt.py:98 in forward                              │
+│                                                                              │
+│     95 │   │   x_mean = torch.sort(no_pred, descending=True)[0][:, self.star │
+│     96 │   │   # x_mean = no_pred.mean(dim=1).reshape(no_pred.shape[0], -1)  │
+│     97 │   │   x = -nn.functional.log_softmax(x_mean, dim=0).sum()           │
+│ ❱   98 │   │   loss = self.a * ce + self.b * x                               │
+│     99 │   │   return loss                                                   │
+│    100                                                                       │
+│    101                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+TypeError: only integer tensors of a single element can be converted to an index
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 9568) of binary: /public/home/mswanghao/anaconda3/envs/LLM/bin/python
+Traceback (most recent call last):
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 723, in <module>
+    main()
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 719, in main
+    run(args)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 710, in run
+    elastic_launch(
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 259, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2023-08-16_00:23:47
+  host      : a13r1n03
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 9569)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2023-08-16_00:23:47
+  host      : a13r1n03
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 9570)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2023-08-16_00:23:47
+  host      : a13r1n03
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 9571)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-08-16_00:23:47
+  host      : a13r1n03
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 9568)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

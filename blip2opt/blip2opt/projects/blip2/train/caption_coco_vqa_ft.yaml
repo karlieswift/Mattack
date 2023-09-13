@@ -1,0 +1,80 @@
+model:
+  arch: blip2_opt
+  model_type: pretrain_opt2.7b
+  load_pretrained: True
+  pretrained: "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth"
+  vit_model: eva_clip_g
+
+  # vit encoder
+  image_size: 400
+  drop_path_rate: 0
+  use_grad_checkpoint: False
+  vit_precision: "fp32"
+  freeze_vit: True
+
+  # Q-Former
+  num_query_token: 32
+
+datasets:
+#  coco_vqa:
+#    vis_processor:
+#        train:
+#          name: "blip_image_train"
+#          image_size: 400
+#        eval:
+#          name: "blip_image_eval"
+#          image_size: 400
+#        test:
+#          name: "blip_image_eval"
+#          image_size: 400
+#    text_processor:
+#        train:
+#          name: "blip_question"
+#        eval:
+#          name: "blip_question"
+#        test:
+#          name: "blip_question"
+
+  vg_vqa: # name of the dataset builder
+    vis_processor:
+      train:
+        name: "blip_image_train"
+        image_size: 400
+    text_processor:
+      train:
+        name: "blip_question"
+
+run:
+  task: vqa
+  # optimizer
+  lr_sched: "linear_warmup_cosine_lr"
+  init_lr: 1e-5
+  min_lr: 0
+  warmup_steps: 1000
+  warmup_lr: 1e-8
+  weight_decay: 0.05
+  max_epoch: 100
+  batch_size_train: 12
+  batch_size_eval: 2
+  num_workers: 4
+  accum_grad_iters: 1
+  lr_layer_decay: 0.95 # layer-wise learning rate decay for the ViT
+
+  max_len: 10
+  min_len: 1
+  num_beams: 5
+  inference_method: "generate"
+  #prompt: "Question: {} Short answer:"
+
+  seed: 42
+  output_dir: "output_vqaDRSL__1/BLIP2/DRSL3_6_0_20"
+
+  amp: True
+  resume_ckpt_path: null
+
+  evaluate: False
+  train_splits: ["train"]  
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True

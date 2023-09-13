@@ -1,0 +1,152 @@
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss DRSL3 b=1e-05 start=0 end=6loss DRSL3 b=1e-05 start=0 end=6
+
+loss DRSL3 b=1e-05 start=0 end=6
+loss DRSL3 b=1e-05 start=0 end=6
+| distributed init (rank 2, world 4): env://| distributed init (rank 3, world 4): env://
+
+| distributed init (rank 1, world 4): env://
+| distributed init (rank 0, world 4): env://
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-19 14:03:51,441 [INFO] 
+=====  Running Parameters    =====
+2023-08-19 14:03:51,444 [INFO] {
+    "accum_grad_iters": 1,
+    "amp": true,
+    "batch_size_eval": 2,
+    "batch_size_train": 12,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "init_lr": 1e-05,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 1,
+    "max_len": 30,
+    "min_len": 8,
+    "min_lr": 0,
+    "num_beams": 5,
+    "num_workers": 4,
+    "output_dir": "output3/BLIP2/Caption_coco_drsl_0_6",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "captioning",
+    "train_splits": [
+        "train"
+    ],
+    "warmup_lr": 1e-08,
+    "warmup_steps": 1000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-19 14:03:51,444 [INFO] 
+======  Dataset Attributes  ======
+2023-08-19 14:03:51,445 [INFO] 
+======== coco_caption =======
+2023-08-19 14:03:51,445 [INFO] {
+    "build_info": {
+        "annotations": {
+            "test": {
+                "md5": "3ff34b0ef2db02d01c37399f6a2a6cd1",
+                "storage": "coco/annotations/coco_karpathy_test.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_test.json"
+            },
+            "train": {
+                "md5": "aa31ac474cf6250ebb81d18348a07ed8",
+                "storage": "coco/annotations/coco_karpathy_train.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_train.json"
+            },
+            "val": {
+                "md5": "b273847456ef5580e33713b1f7de52a0",
+                "storage": "coco/annotations/coco_karpathy_val.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_val.json"
+            }
+        },
+        "images": {
+            "storage": "coco/images/"
+        }
+    },
+    "data_type": "images",
+    "dataset_card": "dataset_card/coco_caption.md",
+    "text_processor": {
+        "eval": {
+            "name": "blip_caption"
+        },
+        "train": {
+            "name": "blip_caption",
+            "prompt": "a photo of "
+        }
+    },
+    "vis_processor": {
+        "eval": {
+            "image_size": 364,
+            "name": "blip_image_eval"
+        },
+        "train": {
+            "image_size": 364,
+            "name": "blip2_image_train"
+        }
+    }
+}
+2023-08-19 14:03:51,445 [INFO] 
+======  Model Attributes  ======
+2023-08-19 14:03:51,446 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "freeze_vit": true,
+    "image_size": 364,
+    "load_finetuned": false,
+    "model_type": "caption_coco_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth",
+    "prompt": "a photo of",
+    "use_grad_checkpoint": true,
+    "vit_precision": "fp32"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_train.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_val.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_test.json
+2023-08-19 14:03:51,462 [INFO] Building datasets...
+BlipImageEvalProcessor
+Position interpolate from 16x16 to 26x26
+2023-08-19 14:04:31,581 [INFO] freeze vision encoder
+https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-19 14:07:55,743 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-19 14:07:55,779 [INFO] Start training
+2023-08-19 14:08:16,998 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-19 14:08:16,999 [INFO] Loaded 566747 records for train split from the dataset.
+2023-08-19 14:08:16,999 [INFO] Loaded 5000 records for val split from the dataset.
+2023-08-19 14:08:16,999 [INFO] Loaded 5000 records for test split from the dataset.
+2023-08-19 14:08:17,049 [INFO] number of trainable parameters: 107133696
+2023-08-19 14:08:17,055 [INFO] Start training epoch 0, 11807 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+Train: data epoch: [0]  [ 0/41]  eta: 0:17:38  lr: 0.000000  loss: 2.0368  time: 25.8215  data: 0.0000  max mem: 13105
+2023-08-19 14:08:42,937 [INFO] Reducer buckets have been rebuilt in this iteration.
+Train: data epoch: [0]  [40/41]  eta: 0:00:05  lr: 0.000000  loss: 1.9707  time: 5.4275  data: 0.0000  max mem: 14867
+Train: data epoch: [0] Total time: 0:04:02 (5.9042 s / it)
+2023-08-19 14:12:19,178 [INFO] Averaged stats: lr: 0.0000  loss: 2.0437
+2023-08-19 14:12:19,215 [INFO] No validation splits found.
+2023-08-19 14:12:19,272 [INFO] Saving checkpoint at epoch 0 to /public/home/mswanghao/TorchProject/lavis/lavis/output3/BLIP2/Caption_coco_drsl_0_6/20230819140/checkpoint_0.pth.
+2023-08-19 14:12:25,060 [INFO] No validation splits found.
+2023-08-19 14:12:25,062 [INFO] Training time 0:04:29

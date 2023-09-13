@@ -1,0 +1,12 @@
+['/public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_4_0_6/20230821145/checkpoint_1.pth', '/public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_4_0_10/20230821150/checkpoint_1.pth', '/public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_4_0_20/20230821151/checkpoint_1.pth', '/public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_6_0_20/20230821151/checkpoint_1.pth', '/public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_6_0_10/20230821152/checkpoint_1.pth', '/public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_6_0_6/20230821152/checkpoint_1.pth']
+loss DRSL3 b=1e-06 start=0 end=6
+Position interpolate from 16x16 to 28x28
+pretrain_path: /public/home/mswanghao/TorchProject/lavis/lavis/output_vqaDRSL/BLIP2/DRSL3_6_0_6/20230821152/checkpoint_1.pth
+BlipImageEvalProcessor
+  0%|          | 0/1000 [00:00<?, ?it/s]MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardGetWorkSpaceSizeImplicitGemm] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindWinogradSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataDirectSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataImplicitGemmSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+  0%|          | 1/1000 [00:55<15:19:47, 55.24s/it]  0%|          | 2/1000 [01:30<12:00:43, 43.33s/it]  0%|          | 3/1000 [02:11<11:45:03, 42.43s/it]  0%|          | 4/1000 [02:46<10:55:44, 39.50s/it]  0%|          | 5/1000 [03:19<10:13:58, 37.02s/it]  1%|          | 6/1000 [03:53<9:58:32, 36.13s/it]   1%|          | 7/1000 [04:27<9:46:24, 35.43s/it]  1%|          | 8/1000 [05:03<9:46:30, 35.47s/it]  1%|          | 9/1000 [05:37<9:38:25, 35.02s/it]slurmstepd: error: *** JOB 13176539 ON a13r1n05 CANCELLED AT 2023-08-28T21:38:33 ***

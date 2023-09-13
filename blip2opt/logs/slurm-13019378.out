@@ -1,0 +1,270 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss DRSL3 b=1e-05 start=0 end=100loss DRSL3 b=1e-05 start=0 end=100
+
+loss DRSL3 b=1e-05 start=0 end=100
+loss DRSL3 b=1e-05 start=0 end=100
+| distributed init (rank 2, world 4): env://| distributed init (rank 0, world 4): env://| distributed init (rank 3, world 4): env://| distributed init (rank 1, world 4): env://
+
+
+
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-20 09:08:35,197 [INFO] 
+=====  Running Parameters    =====
+2023-08-20 09:08:35,198 [INFO] {
+    "accum_grad_iters": 1,
+    "amp": true,
+    "batch_size_eval": 32,
+    "batch_size_train": 12,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "inference_method": "generate",
+    "init_lr": 1e-05,
+    "lr_layer_decay": 0.95,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 2,
+    "max_len": 10,
+    "min_len": 1,
+    "min_lr": 0,
+    "num_beams": 5,
+    "num_workers": 4,
+    "output_dir": "output_vqa/BLIP2/DRSL3_0_100",
+    "prompt": "Question: {} Short answer:",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "vqa",
+    "train_splits": [
+        "train"
+    ],
+    "warmup_lr": 1e-08,
+    "warmup_steps": 1000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-20 09:08:35,198 [INFO] 
+======  Dataset Attributes  ======
+2023-08-20 09:08:35,198 [INFO] 
+======== vg_vqa =======
+2023-08-20 09:08:35,199 [INFO] {
+    "build_info": {
+        "annotations": {
+            "train": {
+                "storage": "vg/annotations/vg_qa.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/datasets/visual_genome/vg_qa.json"
+            }
+        },
+        "images": {
+            "storage": "vg/images/"
+        }
+    },
+    "data_type": "images",
+    "text_processor": {
+        "train": {
+            "name": "blip_question"
+        }
+    },
+    "vis_processor": {
+        "train": {
+            "image_size": 400,
+            "name": "blip_image_train"
+        }
+    }
+}
+2023-08-20 09:08:35,199 [INFO] 
+======  Model Attributes  ======
+2023-08-20 09:08:35,199 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "finetuned": "",
+    "freeze_vit": true,
+    "image_size": 400,
+    "load_finetuned": false,
+    "load_pretrained": true,
+    "model_type": "pretrain_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth",
+    "prompt": "",
+    "use_grad_checkpoint": false,
+    "vit_model": "eva_clip_g",
+    "vit_precision": "fp32"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/vg/annotations/vg_qa.json
+2023-08-20 09:08:35,208 [INFO] Building datasets...
+BlipQuestionProcessor
+Position interpolate from 16x16 to 28x28
+2023-08-20 09:09:12,096 [INFO] freeze vision encoder
+https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-20 09:11:13,981 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-20 09:11:14,017 [INFO] Start training
+2023-08-20 09:11:35,938 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-20 09:11:35,945 [INFO] Loaded 145395 records for train split from the dataset.
+2023-08-20 09:11:36,010 [INFO] number of trainable parameters: 107133696
+2023-08-20 09:11:36,011 [INFO] Start training epoch 0, 3029 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardGetWorkSpaceSizeImplicitGemm] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardGetWorkSpaceSizeImplicitGemm] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardGetWorkSpaceSizeImplicitGemm] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardGetWorkSpaceSizeImplicitGemm] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindWinogradSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindWinogradSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataDirectSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataDirectSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataImplicitGemmSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataImplicitGemmSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindWinogradSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataDirectSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataImplicitGemmSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindWinogradSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataDirectSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [FindDataImplicitGemmSolutions] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+Train: data epoch: [0]  [   0/3029]  eta: 22:57:00  lr: 0.000000  loss: 2.7895  time: 27.2764  data: 0.0000  max mem: 12766
+2023-08-20 09:12:03,382 [INFO] Reducer buckets have been rebuilt in this iteration.
+Train: data epoch: [0]  [  50/3029]  eta: 4:40:56  lr: 0.000001  loss: 2.6826  time: 5.2183  data: 0.0000  max mem: 14218
+Train: data epoch: [0]  [ 100/3029]  eta: 4:25:43  lr: 0.000001  loss: 2.5752  time: 5.2202  data: 0.0000  max mem: 14218
+Train: data epoch: [0]  [ 150/3029]  eta: 4:17:51  lr: 0.000002  loss: 2.5278  time: 5.2254  data: 0.0000  max mem: 14288
+Train: data epoch: [0]  [ 200/3029]  eta: 4:11:47  lr: 0.000002  loss: 1.7891  time: 5.2371  data: 0.0000  max mem: 14385
+Train: data epoch: [0]  [ 250/3029]  eta: 4:06:19  lr: 0.000003  loss: 1.8259  time: 5.2383  data: 0.0000  max mem: 14385
+Train: data epoch: [0]  [ 300/3029]  eta: 4:01:15  lr: 0.000003  loss: 2.2330  time: 5.2155  data: 0.0000  max mem: 14385
+Train: data epoch: [0]  [ 350/3029]  eta: 3:56:36  lr: 0.000004  loss: 2.0697  time: 5.3040  data: 0.0000  max mem: 14385
+Train: data epoch: [0]  [ 400/3029]  eta: 3:52:08  lr: 0.000004  loss: 2.3686  time: 5.3077  data: 0.0000  max mem: 14385
+Train: data epoch: [0]  [ 450/3029]  eta: 3:47:44  lr: 0.000005  loss: 2.0172  time: 5.3421  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 500/3029]  eta: 3:43:20  lr: 0.000005  loss: 2.0677  time: 5.3257  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 550/3029]  eta: 3:38:56  lr: 0.000006  loss: 1.5470  time: 5.2954  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 600/3029]  eta: 3:34:28  lr: 0.000006  loss: 2.1532  time: 5.2661  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 650/3029]  eta: 3:30:04  lr: 0.000007  loss: 2.4730  time: 5.3279  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 700/3029]  eta: 3:25:38  lr: 0.000007  loss: 1.8926  time: 5.2967  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 750/3029]  eta: 3:21:12  lr: 0.000008  loss: 2.2318  time: 5.2710  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 800/3029]  eta: 3:16:52  lr: 0.000008  loss: 1.8685  time: 5.3378  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 850/3029]  eta: 3:12:28  lr: 0.000009  loss: 2.3215  time: 5.3108  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 900/3029]  eta: 3:08:02  lr: 0.000009  loss: 2.2508  time: 5.3210  data: 0.0000  max mem: 14431
+Train: data epoch: [0]  [ 950/3029]  eta: 3:03:36  lr: 0.000010  loss: 2.2895  time: 5.3023  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1000/3029]  eta: 2:59:11  lr: 0.000010  loss: 1.7674  time: 5.2852  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1050/3029]  eta: 2:54:43  lr: 0.000010  loss: 2.0274  time: 5.2673  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1100/3029]  eta: 2:50:17  lr: 0.000010  loss: 2.1776  time: 5.2828  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1150/3029]  eta: 2:45:52  lr: 0.000010  loss: 2.0705  time: 5.2584  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1200/3029]  eta: 2:41:26  lr: 0.000010  loss: 2.0237  time: 5.2684  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1250/3029]  eta: 2:37:01  lr: 0.000010  loss: 2.2916  time: 5.2990  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1300/3029]  eta: 2:32:35  lr: 0.000010  loss: 2.0462  time: 5.2764  data: 0.0000  max mem: 14434
+Train: data epoch: [0]  [1350/3029]  eta: 2:28:11  lr: 0.000010  loss: 1.8657  time: 5.2922  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1400/3029]  eta: 2:23:46  lr: 0.000010  loss: 1.9349  time: 5.3001  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1450/3029]  eta: 2:19:24  lr: 0.000010  loss: 2.0005  time: 5.4050  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1500/3029]  eta: 2:15:04  lr: 0.000010  loss: 2.0959  time: 5.3800  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1550/3029]  eta: 2:10:44  lr: 0.000010  loss: 1.9252  time: 5.4151  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1600/3029]  eta: 2:06:23  lr: 0.000010  loss: 2.1324  time: 5.3814  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1650/3029]  eta: 2:02:01  lr: 0.000010  loss: 1.9612  time: 5.4020  data: 0.0000  max mem: 14483
+Train: data epoch: [0]  [1700/3029]  eta: 1:57:38  lr: 0.000010  loss: 2.4450  time: 5.3023  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [1750/3029]  eta: 1:53:13  lr: 0.000010  loss: 1.9922  time: 5.3750  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [1800/3029]  eta: 1:48:49  lr: 0.000010  loss: 1.7764  time: 5.3409  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [1850/3029]  eta: 1:44:24  lr: 0.000010  loss: 1.9190  time: 5.3382  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [1900/3029]  eta: 1:39:59  lr: 0.000010  loss: 2.2993  time: 5.3295  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [1950/3029]  eta: 1:35:34  lr: 0.000010  loss: 1.8664  time: 5.3317  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [2000/3029]  eta: 1:31:09  lr: 0.000010  loss: 1.6947  time: 5.3474  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [2050/3029]  eta: 1:26:44  lr: 0.000010  loss: 2.1569  time: 5.3296  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [2100/3029]  eta: 1:22:18  lr: 0.000010  loss: 2.1187  time: 5.3577  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [2150/3029]  eta: 1:17:53  lr: 0.000010  loss: 2.3289  time: 5.3271  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [2200/3029]  eta: 1:13:28  lr: 0.000010  loss: 2.2590  time: 5.3443  data: 0.0000  max mem: 14487
+Train: data epoch: [0]  [2250/3029]  eta: 1:09:02  lr: 0.000010  loss: 1.9559  time: 5.3740  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2300/3029]  eta: 1:04:37  lr: 0.000010  loss: 2.4277  time: 5.3571  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2350/3029]  eta: 1:00:12  lr: 0.000010  loss: 2.3154  time: 5.3348  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2400/3029]  eta: 0:55:46  lr: 0.000010  loss: 2.1265  time: 5.3370  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2450/3029]  eta: 0:51:20  lr: 0.000010  loss: 1.8453  time: 5.3305  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2500/3029]  eta: 0:46:54  lr: 0.000010  loss: 2.0686  time: 5.3342  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2550/3029]  eta: 0:42:28  lr: 0.000010  loss: 2.1263  time: 5.3581  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2600/3029]  eta: 0:38:02  lr: 0.000010  loss: 2.1667  time: 5.3453  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2650/3029]  eta: 0:33:36  lr: 0.000010  loss: 1.8560  time: 5.3534  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2700/3029]  eta: 0:29:11  lr: 0.000010  loss: 2.2154  time: 5.3642  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2750/3029]  eta: 0:24:45  lr: 0.000010  loss: 1.8405  time: 5.3510  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2800/3029]  eta: 0:20:18  lr: 0.000010  loss: 1.8180  time: 5.3324  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2850/3029]  eta: 0:15:52  lr: 0.000010  loss: 1.7117  time: 5.3453  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2900/3029]  eta: 0:11:26  lr: 0.000010  loss: 1.7916  time: 5.3423  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [2950/3029]  eta: 0:07:00  lr: 0.000010  loss: 2.2535  time: 5.3204  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [3000/3029]  eta: 0:02:34  lr: 0.000010  loss: 2.0504  time: 5.3280  data: 0.0000  max mem: 14563
+Train: data epoch: [0]  [3028/3029]  eta: 0:00:05  lr: 0.000010  loss: 1.9364  time: 5.3216  data: 0.0000  max mem: 14563
+Train: data epoch: [0] Total time: 4:28:46 (5.3242 s / it)
+2023-08-20 13:40:23,078 [INFO] Averaged stats: lr: 0.0000  loss: 2.0570
+2023-08-20 13:40:23,124 [INFO] No validation splits found.
+2023-08-20 13:40:23,182 [INFO] Saving checkpoint at epoch 0 to /public/home/mswanghao/TorchProject/lavis/lavis/output_vqa/BLIP2/DRSL3_0_100/20230820090/checkpoint_0.pth.
+2023-08-20 13:40:28,011 [INFO] Start training
+2023-08-20 13:40:28,104 [INFO] Start training epoch 1, 3029 iters per inner epoch.
+Train: data epoch: [1]  [   0/3029]  eta: 10:10:42  lr: 0.000005  loss: 1.8638  time: 12.0974  data: 0.0001  max mem: 14563
+Train: data epoch: [1]  [  50/3029]  eta: 4:31:36  lr: 0.000005  loss: 1.7820  time: 5.3454  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 100/3029]  eta: 4:23:39  lr: 0.000005  loss: 1.7595  time: 5.3626  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 150/3029]  eta: 4:18:11  lr: 0.000005  loss: 2.4994  time: 5.3195  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 200/3029]  eta: 4:13:26  lr: 0.000005  loss: 2.1282  time: 5.3707  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 250/3029]  eta: 4:08:42  lr: 0.000005  loss: 1.7388  time: 5.3531  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 300/3029]  eta: 4:03:55  lr: 0.000005  loss: 2.0407  time: 5.3406  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 350/3029]  eta: 3:59:15  lr: 0.000005  loss: 1.8927  time: 5.3241  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 400/3029]  eta: 3:54:41  lr: 0.000005  loss: 2.0068  time: 5.3500  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 450/3029]  eta: 3:50:12  lr: 0.000005  loss: 1.7416  time: 5.3467  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 500/3029]  eta: 3:45:42  lr: 0.000005  loss: 2.1570  time: 5.3641  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 550/3029]  eta: 3:41:12  lr: 0.000005  loss: 1.9931  time: 5.3488  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 600/3029]  eta: 3:36:38  lr: 0.000005  loss: 2.2848  time: 5.3206  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 650/3029]  eta: 3:32:09  lr: 0.000005  loss: 1.9437  time: 5.3379  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 700/3029]  eta: 3:27:40  lr: 0.000005  loss: 1.8687  time: 5.3425  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 750/3029]  eta: 3:23:09  lr: 0.000005  loss: 2.2482  time: 5.3238  data: 0.0000  max mem: 14563
+Train: data epoch: [1]  [ 800/3029]  eta: 3:18:42  lr: 0.000005  loss: 1.5125  time: 5.3499  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [ 850/3029]  eta: 3:14:13  lr: 0.000005  loss: 1.6652  time: 5.3494  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [ 900/3029]  eta: 3:09:47  lr: 0.000005  loss: 1.9511  time: 5.3551  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [ 950/3029]  eta: 3:05:19  lr: 0.000005  loss: 1.7495  time: 5.3501  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1000/3029]  eta: 3:00:51  lr: 0.000005  loss: 2.0265  time: 5.3484  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1050/3029]  eta: 2:56:23  lr: 0.000005  loss: 2.0689  time: 5.3359  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1100/3029]  eta: 2:51:57  lr: 0.000005  loss: 1.9177  time: 5.3659  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1150/3029]  eta: 2:47:31  lr: 0.000005  loss: 2.0188  time: 5.3630  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1200/3029]  eta: 2:43:03  lr: 0.000005  loss: 1.7980  time: 5.3608  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1250/3029]  eta: 2:38:34  lr: 0.000005  loss: 1.8551  time: 5.3179  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1300/3029]  eta: 2:34:07  lr: 0.000005  loss: 1.9582  time: 5.3605  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1350/3029]  eta: 2:29:40  lr: 0.000005  loss: 1.6760  time: 5.3376  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1400/3029]  eta: 2:25:12  lr: 0.000005  loss: 1.9582  time: 5.3450  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1450/3029]  eta: 2:20:46  lr: 0.000005  loss: 1.8931  time: 5.3845  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1500/3029]  eta: 2:16:18  lr: 0.000005  loss: 2.2252  time: 5.3617  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1550/3029]  eta: 2:11:50  lr: 0.000005  loss: 1.7300  time: 5.3185  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1600/3029]  eta: 2:07:23  lr: 0.000005  loss: 1.7919  time: 5.3529  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1650/3029]  eta: 2:02:56  lr: 0.000005  loss: 2.0478  time: 5.3761  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1700/3029]  eta: 1:58:28  lr: 0.000005  loss: 1.8678  time: 5.3590  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1750/3029]  eta: 1:54:01  lr: 0.000005  loss: 1.9531  time: 5.3347  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1800/3029]  eta: 1:49:33  lr: 0.000005  loss: 2.0865  time: 5.3378  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1850/3029]  eta: 1:45:06  lr: 0.000005  loss: 2.1251  time: 5.3606  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1900/3029]  eta: 1:40:38  lr: 0.000005  loss: 2.2662  time: 5.3197  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [1950/3029]  eta: 1:36:11  lr: 0.000005  loss: 1.8737  time: 5.3539  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2000/3029]  eta: 1:31:43  lr: 0.000005  loss: 2.0896  time: 5.3361  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2050/3029]  eta: 1:27:15  lr: 0.000005  loss: 1.8095  time: 5.3314  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2100/3029]  eta: 1:22:48  lr: 0.000005  loss: 1.9396  time: 5.3256  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2150/3029]  eta: 1:18:20  lr: 0.000005  loss: 2.0816  time: 5.3550  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2200/3029]  eta: 1:13:53  lr: 0.000005  loss: 1.8028  time: 5.3291  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2250/3029]  eta: 1:09:25  lr: 0.000005  loss: 1.9582  time: 5.3336  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2300/3029]  eta: 1:04:58  lr: 0.000005  loss: 2.1688  time: 5.3483  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2350/3029]  eta: 1:00:30  lr: 0.000005  loss: 1.9617  time: 5.3440  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2400/3029]  eta: 0:56:03  lr: 0.000005  loss: 2.1781  time: 5.3592  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2450/3029]  eta: 0:51:36  lr: 0.000005  loss: 2.0187  time: 5.3600  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2500/3029]  eta: 0:47:08  lr: 0.000005  loss: 2.0114  time: 5.3370  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2550/3029]  eta: 0:42:41  lr: 0.000005  loss: 2.3420  time: 5.3284  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2600/3029]  eta: 0:38:13  lr: 0.000005  loss: 1.9711  time: 5.3635  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2650/3029]  eta: 0:33:46  lr: 0.000005  loss: 1.8760  time: 5.3521  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2700/3029]  eta: 0:29:19  lr: 0.000005  loss: 2.1212  time: 5.3560  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2750/3029]  eta: 0:24:51  lr: 0.000005  loss: 2.4097  time: 5.3567  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2800/3029]  eta: 0:20:24  lr: 0.000005  loss: 1.5622  time: 5.3505  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2850/3029]  eta: 0:15:57  lr: 0.000005  loss: 1.5979  time: 5.3258  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2900/3029]  eta: 0:11:29  lr: 0.000005  loss: 1.9739  time: 5.3500  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [2950/3029]  eta: 0:07:02  lr: 0.000005  loss: 2.2002  time: 5.3271  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [3000/3029]  eta: 0:02:35  lr: 0.000005  loss: 2.0298  time: 5.3490  data: 0.0000  max mem: 14580
+Train: data epoch: [1]  [3028/3029]  eta: 0:00:05  lr: 0.000005  loss: 2.1562  time: 5.3487  data: 0.0000  max mem: 14580
+Train: data epoch: [1] Total time: 4:29:53 (5.3463 s / it)
+2023-08-20 18:10:22,005 [INFO] Averaged stats: lr: 0.0000  loss: 2.0150
+2023-08-20 18:10:22,073 [INFO] No validation splits found.
+2023-08-20 18:10:22,150 [INFO] Saving checkpoint at epoch 1 to /public/home/mswanghao/TorchProject/lavis/lavis/output_vqa/BLIP2/DRSL3_0_100/20230820090/checkpoint_1.pth.
+2023-08-20 18:10:26,264 [INFO] No validation splits found.
+2023-08-20 18:10:26,268 [INFO] Training time 8:59:12

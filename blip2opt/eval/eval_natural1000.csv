@@ -1,0 +1,1001 @@
+model,image,answer
+blip2_pretrained_opt2.7b,cat_0261.jpg,The kitten is looking at the camera.
+blip2_pretrained_opt2.7b,person_0490.jpg,The woman is holding a microphone in front of her face.
+blip2_pretrained_opt2.7b,car_0326.jpg,The blue car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the
+blip2_pretrained_opt2.7b,person_0160.jpg,The man is wearing a red tie.
+blip2_pretrained_opt2.7b,dog_0151.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0026.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0025.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,car_0943.jpg,Audi tt coupe coupe coupe coupe coupe coupe coupe coupe coupe coupe coupe coupe coupe
+blip2_pretrained_opt2.7b,airplane_0313.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,car_0509.jpg,Acura
+blip2_pretrained_opt2.7b,car_0045.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0177.jpg,The man on the left is looking at the man on the right. The man on the right is looking at the man on the left.
+blip2_pretrained_opt2.7b,airplane_0143.jpg,The plane is parked in front of a grassy field.
+blip2_pretrained_opt2.7b,car_0409.jpg,The picture is of a car on display at a car show.
+blip2_pretrained_opt2.7b,dog_0358.jpg,The person is holding the dog.
+blip2_pretrained_opt2.7b,dog_0542.jpg,The dog is black and white.
+blip2_pretrained_opt2.7b,person_0305.jpg,The woman is holding a tennis racquet.
+blip2_pretrained_opt2.7b,fruit_0436.jpg,The picture is of a strawberry.
+blip2_pretrained_opt2.7b,person_0763.jpg,"The man in the photo is wearing a black suit, a white shirt, and a brown tie. He is smiling."
+blip2_pretrained_opt2.7b,car_0262.jpg,Acura
+blip2_pretrained_opt2.7b,person_0526.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,motorbike_0030.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0715.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0950.jpg,The picture is of a car on the road.
+blip2_pretrained_opt2.7b,fruit_0103.jpg,The image is of a potato on top of a toothpick.
+blip2_pretrained_opt2.7b,flower_0810.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,flower_0564.jpg,A hibiscus flower
+blip2_pretrained_opt2.7b,fruit_0140.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,person_0373.jpg,The picture is of a group of people standing in front of a building.
+blip2_pretrained_opt2.7b,airplane_0265.jpg,The picture is of an airplane parked on the tarmac.
+blip2_pretrained_opt2.7b,cat_0751.jpg,The cat is sitting on a shelf.
+blip2_pretrained_opt2.7b,person_0761.jpg,The man is wearing a blue tie.
+blip2_pretrained_opt2.7b,fruit_0568.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,car_0070.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0356.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0658.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0120.jpg,The dog is standing in front of the door.
+blip2_pretrained_opt2.7b,airplane_0654.jpg,The plane is parked on the tarmac.
+blip2_pretrained_opt2.7b,person_0193.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0507.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,car_0686.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0655.jpg,The image is of a field of poppies. The image is of a field of poppies. The image is of a field of
+blip2_pretrained_opt2.7b,cat_0626.jpg,The cat is sitting on the floor.
+blip2_pretrained_opt2.7b,motorbike_0296.jpg,The man is riding a motorcycle.
+blip2_pretrained_opt2.7b,person_0918.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0737.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,airplane_0658.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,dog_0699.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0127.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,flower_0480.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0578.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0214.jpg,The cat is sitting on the person's lap.
+blip2_pretrained_opt2.7b,person_0054.jpg,The man is wearing glasses and a white shirt. He is holding a microphone in his right hand. He is speaking into the microphone.
+blip2_pretrained_opt2.7b,fruit_0905.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,flower_0166.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,fruit_0233.jpg,The ball is yellow and has a hole in the middle.
+blip2_pretrained_opt2.7b,person_0080.jpg,The man is wearing a red jacket.
+blip2_pretrained_opt2.7b,fruit_0955.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,cat_0000.jpg,The cat is sitting in a cage. The cat is looking at the camera. The cat is looking at the camera. The cat is looking at
+blip2_pretrained_opt2.7b,airplane_0622.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0708.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0128.jpg,the woman is smiling
+blip2_pretrained_opt2.7b,car_0298.jpg,The car is parked in front of the house.
+blip2_pretrained_opt2.7b,cat_0664.jpg,The person is holding the cat.
+blip2_pretrained_opt2.7b,cat_0674.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,car_0434.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0770.jpg,Acura
+blip2_pretrained_opt2.7b,cat_0116.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0504.jpg,The picture is of a man holding a dog.
+blip2_pretrained_opt2.7b,motorbike_0245.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0189.jpg,This is a photo of a flower.
+blip2_pretrained_opt2.7b,airplane_0450.jpg,The picture is of an emirates airplane.
+blip2_pretrained_opt2.7b,motorbike_0386.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0364.jpg,This is a picture of a field of poinsettia flowers.
+blip2_pretrained_opt2.7b,car_0921.jpg,The car is parked in a parking lot. The car is parked in a parking lot. The car is parked in a parking lot. The car
+blip2_pretrained_opt2.7b,airplane_0151.jpg,The picture is of a plane on the runway.
+blip2_pretrained_opt2.7b,dog_0449.jpg,"The dog is sitting on the grass, the boy is wearing a blue shirt, the girl is wearing a pink shirt, and the dog has black"
+blip2_pretrained_opt2.7b,fruit_0634.jpg,The picture is of a peach.
+blip2_pretrained_opt2.7b,fruit_0997.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,motorbike_0284.jpg,The picture is of a motorcycle parked in front of a house.
+blip2_pretrained_opt2.7b,flower_0098.jpg,The picture is of a field of pink flowers.
+blip2_pretrained_opt2.7b,motorbike_0637.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,motorbike_0139.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0348.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0583.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,airplane_0517.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,dog_0309.jpg,The dog is being held by a person.
+blip2_pretrained_opt2.7b,airplane_0429.jpg,"The planes are parked on the tarmac, waiting to take off."
+blip2_pretrained_opt2.7b,car_0004.jpg,Acura
+blip2_pretrained_opt2.7b,flower_0086.jpg,This is a picture of a group of sunflowers.
+blip2_pretrained_opt2.7b,person_0171.jpg,The man is wearing a blue shirt.
+blip2_pretrained_opt2.7b,car_0660.jpg,Aston Martin DB11
+blip2_pretrained_opt2.7b,dog_0175.jpg,The person is holding the dog by the scruff of the neck.
+blip2_pretrained_opt2.7b,airplane_0320.jpg,The picture is of an airplane on the runway.
+blip2_pretrained_opt2.7b,airplane_0098.jpg,The picture is of an airplane parked on the tarmac.
+blip2_pretrained_opt2.7b,airplane_0539.jpg,The picture is of a british airways airplane parked on the tarmac.
+blip2_pretrained_opt2.7b,flower_0063.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,airplane_0134.jpg,"The plane is on the ground, the grass is green, and the sky is blue."
+blip2_pretrained_opt2.7b,flower_0689.jpg,"The picture is of a group of red, white, and pink flowers."
+blip2_pretrained_opt2.7b,motorbike_0457.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0897.jpg,The picture is of a fish.
+blip2_pretrained_opt2.7b,car_0789.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0677.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0004.jpg,The man has a beard.
+blip2_pretrained_opt2.7b,fruit_0557.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,motorbike_0531.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0280.jpg,The dog is standing in front of the gate.
+blip2_pretrained_opt2.7b,flower_0635.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,car_0881.jpg,2007 audi a5 2.0t coupe coupe coupe coupe coupe coupe coupe coupe coupe coupe cou
+blip2_pretrained_opt2.7b,motorbike_0078.jpg,The picture shows a motorcycle parked in front of a wall.
+blip2_pretrained_opt2.7b,motorbike_0634.jpg,The picture is of a motorcycle.
+blip2_pretrained_opt2.7b,airplane_0300.jpg,The picture is of an airplane parked on the tarmac.
+blip2_pretrained_opt2.7b,flower_0560.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,dog_0061.jpg,The dog is sitting in the grass.
+blip2_pretrained_opt2.7b,person_0116.jpg,the man is wearing glasses and has a mustache
+blip2_pretrained_opt2.7b,fruit_0193.jpg,The image is of a strawberry.
+blip2_pretrained_opt2.7b,fruit_0474.jpg,The chocolate ball is brown and has a small hole in the center.
+blip2_pretrained_opt2.7b,car_0511.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0336.jpg,The man has a mustache and is wearing glasses. The man has a mustache and is wearing glasses. The man has a mustache and is wearing glasses
+blip2_pretrained_opt2.7b,airplane_0388.jpg,The picture is of an airplane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,motorbike_0178.jpg,The picture is of a motorcycle parked in a field.
+blip2_pretrained_opt2.7b,motorbike_0620.jpg,The picture is of a motorcycle parked in front of a building.
+blip2_pretrained_opt2.7b,flower_0752.jpg,The picture is of a zinnia flower.
+blip2_pretrained_opt2.7b,cat_0848.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0564.jpg,The dog is wearing a red shirt.
+blip2_pretrained_opt2.7b,airplane_0718.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,cat_0340.jpg,The cat is in the man's hand.
+blip2_pretrained_opt2.7b,cat_0602.jpg,The cat is standing in front of the blue bowl.
+blip2_pretrained_opt2.7b,motorbike_0638.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0476.jpg,The dog is wearing a red collar.
+blip2_pretrained_opt2.7b,car_0430.jpg,The picture is of the front of the car.
+blip2_pretrained_opt2.7b,motorbike_0599.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0579.jpg,The dog is brown and white.
+blip2_pretrained_opt2.7b,flower_0463.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0636.jpg,The man is riding a motorcycle.
+blip2_pretrained_opt2.7b,airplane_0232.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0368.jpg,The woman is wearing a blue tank top and black shorts. She is looking at the ground with her eyes closed.
+blip2_pretrained_opt2.7b,flower_0614.jpg,"The sky is blue, the grass is green, and the daisies are white."
+blip2_pretrained_opt2.7b,flower_0427.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,cat_0287.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,flower_0068.jpg,The image is of a hibiscus flower.
+blip2_pretrained_opt2.7b,motorbike_0156.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0639.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0033.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,dog_0640.jpg,The dog is standing in the snow.
+blip2_pretrained_opt2.7b,motorbike_0113.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0657.jpg,The picture is of a korean airplane.
+blip2_pretrained_opt2.7b,motorbike_0032.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0081.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0150.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,person_0294.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0953.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,airplane_0545.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0707.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,person_0791.jpg,An old man in a suit and tie sitting in front of a microphone
+blip2_pretrained_opt2.7b,cat_0429.jpg,The cat is sitting on top of the box.
+blip2_pretrained_opt2.7b,motorbike_0283.jpg,The picture is of a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0318.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,car_0678.jpg,Aston Martin
+blip2_pretrained_opt2.7b,person_0247.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,person_0889.jpg,The woman has brown hair and the man has black hair.
+blip2_pretrained_opt2.7b,car_0232.jpg,The Acura is parked in front of the Acura dealership. The Acura is parked in front of the Acura dealership. The Acura
+blip2_pretrained_opt2.7b,dog_0073.jpg,The dog is standing in front of a fence.
+blip2_pretrained_opt2.7b,person_0972.jpg,the man is smiling
+blip2_pretrained_opt2.7b,flower_0119.jpg,A red rose
+blip2_pretrained_opt2.7b,car_0020.jpg,The Acura is parked in front of a building.
+blip2_pretrained_opt2.7b,flower_0643.jpg,Red and white camellia
+blip2_pretrained_opt2.7b,flower_0092.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,person_0758.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,cat_0760.jpg,The picture is of a cat sitting on a blanket.
+blip2_pretrained_opt2.7b,airplane_0427.jpg,The picture is of an airplane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,flower_0125.jpg,The grass is green and the flowers are red.
+blip2_pretrained_opt2.7b,person_0014.jpg,the man is wearing sunglasses
+blip2_pretrained_opt2.7b,person_0020.jpg,The man is holding a microphone in front of his mouth.
+blip2_pretrained_opt2.7b,airplane_0145.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,airplane_0110.jpg,The picture is of an airplane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,airplane_0379.jpg,The picture is of an airplane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,car_0854.jpg,The audi car is driving on the road.
+blip2_pretrained_opt2.7b,fruit_0272.jpg,The ball is yellow.
+blip2_pretrained_opt2.7b,person_0981.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,fruit_0205.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,person_0254.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,fruit_0636.jpg,The picture is of a red fruit.
+blip2_pretrained_opt2.7b,flower_0014.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,car_0223.jpg,Acura
+blip2_pretrained_opt2.7b,cat_0279.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0459.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,car_0819.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,flower_0687.jpg,The flower is yellow and has brown spots on the petals.
+blip2_pretrained_opt2.7b,airplane_0199.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,car_0080.jpg,Acura
+blip2_pretrained_opt2.7b,cat_0422.jpg,The woman is holding the cat.
+blip2_pretrained_opt2.7b,cat_0801.jpg,The cat is sitting in front of a desk.
+blip2_pretrained_opt2.7b,person_0637.jpg,the woman is smiling
+blip2_pretrained_opt2.7b,person_0672.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,fruit_0612.jpg,The picture is of a potato.
+blip2_pretrained_opt2.7b,cat_0111.jpg,The cat is sitting on a towel.
+blip2_pretrained_opt2.7b,cat_0628.jpg,The cat is standing in front of the bowl.
+blip2_pretrained_opt2.7b,motorbike_0317.jpg,"The bike is red, white, and black."
+blip2_pretrained_opt2.7b,fruit_0902.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,flower_0510.jpg,The picture is of a bird of paradise flower.
+blip2_pretrained_opt2.7b,motorbike_0102.jpg,The picture is of a motorcycle parked in front of a building.
+blip2_pretrained_opt2.7b,cat_0286.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0478.jpg,The cat is looking to the left.
+blip2_pretrained_opt2.7b,dog_0620.jpg,The dog is standing in front of the man.
+blip2_pretrained_opt2.7b,cat_0288.jpg,The cat is sitting in a cage.
+blip2_pretrained_opt2.7b,airplane_0695.jpg,The picture is of a plane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,motorbike_0362.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,dog_0636.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,car_0364.jpg,The car is yellow.
+blip2_pretrained_opt2.7b,dog_0364.jpg,The picture is of a group of puppies.
+blip2_pretrained_opt2.7b,fruit_0056.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,fruit_0051.jpg,The fruit is yellow and has a brown spot on it.
+blip2_pretrained_opt2.7b,cat_0063.jpg,The cat is sitting in a cage.
+blip2_pretrained_opt2.7b,cat_0167.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0550.jpg,The picture is of a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,dog_0160.jpg,The dog is looking at the camera. The dog's eyes are brown. The dog's ears are brown. The dog's nose is black.
+blip2_pretrained_opt2.7b,motorbike_0376.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0948.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,motorbike_0355.jpg,This is a picture of a motorcycle parked in a garage.
+blip2_pretrained_opt2.7b,car_0513.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0053.jpg,The woman is holding the dog.
+blip2_pretrained_opt2.7b,car_0210.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0452.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,motorbike_0418.jpg,The yellow dirt bike is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0423.jpg,The girl is looking to the left.
+blip2_pretrained_opt2.7b,person_0453.jpg,The woman is holding a tennis racquet.
+blip2_pretrained_opt2.7b,fruit_0839.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,fruit_0993.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,cat_0343.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,flower_0110.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0276.jpg,The picture is of a motorcycle parked in front of a grassy field.
+blip2_pretrained_opt2.7b,person_0383.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,motorbike_0103.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0835.jpg,The image is of an apple.
+blip2_pretrained_opt2.7b,dog_0443.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0136.jpg,The woman is holding the dog.
+blip2_pretrained_opt2.7b,dog_0586.jpg,The dog is in a dog kennel.
+blip2_pretrained_opt2.7b,airplane_0123.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0622.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0050.jpg,The man is holding a black and white dog.
+blip2_pretrained_opt2.7b,flower_0549.jpg,The picture is of a group of pink flowers.
+blip2_pretrained_opt2.7b,car_0907.jpg,Audi A5 2 0 tdi quattro 2dr coupe 2dr coupe 2dr coupe 2dr coupe 2dr cou
+blip2_pretrained_opt2.7b,car_0388.jpg,Acura
+blip2_pretrained_opt2.7b,dog_0697.jpg,The dog is lying on the floor.
+blip2_pretrained_opt2.7b,fruit_0919.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,fruit_0470.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,person_0680.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,dog_0152.jpg,The dog is brown and white.
+blip2_pretrained_opt2.7b,fruit_0951.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,car_0043.jpg,Acura
+blip2_pretrained_opt2.7b,cat_0341.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,person_0049.jpg,The man on the left is wearing a blue shirt. The man on the right is wearing a black shirt. The man in the middle is wearing
+blip2_pretrained_opt2.7b,flower_0722.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,car_0016.jpg,The picture is of a car parked in a parking lot.
+blip2_pretrained_opt2.7b,motorbike_0024.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,airplane_0104.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,car_0105.jpg,The car is driving down the road.
+blip2_pretrained_opt2.7b,motorbike_0011.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0288.jpg,The dog is sitting on the floor.
+blip2_pretrained_opt2.7b,person_0410.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,car_0145.jpg,The Acura is parked in the showroom.
+blip2_pretrained_opt2.7b,flower_0011.jpg,The picture is of a coneflower.
+blip2_pretrained_opt2.7b,person_0683.jpg,The man is holding a microphone in his right hand. The man is wearing a black shirt. The man is holding a microphone in his right hand
+blip2_pretrained_opt2.7b,flower_0559.jpg,The girl is standing in front of a field of tulips.
+blip2_pretrained_opt2.7b,cat_0511.jpg,The woman is holding the cat.
+blip2_pretrained_opt2.7b,airplane_0141.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0492.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0381.jpg,The dog is black and white.
+blip2_pretrained_opt2.7b,car_0277.jpg,This is a picture of a vehicle parked in front of a building.
+blip2_pretrained_opt2.7b,airplane_0318.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,car_0845.jpg,The car is parked in front of the car in front of the car in front of the car in front of the car in front of the car
+blip2_pretrained_opt2.7b,flower_0511.jpg,This is a picture of a flower.
+blip2_pretrained_opt2.7b,person_0610.jpg,the woman is smiling
+blip2_pretrained_opt2.7b,flower_0465.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,person_0586.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,motorbike_0687.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0629.jpg,The kitten is white and black.
+blip2_pretrained_opt2.7b,car_0889.jpg,The red car is parked in front of the building.
+blip2_pretrained_opt2.7b,fruit_0442.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,dog_0362.jpg,The dog is black and white.
+blip2_pretrained_opt2.7b,cat_0688.jpg,The woman is holding the cat by the scruff of its neck.
+blip2_pretrained_opt2.7b,cat_0572.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0074.jpg,The cat is sitting on the floor.
+blip2_pretrained_opt2.7b,fruit_0791.jpg,The picture is of a mango.
+blip2_pretrained_opt2.7b,dog_0245.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0282.jpg,The dog is standing in front of the wall.
+blip2_pretrained_opt2.7b,fruit_0053.jpg,The picture is of a potato.
+blip2_pretrained_opt2.7b,airplane_0568.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,dog_0295.jpg,The dog is sitting on the floor.
+blip2_pretrained_opt2.7b,person_0485.jpg,The woman is holding a microphone in front of her face.
+blip2_pretrained_opt2.7b,dog_0037.jpg,The dog is sitting on the grass.
+blip2_pretrained_opt2.7b,dog_0526.jpg,The man is holding the dog.
+blip2_pretrained_opt2.7b,fruit_0388.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,person_0395.jpg,The man is speaking into a microphone.
+blip2_pretrained_opt2.7b,cat_0419.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,flower_0555.jpg,The picture is of a white flower with a yellow center.
+blip2_pretrained_opt2.7b,person_0477.jpg,The woman has a gold medal around her neck.
+blip2_pretrained_opt2.7b,fruit_0180.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,motorbike_0242.jpg,The picture is of a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0020.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0501.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,person_0797.jpg,The man in the blue shirt is looking at the camera. The man in the brown shirt is looking at the camera. The man in the black
+blip2_pretrained_opt2.7b,car_0577.jpg,aston martin
+blip2_pretrained_opt2.7b,flower_0286.jpg,The picture is of a yellow tulip.
+blip2_pretrained_opt2.7b,flower_0784.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,person_0326.jpg,The man is sitting in front of a microphone.
+blip2_pretrained_opt2.7b,cat_0183.jpg,The cat is in a blue container.
+blip2_pretrained_opt2.7b,person_0721.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,cat_0179.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,motorbike_0733.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,cat_0579.jpg,The picture is of a kitten.
+blip2_pretrained_opt2.7b,cat_0568.jpg,The cat is looking straight at the camera. The cat is looking at the camera. The cat is looking at the camera. The cat is looking
+blip2_pretrained_opt2.7b,person_0134.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,motorbike_0397.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0632.jpg,The man is wearing sunglasses.
+blip2_pretrained_opt2.7b,person_0865.jpg,The man is looking at the camera with a smile on his face.
+blip2_pretrained_opt2.7b,dog_0067.jpg,The dog is looking at the ball.
+blip2_pretrained_opt2.7b,flower_0091.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,dog_0123.jpg,The woman is holding the dog by the scruff of the neck.
+blip2_pretrained_opt2.7b,flower_0394.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,car_0309.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0042.jpg,The cat is white and has brown eyes.
+blip2_pretrained_opt2.7b,person_0663.jpg,The girl in the yellow shirt is looking at the girl in the red shirt. The girl in the red shirt is looking at the girl in the
+blip2_pretrained_opt2.7b,flower_0516.jpg,The picture is of a vase of daffodils.
+blip2_pretrained_opt2.7b,fruit_0074.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,person_0109.jpg,The man in the photo is wearing a black jacket and a tie. He is speaking into microphones.
+blip2_pretrained_opt2.7b,motorbike_0421.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0757.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0293.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0531.jpg,The picture shows an apple.
+blip2_pretrained_opt2.7b,fruit_0909.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,cat_0416.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,car_0602.jpg,The Aston Martin is parked on the side of the road. The Aston Martin is parked on the side of the road. The Aston Martin is parked
+blip2_pretrained_opt2.7b,airplane_0215.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,car_0133.jpg,2007 mazda mx-5
+blip2_pretrained_opt2.7b,motorbike_0095.jpg,The man is sitting on a purple motorcycle.
+blip2_pretrained_opt2.7b,fruit_0039.jpg,The picture shows a lemon.
+blip2_pretrained_opt2.7b,airplane_0044.jpg,The plane is parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0197.jpg,The motorcycle is parked in the parking lot.
+blip2_pretrained_opt2.7b,fruit_0243.jpg,The image is of a cake.
+blip2_pretrained_opt2.7b,fruit_0309.jpg,The picture is of a red apple.
+blip2_pretrained_opt2.7b,fruit_0083.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,airplane_0040.jpg,The picture is of a plane in the air.
+blip2_pretrained_opt2.7b,motorbike_0781.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0002.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0474.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,motorbike_0615.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0176.jpg,The picture is of two jets flying over a mountain range.
+blip2_pretrained_opt2.7b,flower_0533.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,car_0957.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0087.jpg,The image is of a heart shaped raspberries.
+blip2_pretrained_opt2.7b,fruit_0081.jpg,The picture is of a blueberry.
+blip2_pretrained_opt2.7b,person_0783.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0714.jpg,The picture is of a green apple.
+blip2_pretrained_opt2.7b,cat_0776.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0680.jpg,The image is of a potato.
+blip2_pretrained_opt2.7b,cat_0510.jpg,The cat is sitting in the cat litter box.
+blip2_pretrained_opt2.7b,fruit_0449.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,airplane_0036.jpg,The planes are in the air. The planes are in the air. The planes are in the air. The planes are in the air. The
+blip2_pretrained_opt2.7b,fruit_0195.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,dog_0365.jpg,The dog is sitting on the ground. The dog is black and white. The dog is sitting on the ground. The dog is sitting on the
+blip2_pretrained_opt2.7b,person_0335.jpg,The man is holding a microphone in front of his face.
+blip2_pretrained_opt2.7b,car_0480.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0915.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,airplane_0659.jpg,The picture is of a plane on the runway.
+blip2_pretrained_opt2.7b,flower_0694.jpg,The flower is pink and has white petals.
+blip2_pretrained_opt2.7b,car_0726.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,motorbike_0686.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0489.jpg,The man is driving the car.
+blip2_pretrained_opt2.7b,fruit_0806.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,cat_0166.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0462.jpg,The fruit is green.
+blip2_pretrained_opt2.7b,airplane_0217.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,airplane_0575.jpg,The picture is of a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,airplane_0504.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0087.jpg,The picture shows a motorcycle parked on the side of the road. It is parked on the side of the road because it has a flat tire.
+blip2_pretrained_opt2.7b,fruit_0178.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,car_0615.jpg,The blue car is the aston martin vantage coupe
+blip2_pretrained_opt2.7b,flower_0692.jpg,The picture shows a flower bed in the garden of a house in the netherlands. The flower bed is full of purple hyacinths
+blip2_pretrained_opt2.7b,motorbike_0368.jpg,Ducati Multistrada 1200
+blip2_pretrained_opt2.7b,dog_0109.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,person_0459.jpg,The woman is holding a tennis racket.
+blip2_pretrained_opt2.7b,fruit_0186.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,airplane_0256.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,cat_0528.jpg,The cat is sitting on the floor.
+blip2_pretrained_opt2.7b,car_0000.jpg,The car is parked in front of the house.
+blip2_pretrained_opt2.7b,airplane_0642.jpg,The picture is of a mexican airplane with the word mexico written on it.
+blip2_pretrained_opt2.7b,dog_0417.jpg,The girl is holding the dog by the collar.
+blip2_pretrained_opt2.7b,motorbike_0737.jpg,The man is sitting on the motorcycle.
+blip2_pretrained_opt2.7b,dog_0040.jpg,The dog is standing in front of a chain link fence.
+blip2_pretrained_opt2.7b,car_0890.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,fruit_0999.jpg,The fruit is a pear.
+blip2_pretrained_opt2.7b,motorbike_0209.jpg,The bike is parked in front of a garage.
+blip2_pretrained_opt2.7b,motorbike_0147.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0713.jpg,The man is holding a cell phone.
+blip2_pretrained_opt2.7b,dog_0304.jpg,The dog is sitting in the grass.
+blip2_pretrained_opt2.7b,motorbike_0707.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0887.jpg,The audi car is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0104.jpg,The image is of a chocolate ball.
+blip2_pretrained_opt2.7b,motorbike_0564.jpg,The picture is of a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0908.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,fruit_0405.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,person_0557.jpg,The image is of a group of boys playing a game of soccer.
+blip2_pretrained_opt2.7b,dog_0503.jpg,The dog is looking at the dog on the left. The dog on the right is looking at the dog on the left. The dog on the
+blip2_pretrained_opt2.7b,person_0117.jpg,"The man is wearing a brown jacket, a white shirt, and a blue tie."
+blip2_pretrained_opt2.7b,motorbike_0497.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0947.jpg,The picture is of an avocado.
+blip2_pretrained_opt2.7b,airplane_0071.jpg,The picture is of a plane on the runway.
+blip2_pretrained_opt2.7b,fruit_0337.jpg,The raspberries are purple.
+blip2_pretrained_opt2.7b,fruit_0416.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,motorbike_0388.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0624.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,person_0515.jpg,The man is holding a tennis racquet.
+blip2_pretrained_opt2.7b,dog_0516.jpg,The person is holding the dog.
+blip2_pretrained_opt2.7b,cat_0743.jpg,The cat is lying on the newspaper.
+blip2_pretrained_opt2.7b,car_0680.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,airplane_0287.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,fruit_0473.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,flower_0211.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,dog_0237.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,car_0639.jpg,The man is sitting in the front seat of the car.
+blip2_pretrained_opt2.7b,flower_0492.jpg,The picture is of a lotus flower.
+blip2_pretrained_opt2.7b,fruit_0596.jpg,The picture is of a potato.
+blip2_pretrained_opt2.7b,fruit_0829.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,fruit_0085.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,flower_0109.jpg,The picture is of a clock.
+blip2_pretrained_opt2.7b,person_0391.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,fruit_0350.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,dog_0450.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,flower_0032.jpg,This is a picture of a flower.
+blip2_pretrained_opt2.7b,fruit_0757.jpg,The picture is of a tomato.
+blip2_pretrained_opt2.7b,dog_0599.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0660.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,fruit_0964.jpg,The picture is of an avocado.
+blip2_pretrained_opt2.7b,car_0212.jpg,The Acura is driving on the left side of the road.
+blip2_pretrained_opt2.7b,person_0825.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0720.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0950.jpg,The man on the left is looking at the man on the right. The man on the right is looking at the man on the left.
+blip2_pretrained_opt2.7b,flower_0313.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,fruit_0710.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,dog_0572.jpg,The dog is standing on the sidewalk.
+blip2_pretrained_opt2.7b,flower_0282.jpg,The white flowers are in bloom. The green leaves are on the plant. The white flowers are in bloom. The green leaves are on the plant
+blip2_pretrained_opt2.7b,fruit_0617.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,cat_0725.jpg,The woman is holding the cat.
+blip2_pretrained_opt2.7b,fruit_0671.jpg,A pine cone.
+blip2_pretrained_opt2.7b,motorbike_0136.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0310.jpg,The picture is of a potato.
+blip2_pretrained_opt2.7b,cat_0822.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0436.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,motorbike_0343.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0466.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0469.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,person_0201.jpg,The man on the left is wearing a st louis cardinals hat. The man on the right is wearing a st louis cardinals hat
+blip2_pretrained_opt2.7b,car_0755.jpg,The car is driving on the road.
+blip2_pretrained_opt2.7b,flower_0514.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,cat_0856.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0269.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,dog_0010.jpg,The dog is sitting on the floor.
+blip2_pretrained_opt2.7b,cat_0494.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,car_0065.jpg,The Acura is parked in front of a building.
+blip2_pretrained_opt2.7b,flower_0715.jpg,The picture is of a field of yellow tulips.
+blip2_pretrained_opt2.7b,flower_0587.jpg,The picture is of a vase with a rose in it. The vase is on a table. There is a candle on the table.
+blip2_pretrained_opt2.7b,cat_0713.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0631.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0367.jpg,The dog is sitting in the grass.
+blip2_pretrained_opt2.7b,flower_0605.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,flower_0513.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0228.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0203.jpg,The picture is of an airplane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,person_0042.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,person_0686.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,car_0240.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0158.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0712.jpg,The picture is of a dragon fruit.
+blip2_pretrained_opt2.7b,person_0245.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0821.jpg,The fruit is a pear.
+blip2_pretrained_opt2.7b,cat_0639.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0127.jpg,The dog is sitting on the floor.
+blip2_pretrained_opt2.7b,fruit_0629.jpg,The picture is of a kiwi.
+blip2_pretrained_opt2.7b,flower_0073.jpg,This is a picture of a flower.
+blip2_pretrained_opt2.7b,fruit_0793.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,person_0351.jpg,The man is wearing a white shirt
+blip2_pretrained_opt2.7b,cat_0145.jpg,The cat is sitting in a cage.
+blip2_pretrained_opt2.7b,cat_0477.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,flower_0101.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0302.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,fruit_0772.jpg,The picture is of a potato.
+blip2_pretrained_opt2.7b,motorbike_0590.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,flower_0607.jpg,"Red, white, and blue."
+blip2_pretrained_opt2.7b,motorbike_0726.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0793.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,car_0544.jpg,Aston Martin Rapide
+blip2_pretrained_opt2.7b,cat_0465.jpg,The cat is looking directly at the camera.
+blip2_pretrained_opt2.7b,dog_0235.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0600.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,fruit_0169.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,airplane_0072.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,car_0293.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,airplane_0234.jpg,The picture is of two airplanes.
+blip2_pretrained_opt2.7b,fruit_0364.jpg,The picture is of a fruit. The fruit is yellow. The top of the fruit is brown. The bottom of the fruit is brown. The
+blip2_pretrained_opt2.7b,fruit_0078.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,motorbike_0411.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,fruit_0830.jpg,The picture is of a ball of chocolate.
+blip2_pretrained_opt2.7b,airplane_0489.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0846.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,car_0888.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0818.jpg,The picture is of a rhododendron flower.
+blip2_pretrained_opt2.7b,fruit_0532.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,cat_0638.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0180.jpg,The dog is standing in front of the man's desk.
+blip2_pretrained_opt2.7b,dog_0541.jpg,The dog on the left has blue eyes. The dog on the right has brown eyes.
+blip2_pretrained_opt2.7b,flower_0702.jpg,The image is of a green plant with yellow and white flowers.
+blip2_pretrained_opt2.7b,cat_0464.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,motorbike_0238.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0047.jpg,The cat is sitting on the person's lap.
+blip2_pretrained_opt2.7b,fruit_0842.jpg,An apple.
+blip2_pretrained_opt2.7b,person_0904.jpg,The man is holding a microphone in front of his face.
+blip2_pretrained_opt2.7b,fruit_0631.jpg,The picture is of a plum.
+blip2_pretrained_opt2.7b,person_0315.jpg,The man has a mustache.
+blip2_pretrained_opt2.7b,dog_0027.jpg,The boy is holding the dog.
+blip2_pretrained_opt2.7b,dog_0634.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,motorbike_0056.jpg,The motorcycle is parked on the side of the road. The motorcycle is blue and white. The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0556.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,airplane_0160.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0118.jpg,The picture is of a motorcycle parked in front of a building.
+blip2_pretrained_opt2.7b,person_0894.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,cat_0392.jpg,The cat is sitting in front of the food bowl.
+blip2_pretrained_opt2.7b,motorbike_0111.jpg,The dirt bike is parked on the side of the road. The dirt bike is parked on the side of the road. The dirt bike is parked
+blip2_pretrained_opt2.7b,motorbike_0135.jpg,The dirt bike is parked on the side of the road. The dirt bike is parked on the side of the road. The dirt bike is parked
+blip2_pretrained_opt2.7b,person_0260.jpg,The woman is wearing a red scarf.
+blip2_pretrained_opt2.7b,car_0756.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0563.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,person_0649.jpg,The woman is holding a tennis racquet.
+blip2_pretrained_opt2.7b,car_0825.jpg,The cars are parked in a parking lot.
+blip2_pretrained_opt2.7b,dog_0268.jpg,The dog is standing in front of a door.
+blip2_pretrained_opt2.7b,dog_0227.jpg,"The dog is brown, black, and white."
+blip2_pretrained_opt2.7b,flower_0136.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,cat_0783.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,dog_0341.jpg,The dog is black.
+blip2_pretrained_opt2.7b,car_0228.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0828.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,dog_0587.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,fruit_0007.jpg,This is a ball of green grapes.
+blip2_pretrained_opt2.7b,person_0457.jpg,The woman is looking at the tennis ball.
+blip2_pretrained_opt2.7b,car_0274.jpg,The car is driving on the road.
+blip2_pretrained_opt2.7b,flower_0285.jpg,This is a picture of a flower.
+blip2_pretrained_opt2.7b,person_0238.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,fruit_0503.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,cat_0002.jpg,The cat on the left is looking at the camera. The cat on the right is looking at the camera. The cat on the left is looking
+blip2_pretrained_opt2.7b,cat_0728.jpg,The cat is lying on the floor.
+blip2_pretrained_opt2.7b,dog_0428.jpg,The dog is sitting on the ground.
+blip2_pretrained_opt2.7b,car_0501.jpg,The car is green.
+blip2_pretrained_opt2.7b,motorbike_0332.jpg,The bike is parked in front of a wall.
+blip2_pretrained_opt2.7b,cat_0177.jpg,The cat is in the cat tree.
+blip2_pretrained_opt2.7b,car_0436.jpg,The car is covered in snow.
+blip2_pretrained_opt2.7b,motorbike_0162.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0137.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0412.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,flower_0057.jpg,the red flowers are in the foreground and the green leaves are in the background
+blip2_pretrained_opt2.7b,flower_0416.jpg,The picture is of a vase of orchids.
+blip2_pretrained_opt2.7b,person_0413.jpg,The man is speaking into a microphone.
+blip2_pretrained_opt2.7b,car_0492.jpg,Aston Martin DB11
+blip2_pretrained_opt2.7b,cat_0339.jpg,The cat is white.
+blip2_pretrained_opt2.7b,fruit_0698.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,fruit_0489.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,person_0467.jpg,a man with glasses and a beard
+blip2_pretrained_opt2.7b,motorbike_0754.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0164.jpg,The dog is standing on the ground.
+blip2_pretrained_opt2.7b,fruit_0273.jpg,The picture is of an egg.
+blip2_pretrained_opt2.7b,airplane_0349.jpg,The picture is of a plane on the ground.
+blip2_pretrained_opt2.7b,person_0297.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0687.jpg,The woman is holding the dog.
+blip2_pretrained_opt2.7b,dog_0197.jpg,The dog is sitting on the ground.
+blip2_pretrained_opt2.7b,cat_0616.jpg,The woman is holding the cat.
+blip2_pretrained_opt2.7b,person_0617.jpg,Angela Merkel
+blip2_pretrained_opt2.7b,person_0611.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,airplane_0092.jpg,The picture is of a plane with the word india written on it.
+blip2_pretrained_opt2.7b,car_0044.jpg,Hummer
+blip2_pretrained_opt2.7b,cat_0765.jpg,The cat is standing on the cat tree.
+blip2_pretrained_opt2.7b,person_0186.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,car_0912.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0522.jpg,The motorcycle is parked in front of a wall.
+blip2_pretrained_opt2.7b,motorbike_0699.jpg,The picture is of a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0091.jpg,The cat is sitting on a chair.
+blip2_pretrained_opt2.7b,car_0836.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0893.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,motorbike_0667.jpg,"The motorcycle is red, white, and black."
+blip2_pretrained_opt2.7b,dog_0384.jpg,The dog is standing on its hind legs.
+blip2_pretrained_opt2.7b,car_0424.jpg,The car is driving down the road.
+blip2_pretrained_opt2.7b,fruit_0697.jpg,The picture shows a ball of kiwi fruit.
+blip2_pretrained_opt2.7b,car_0415.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,car_0952.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0224.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,motorbike_0585.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0928.jpg,The picture is of a peach.
+blip2_pretrained_opt2.7b,dog_0464.jpg,The dog is looking up.
+blip2_pretrained_opt2.7b,person_0628.jpg,The woman is wearing sunglasses. The woman is wearing a grey shirt. The woman has brown hair. The woman has brown eyes. The woman has
+blip2_pretrained_opt2.7b,airplane_0181.jpg,The picture is of a plane in the air.
+blip2_pretrained_opt2.7b,cat_0345.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,airplane_0484.jpg,The picture is of a plane on the runway.
+blip2_pretrained_opt2.7b,dog_0101.jpg,The man is standing in front of the dog.
+blip2_pretrained_opt2.7b,cat_0482.jpg,The cat is sitting on a chair.
+blip2_pretrained_opt2.7b,airplane_0632.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,fruit_0276.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,motorbike_0460.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,flower_0277.jpg,The picture is of a hibiscus flower.
+blip2_pretrained_opt2.7b,person_0716.jpg,The man is holding a wine glass.
+blip2_pretrained_opt2.7b,fruit_0783.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,cat_0462.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0518.jpg,The cat is lying on the couch.
+blip2_pretrained_opt2.7b,car_0739.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,cat_0794.jpg,The kitten is sitting in the cat bed.
+blip2_pretrained_opt2.7b,fruit_0866.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,flower_0443.jpg,The image is of a thistle.
+blip2_pretrained_opt2.7b,airplane_0522.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0393.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0245.jpg,The plane is parked on the runway.
+blip2_pretrained_opt2.7b,car_0085.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,flower_0094.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,car_0530.jpg,aston martin vanquish
+blip2_pretrained_opt2.7b,dog_0161.jpg,The person is holding the dog by the scruff of the neck.
+blip2_pretrained_opt2.7b,cat_0121.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,cat_0752.jpg,The kitten is standing on the edge of the bed.
+blip2_pretrained_opt2.7b,car_0699.jpg,The car is orange.
+blip2_pretrained_opt2.7b,person_0378.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,person_0934.jpg,the man is smiling
+blip2_pretrained_opt2.7b,fruit_0858.jpg,Pineapple
+blip2_pretrained_opt2.7b,person_0227.jpg,The man is holding a microphone.
+blip2_pretrained_opt2.7b,car_0300.jpg,The car is parked in a parking lot.
+blip2_pretrained_opt2.7b,flower_0546.jpg,"The grass is green, the flowers are red, and the sky is blue."
+blip2_pretrained_opt2.7b,flower_0732.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,person_0757.jpg,The man is sitting in the israeli parliament. He is wearing a black suit and a blue tie. He is looking at the camera.
+blip2_pretrained_opt2.7b,person_0058.jpg,The boy is smiling and holding a medal.
+blip2_pretrained_opt2.7b,car_0191.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0267.jpg,The cat is sitting on the floor.
+blip2_pretrained_opt2.7b,fruit_0763.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,fruit_0026.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,dog_0033.jpg,The dog is black and white.
+blip2_pretrained_opt2.7b,flower_0486.jpg,The flower is white and has a yellow center.
+blip2_pretrained_opt2.7b,flower_0079.jpg,The picture is of yellow flowers.
+blip2_pretrained_opt2.7b,airplane_0641.jpg,The picture is of a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,flower_0226.jpg,The picture is of a red rose.
+blip2_pretrained_opt2.7b,cat_0049.jpg,The cat is sitting on the floor.
+blip2_pretrained_opt2.7b,car_0186.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,car_0150.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0118.jpg,The dog is sitting on the couch.
+blip2_pretrained_opt2.7b,cat_0217.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,fruit_0457.jpg,The picture is of a tomato.
+blip2_pretrained_opt2.7b,motorbike_0542.jpg,green kawasaki dirt bike
+blip2_pretrained_opt2.7b,dog_0432.jpg,The dog is black and white.
+blip2_pretrained_opt2.7b,motorbike_0295.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0822.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,cat_0444.jpg,The cat is sitting on the table.
+blip2_pretrained_opt2.7b,person_0760.jpg,The man is looking at the camera with a smile on his face. The girl is looking at the camera with a smile on her face.
+blip2_pretrained_opt2.7b,airplane_0214.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0843.jpg,The man in the photo is wearing a white jacket and a blue shirt.
+blip2_pretrained_opt2.7b,car_0200.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0041.jpg,The picture is of a blueberry.
+blip2_pretrained_opt2.7b,fruit_0030.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,person_0125.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0276.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,airplane_0602.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,flower_0441.jpg,The image is of a tree with yellow and purple flowers.
+blip2_pretrained_opt2.7b,fruit_0227.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,fruit_0444.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,cat_0874.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,person_0753.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,car_0765.jpg,The car is driving on the road.
+blip2_pretrained_opt2.7b,car_0709.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,person_0943.jpg,the man is wearing a red shirt
+blip2_pretrained_opt2.7b,dog_0506.jpg,The dog is lying on the couch.
+blip2_pretrained_opt2.7b,person_0091.jpg,The man has brown hair and brown eyes. The woman has blonde hair and blue eyes.
+blip2_pretrained_opt2.7b,person_0762.jpg,an old man in a suit and tie
+blip2_pretrained_opt2.7b,motorbike_0082.jpg,The picture shows a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0592.jpg,Aston Martin DB9
+blip2_pretrained_opt2.7b,airplane_0016.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,car_0961.jpg,The car is white.
+blip2_pretrained_opt2.7b,cat_0348.jpg,The cat is in a cage.
+blip2_pretrained_opt2.7b,motorbike_0576.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0950.jpg,The ball is yellow and has a green top. The ball has a green top. The ball has a green top. The ball has a green
+blip2_pretrained_opt2.7b,airplane_0693.jpg,"The sky is blue, the planes are blue, the sky is blue, the sky is blue, the sky is blue, the sky is blue"
+blip2_pretrained_opt2.7b,fruit_0527.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,flower_0363.jpg,The image is of a red and black floral pattern.
+blip2_pretrained_opt2.7b,airplane_0173.jpg,The picture is of a plane on the runway.
+blip2_pretrained_opt2.7b,fruit_0012.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,dog_0071.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,car_0490.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,cat_0367.jpg,The cat on the left is looking at the cat on the right. The cat on the right is looking at the cat on the left.
+blip2_pretrained_opt2.7b,cat_0741.jpg,The cat is looking up.
+blip2_pretrained_opt2.7b,car_0417.jpg,Acura
+blip2_pretrained_opt2.7b,person_0867.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,flower_0360.jpg,The sky is blue and the flowers are pink.
+blip2_pretrained_opt2.7b,flower_0714.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,flower_0708.jpg,The picture is of a plant.
+blip2_pretrained_opt2.7b,dog_0165.jpg,The dog is in the man's hand.
+blip2_pretrained_opt2.7b,flower_0329.jpg,The picture is of a dahlia flower.
+blip2_pretrained_opt2.7b,fruit_0603.jpg,A pine cone
+blip2_pretrained_opt2.7b,person_0330.jpg,The man is wearing glasses and has a beard.
+blip2_pretrained_opt2.7b,car_0722.jpg,aston martin vanquish
+blip2_pretrained_opt2.7b,cat_0215.jpg,"The cat on the left is looking at the camera, the cat on the right is looking at the camera, and the cat on the right is"
+blip2_pretrained_opt2.7b,person_0123.jpg,The woman is holding a tennis racquet.
+blip2_pretrained_opt2.7b,car_0064.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0128.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,person_0310.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0643.jpg,The picture is of a cat.
+blip2_pretrained_opt2.7b,fruit_0979.jpg,A potato.
+blip2_pretrained_opt2.7b,car_0502.jpg,Aston Martin DB9
+blip2_pretrained_opt2.7b,flower_0193.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0119.jpg,The bike is parked in front of the wall.
+blip2_pretrained_opt2.7b,flower_0204.jpg,The flower is brown and has brown petals. The flower is brown and has brown petals. The flower is brown and has brown petals
+blip2_pretrained_opt2.7b,fruit_0164.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,person_0000.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0489.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0672.jpg,The ball is brown and has a face on it.
+blip2_pretrained_opt2.7b,dog_0410.jpg,The dog is wearing a blue bandana.
+blip2_pretrained_opt2.7b,motorbike_0391.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0627.jpg,"Red, yellow, and blue."
+blip2_pretrained_opt2.7b,car_0636.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,fruit_0934.jpg,The picture is of a litchi fruit.
+blip2_pretrained_opt2.7b,car_0707.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0768.jpg,The car is driving on the road.
+blip2_pretrained_opt2.7b,cat_0411.jpg,The picture shows a cat sitting on a plate with a bowl of food in front of it.
+blip2_pretrained_opt2.7b,dog_0388.jpg,The dog has blue eyes.
+blip2_pretrained_opt2.7b,person_0659.jpg,The woman is wearing glasses
+blip2_pretrained_opt2.7b,dog_0140.jpg,The dog is standing in front of the door.
+blip2_pretrained_opt2.7b,person_0045.jpg,The man has a mustache.
+blip2_pretrained_opt2.7b,cat_0804.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,cat_0165.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0034.jpg,The dog is standing next to the man.
+blip2_pretrained_opt2.7b,fruit_0949.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,cat_0866.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,person_0654.jpg,The woman is looking up.
+blip2_pretrained_opt2.7b,cat_0198.jpg,The cat on the left is looking up and the one on the right is looking down.
+blip2_pretrained_opt2.7b,fruit_0262.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,dog_0550.jpg,The dog is sitting on the grass.
+blip2_pretrained_opt2.7b,flower_0677.jpg,The picture is of a field of red tulips.
+blip2_pretrained_opt2.7b,car_0401.jpg,The car is parked in front of a building. The car is parked in front of a building. The car is parked in front of a building
+blip2_pretrained_opt2.7b,fruit_0224.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,motorbike_0258.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,motorbike_0165.jpg,The picture is of a motorcycle parked in front of a house.
+blip2_pretrained_opt2.7b,person_0341.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,motorbike_0080.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,person_0003.jpg,The man is wearing a white shirt.
+blip2_pretrained_opt2.7b,dog_0021.jpg,The dog is sitting on the floor.
+blip2_pretrained_opt2.7b,car_0440.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0210.jpg,The image is of a sunflower.
+blip2_pretrained_opt2.7b,car_0584.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0759.jpg,A man in a suit and tie is speaking in front of an israeli flag
+blip2_pretrained_opt2.7b,cat_0268.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,person_0679.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,fruit_0969.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,motorbike_0303.jpg,The man is sitting on the motorcycle.
+blip2_pretrained_opt2.7b,motorbike_0456.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0031.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,fruit_0982.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,motorbike_0596.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0589.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,fruit_0319.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,person_0530.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,motorbike_0478.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0095.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,car_0425.jpg,The car is parked in front of a building.
+blip2_pretrained_opt2.7b,motorbike_0619.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0595.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,flower_0428.jpg,The picture is of a bougainvillea flower.
+blip2_pretrained_opt2.7b,airplane_0408.jpg,The picture is of an airplane parked on the tarmac of an airport.
+blip2_pretrained_opt2.7b,fruit_0970.jpg,The picture is of an avocado.
+blip2_pretrained_opt2.7b,person_0967.jpg,the woman is smiling and wearing a crown
+blip2_pretrained_opt2.7b,person_0325.jpg,the man in the white shirt is hugging the man in the black shirt
+blip2_pretrained_opt2.7b,flower_0419.jpg,A field of yellow flowers
+blip2_pretrained_opt2.7b,motorbike_0625.jpg,The picture is of a motorcycle parked in front of a wall.
+blip2_pretrained_opt2.7b,dog_0658.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,motorbike_0300.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,car_0598.jpg,The Acura is parked on the side of the road. The Acura is parked on the side of the road. The Acura is parked
+blip2_pretrained_opt2.7b,person_0206.jpg,The man is wearing glasses.
+blip2_pretrained_opt2.7b,flower_0118.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,flower_0618.jpg,The image is of a field of red tulips.
+blip2_pretrained_opt2.7b,car_0352.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0390.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,fruit_0298.jpg,The picture is of a pear.
+blip2_pretrained_opt2.7b,airplane_0073.jpg,The picture is of a group of airplanes parked at an airport.
+blip2_pretrained_opt2.7b,motorbike_0662.jpg,The motorcycle is parked in front of a grassy field.
+blip2_pretrained_opt2.7b,person_0669.jpg,The woman is wearing glasses.
+blip2_pretrained_opt2.7b,dog_0196.jpg,The picture is of a dog sitting on a couch.
+blip2_pretrained_opt2.7b,car_0738.jpg,Aston Martin
+blip2_pretrained_opt2.7b,car_0426.jpg,The car is in the snow.
+blip2_pretrained_opt2.7b,airplane_0609.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0778.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0134.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0495.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,car_0204.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,flower_0756.jpg,Sunflowers
+blip2_pretrained_opt2.7b,fruit_0643.jpg,The picture is of a potato.
+blip2_pretrained_opt2.7b,person_0432.jpg,the woman is wearing a tiara
+blip2_pretrained_opt2.7b,flower_0500.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,dog_0132.jpg,The dog is brown and white.
+blip2_pretrained_opt2.7b,person_0765.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0921.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,person_0419.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,airplane_0202.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,person_0887.jpg,The man is looking at the camera.
+blip2_pretrained_opt2.7b,person_0067.jpg,The man is holding a golf club.
+blip2_pretrained_opt2.7b,car_0630.jpg,Acura
+blip2_pretrained_opt2.7b,person_0093.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,car_0260.jpg,Acura
+blip2_pretrained_opt2.7b,dog_0066.jpg,The dog is standing in front of the bowl.
+blip2_pretrained_opt2.7b,airplane_0125.jpg,The picture is of an airplane parked on the tarmac.
+blip2_pretrained_opt2.7b,flower_0311.jpg,Red hibiscus
+blip2_pretrained_opt2.7b,flower_0007.jpg,The flower is in a pot.
+blip2_pretrained_opt2.7b,motorbike_0227.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,flower_0449.jpg,"The grass is green and the flowers are red, white, and blue."
+blip2_pretrained_opt2.7b,car_0723.jpg,The orange car is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0147.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,dog_0418.jpg,The dog is white.
+blip2_pretrained_opt2.7b,airplane_0513.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,car_0483.jpg,Aston Martin DB9
+blip2_pretrained_opt2.7b,airplane_0272.jpg,The picture is of an airplane parked on the tarmac at an airport.
+blip2_pretrained_opt2.7b,person_0982.jpg,The woman in the white shirt is looking at the man in the black shirt.
+blip2_pretrained_opt2.7b,airplane_0009.jpg,The plane is in the air.
+blip2_pretrained_opt2.7b,fruit_0188.jpg,The picture is of a green apple.
+blip2_pretrained_opt2.7b,airplane_0303.jpg,The picture is of a plane parked on the tarmac at an airport.
+blip2_pretrained_opt2.7b,motorbike_0086.jpg,The picture is of a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0771.jpg,The picture shows a dragon fruit.
+blip2_pretrained_opt2.7b,motorbike_0339.jpg,The picture is of a motorcycle parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0546.jpg,The picture is of a british Airways airplane parked on the tarmac.
+blip2_pretrained_opt2.7b,airplane_0479.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0014.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,person_0307.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,car_0885.jpg,The Audi is parked on the side of the road. The Audi is parked on the side of the road. The Audi is parked on the side
+blip2_pretrained_opt2.7b,car_0824.jpg,The car is driving down the road.
+blip2_pretrained_opt2.7b,person_0350.jpg,The man is wearing a white shirt.
+blip2_pretrained_opt2.7b,car_0908.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0677.jpg,"The car is blue, yellow, and has yellow headrests."
+blip2_pretrained_opt2.7b,cat_0052.jpg,A black and white kitten is being held by a woman in a blue shirt.
+blip2_pretrained_opt2.7b,person_0436.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,person_0133.jpg,the man is smiling
+blip2_pretrained_opt2.7b,dog_0149.jpg,The dog is lying on the floor.
+blip2_pretrained_opt2.7b,motorbike_0215.jpg,The motorcycle is parked in front of a brick wall.
+blip2_pretrained_opt2.7b,motorbike_0751.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0229.jpg,"Red clover, clover, clover, clover, clover, clover, clover, clover, clover, cl"
+blip2_pretrained_opt2.7b,airplane_0699.jpg,The picture is of an airplane.
+blip2_pretrained_opt2.7b,person_0218.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,car_0338.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,fruit_0618.jpg,The picture is of a banana.
+blip2_pretrained_opt2.7b,car_0668.jpg,The front of the car is white and the back of the car is black.
+blip2_pretrained_opt2.7b,airplane_0279.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0074.jpg,The scooter is parked on the side of the road. The scooter is parked on the side of the road. The scooter is parked
+blip2_pretrained_opt2.7b,cat_0709.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,flower_0354.jpg,The image is of a group of pink and white flowers.
+blip2_pretrained_opt2.7b,cat_0761.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,airplane_0063.jpg,The jet is in the air.
+blip2_pretrained_opt2.7b,flower_0122.jpg,This is a picture of a flower.
+blip2_pretrained_opt2.7b,flower_0245.jpg,The picture is of a flower in a pot.
+blip2_pretrained_opt2.7b,dog_0032.jpg,The dog is standing in front of the table.
+blip2_pretrained_opt2.7b,flower_0509.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,cat_0700.jpg,The cat is lying down.
+blip2_pretrained_opt2.7b,car_0708.jpg,Aston Martin
+blip2_pretrained_opt2.7b,flower_0676.jpg,The picture is of a water lily.
+blip2_pretrained_opt2.7b,airplane_0302.jpg,The picture is of a qantas airplane.
+blip2_pretrained_opt2.7b,car_0048.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0775.jpg,The image is of a banana.
+blip2_pretrained_opt2.7b,dog_0246.jpg,The dog is on a leash.
+blip2_pretrained_opt2.7b,airplane_0635.jpg,The picture is of an airplane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0554.jpg,The motorcycle is parked on the side of the road. The motorcycle is parked on the side of the road. The motorcycle is parked on the side
+blip2_pretrained_opt2.7b,cat_0193.jpg,The cat has green eyes.
+blip2_pretrained_opt2.7b,cat_0451.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,car_0233.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,airplane_0262.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,dog_0361.jpg,The dog is standing in the grass.
+blip2_pretrained_opt2.7b,fruit_0014.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,dog_0660.jpg,The dog has its tongue hanging out.
+blip2_pretrained_opt2.7b,motorbike_0692.jpg,The motorcycle is green.
+blip2_pretrained_opt2.7b,fruit_0094.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,airplane_0289.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,fruit_0798.jpg,The image is of an apple.
+blip2_pretrained_opt2.7b,motorbike_0466.jpg,The yellow dirt bike is parked on the side of the road. The yellow dirt bike is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0132.jpg,The planes are parked on the tarmac.
+blip2_pretrained_opt2.7b,dog_0286.jpg,The dog is standing in the snow.
+blip2_pretrained_opt2.7b,dog_0547.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,car_0438.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0259.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,fruit_0119.jpg,The fruit is yellow.
+blip2_pretrained_opt2.7b,flower_0305.jpg,The picture is of a group of orange flowers.
+blip2_pretrained_opt2.7b,dog_0285.jpg,The dog is standing in front of a chain link fence.
+blip2_pretrained_opt2.7b,motorbike_0379.jpg,The motorcycle is parked in front of a wall.
+blip2_pretrained_opt2.7b,person_0650.jpg,The man is wearing a black tuxedo and the woman is wearing a white dress.
+blip2_pretrained_opt2.7b,car_0201.jpg,Acura
+blip2_pretrained_opt2.7b,cat_0333.jpg,The person is holding the cat by the scruff of its neck.
+blip2_pretrained_opt2.7b,car_0519.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0141.jpg,The dog is lying on the floor.
+blip2_pretrained_opt2.7b,car_0552.jpg,Aston Martin
+blip2_pretrained_opt2.7b,fruit_0730.jpg,This is a picture of a grape.
+blip2_pretrained_opt2.7b,dog_0407.jpg,The dog is standing in front of the door.
+blip2_pretrained_opt2.7b,motorbike_0249.jpg,The picture shows a motorcycle parked in front of a brick wall.
+blip2_pretrained_opt2.7b,cat_0266.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0443.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0539.jpg,The picture is of a lemon.
+blip2_pretrained_opt2.7b,car_0793.jpg,The car is driving down the road.
+blip2_pretrained_opt2.7b,flower_0721.jpg,The picture is of a tulip.
+blip2_pretrained_opt2.7b,motorbike_0609.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,car_0271.jpg,The Acura is parked on the side of the road in a parking lot. The Acura is parked on the side of the road in a
+blip2_pretrained_opt2.7b,car_0837.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,flower_0263.jpg,Red and white flowers
+blip2_pretrained_opt2.7b,car_0834.jpg,The car is blue.
+blip2_pretrained_opt2.7b,motorbike_0169.jpg,The motorcycle is parked in front of the house.
+blip2_pretrained_opt2.7b,car_0357.jpg,The car is parked on the side of the road. The car is parked on the side of the road. The car is parked on the side
+blip2_pretrained_opt2.7b,fruit_0736.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,dog_0439.jpg,The dog is standing in front of the fence.
+blip2_pretrained_opt2.7b,cat_0453.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0715.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,motorbike_0019.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,motorbike_0144.jpg,The man is sitting on the motorcycle.
+blip2_pretrained_opt2.7b,motorbike_0640.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0088.jpg,The man has brown hair and brown eyes. The man has brown hair and brown eyes. The man has brown hair and brown eyes. The man
+blip2_pretrained_opt2.7b,cat_0648.jpg,The cat is black and white.
+blip2_pretrained_opt2.7b,car_0301.jpg,The picture is of a car parked in front of a car parked in front of a car parked in front of a car parked in front of a
+blip2_pretrained_opt2.7b,car_0526.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0048.jpg,The picture is of a plane in the air.
+blip2_pretrained_opt2.7b,person_0199.jpg,The man is holding a tennis racquet.
+blip2_pretrained_opt2.7b,person_0506.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,flower_0133.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,fruit_0859.jpg,The picture is of an egg.
+blip2_pretrained_opt2.7b,motorbike_0066.jpg,The bike is blue and white.
+blip2_pretrained_opt2.7b,flower_0459.jpg,The picture is of a field of tulips.
+blip2_pretrained_opt2.7b,cat_0311.jpg,The cats are in a cage.
+blip2_pretrained_opt2.7b,person_0212.jpg,The man is looking at the camera with a smile on his face.
+blip2_pretrained_opt2.7b,person_0466.jpg,"a man with a beard and glasses standing in front of the western wall of the temple mount in jerusalem, israel"
+blip2_pretrained_opt2.7b,car_0506.jpg,The picture is of a car.
+blip2_pretrained_opt2.7b,cat_0208.jpg,The cat is lying on the floor.
+blip2_pretrained_opt2.7b,dog_0567.jpg,The dog is sitting on the ground.
+blip2_pretrained_opt2.7b,flower_0033.jpg,This is a picture of a spider on a plant.
+blip2_pretrained_opt2.7b,airplane_0361.jpg,The picture shows a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,cat_0779.jpg,The cat is standing in front of the bowl.
+blip2_pretrained_opt2.7b,person_0196.jpg,The man is holding a tennis ball.
+blip2_pretrained_opt2.7b,flower_0220.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,airplane_0328.jpg,The picture is of a plane parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0067.jpg,The plane is parked on the tarmac.
+blip2_pretrained_opt2.7b,flower_0181.jpg,The bushes are in front of the house.
+blip2_pretrained_opt2.7b,car_0158.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,dog_0645.jpg,The dog is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0224.jpg,The cat is lying on the floor.
+blip2_pretrained_opt2.7b,car_0428.jpg,The car is parked on the side of the road.
+blip2_pretrained_opt2.7b,flower_0164.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,cat_0505.jpg,The cat is lying on the floor.
+blip2_pretrained_opt2.7b,airplane_0360.jpg,The picture is of a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,car_0238.jpg,Acura
+blip2_pretrained_opt2.7b,person_0443.jpg,The woman is holding a frisbee.
+blip2_pretrained_opt2.7b,cat_0636.jpg,The cat is sleeping.
+blip2_pretrained_opt2.7b,person_0603.jpg,Andy Warhol
+blip2_pretrained_opt2.7b,fruit_0704.jpg,The picture is of a green apple.
+blip2_pretrained_opt2.7b,flower_0023.jpg,The picture is of a flower.
+blip2_pretrained_opt2.7b,motorbike_0392.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0615.jpg,The picture is of an apple.
+blip2_pretrained_opt2.7b,cat_0508.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0204.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,car_0452.jpg,The picture is of a car on the road.
+blip2_pretrained_opt2.7b,person_0458.jpg,The woman is holding a tennis racquet.
+blip2_pretrained_opt2.7b,person_0299.jpg,The woman on the left is looking to the right. The woman on the right is looking to the left.
+blip2_pretrained_opt2.7b,fruit_0939.jpg,The apple is green.
+blip2_pretrained_opt2.7b,airplane_0153.jpg,The picture is of an airplane parked on the tarmac at an airport.
+blip2_pretrained_opt2.7b,person_0312.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,fruit_0398.jpg,The ball is yellow.
+blip2_pretrained_opt2.7b,dog_0619.jpg,The dog is lying on the ground.
+blip2_pretrained_opt2.7b,motorbike_0723.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,cat_0721.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,airplane_0222.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,person_0084.jpg,The woman is looking at the camera.
+blip2_pretrained_opt2.7b,dog_0559.jpg,The dog is black and white with blue eyes.
+blip2_pretrained_opt2.7b,cat_0346.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0685.jpg,The cat is lying on the bed.
+blip2_pretrained_opt2.7b,cat_0849.jpg,The man is holding the cat.
+blip2_pretrained_opt2.7b,person_0556.jpg,The man is wearing a blue and white shirt.
+blip2_pretrained_opt2.7b,person_0751.jpg,The man is wearing a black suit and a red tie.
+blip2_pretrained_opt2.7b,cat_0546.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,fruit_0160.jpg,There is a potato on a stick.
+blip2_pretrained_opt2.7b,fruit_0804.jpg,The picture is of an orange.
+blip2_pretrained_opt2.7b,fruit_0709.jpg,The picture is of a fruit.
+blip2_pretrained_opt2.7b,person_0546.jpg,The man is smiling.
+blip2_pretrained_opt2.7b,motorbike_0657.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0649.jpg,The raspberries are purple.
+blip2_pretrained_opt2.7b,car_0259.jpg,The Acura is parked on the side of the road.
+blip2_pretrained_opt2.7b,person_0352.jpg,The woman is smiling.
+blip2_pretrained_opt2.7b,fruit_0640.jpg,The picture is of a fruit with a green stem and a yellow fruit with a green stem and a yellow fruit with a green stem and a yellow
+blip2_pretrained_opt2.7b,airplane_0650.jpg,The picture is of a plane parked on the tarmac.
+blip2_pretrained_opt2.7b,flower_0267.jpg,The image is of a flower.
+blip2_pretrained_opt2.7b,flower_0090.jpg,The image is of a plant with purple and white flowers.
+blip2_pretrained_opt2.7b,motorbike_0583.jpg,The motorcycle is blue and has a black seat.
+blip2_pretrained_opt2.7b,flower_0265.jpg,"The sky is blue, the grass is green, the flowers are pink, the sky is blue, the grass is green, the flowers are pink"
+blip2_pretrained_opt2.7b,airplane_0708.jpg,The picture is of an airplane parked on the tarmac at an airport.
+blip2_pretrained_opt2.7b,person_0397.jpg,The man is wearing a white shirt.
+blip2_pretrained_opt2.7b,motorbike_0633.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,airplane_0055.jpg,The picture is of a plane flying in the sky.
+blip2_pretrained_opt2.7b,dog_0494.jpg,The dog is standing in front of the refrigerator.
+blip2_pretrained_opt2.7b,motorbike_0589.jpg,The motorcycle is parked on the side of the road.
+blip2_pretrained_opt2.7b,fruit_0918.jpg,The image is of a strawberry.
+blip2_pretrained_opt2.7b,cat_0351.jpg,The cat has green eyes.
+blip2_pretrained_opt2.7b,cat_0100.jpg,The cat is looking at the camera.
+blip2_pretrained_opt2.7b,cat_0355.jpg,The cat is looking at the newspaper.
+blip2_pretrained_opt2.7b,car_0740.jpg,Aston Martin DB9

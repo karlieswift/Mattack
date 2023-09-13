@@ -1,0 +1,1 @@
+/opt/gridview/slurm/spool/slurmd_a12r1n19/job13020595/slurm_script: line 14: 26353 Segmentation fault      python adv.py

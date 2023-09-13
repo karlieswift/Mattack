@@ -1,0 +1,1 @@
+/opt/gridview/slurm/spool/slurmd_b02r4n07/job12972690/slurm_script: line 13: 11414 Segmentation fault      python -m torch.distributed.run --nproc_per_node=4 train.py --cfg-path lavis/projects/blip2/train/pretrain_stage2.yaml

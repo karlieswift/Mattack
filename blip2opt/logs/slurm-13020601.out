@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/public/home/mswanghao/TorchProject/lavis/adv.py", line 12, in <module>
+    from lavis.models import load_model_and_preprocess
+  File "/public/home/mswanghao/TorchProject/lavis/lavis/__init__.py", line 15, in <module>
+    from lavis.datasets.builders import *
+  File "/public/home/mswanghao/TorchProject/lavis/lavis/datasets/builders/__init__.py", line 8, in <module>
+    from lavis.datasets.builders.base_dataset_builder import load_dataset_config
+  File "/public/home/mswanghao/TorchProject/lavis/lavis/datasets/builders/base_dataset_builder.py", line 13, in <module>
+    import lavis.common.utils as utils
+  File "/public/home/mswanghao/TorchProject/lavis/lavis/common/utils.py", line 28, in <module>
+    from torchvision.datasets.utils import (
+  File "/public/home/mswanghao/anaconda3/envs/minigpt4/lib/python3.9/site-packages/torchvision/__init__.py", line 7, in <module>
+    from torchvision import datasets
+  File "/public/home/mswanghao/anaconda3/envs/minigpt4/lib/python3.9/site-packages/torchvision/datasets/__init__.py", line 1, in <module>
+    from .lsun import LSUN, LSUNClass
+  File "/public/home/mswanghao/anaconda3/envs/minigpt4/lib/python3.9/site-packages/torchvision/datasets/lsun.py", line 2, in <module>
+    from PIL import Image
+  File "/public/home/mswanghao/anaconda3/envs/minigpt4/lib/python3.9/site-packages/PIL/Image.py", line 103, in <module>
+    from . import _imaging as core
+ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /public/home/mswanghao/anaconda3/envs/minigpt4/lib/python3.9/site-packages/PIL/../../.././libLerc.so)

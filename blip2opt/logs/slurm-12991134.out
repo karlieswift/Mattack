@@ -1,0 +1,308 @@
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss DRSL3 b=1e-06 start=0 end=20loss DRSL3 b=1e-06 start=0 end=20
+
+loss DRSL3 b=1e-06 start=0 end=20loss DRSL3 b=1e-06 start=0 end=20
+
+| distributed init (rank 2, world 4): env://
+| distributed init (rank 1, world 4): env://
+| distributed init (rank 3, world 4): env://
+| distributed init (rank 0, world 4): env://
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-17 09:50:31,060 [INFO] 
+=====  Running Parameters    =====
+2023-08-17 09:50:31,061 [INFO] {
+    "amp": true,
+    "batch_size_eval": 2,
+    "batch_size_train": 16,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "init_lr": 0.0001,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 1,
+    "min_lr": 1e-05,
+    "num_workers": 4,
+    "output_dir": "output/BLIP2/DRSL3_0_20Pretrain_stage2",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "image_text_pretrain",
+    "train_splits": [
+        "train"
+    ],
+    "warmup_lr": 1e-06,
+    "warmup_steps": 2000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-17 09:50:31,061 [INFO] 
+======  Dataset Attributes  ======
+2023-08-17 09:50:31,062 [INFO] 
+======== coco_caption =======
+2023-08-17 09:50:31,062 [INFO] {
+    "build_info": {
+        "annotations": {
+            "test": {
+                "md5": "3ff34b0ef2db02d01c37399f6a2a6cd1",
+                "storage": "coco/annotations/coco_karpathy_test.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_test.json"
+            },
+            "train": {
+                "md5": "aa31ac474cf6250ebb81d18348a07ed8",
+                "storage": "coco/annotations/coco_karpathy_train.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_train.json"
+            },
+            "val": {
+                "md5": "b273847456ef5580e33713b1f7de52a0",
+                "storage": "coco/annotations/coco_karpathy_val.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_val.json"
+            }
+        },
+        "images": {
+            "storage": "coco/images/"
+        }
+    },
+    "data_type": "images",
+    "dataset_card": "dataset_card/coco_caption.md",
+    "text_processor": {
+        "train": {
+            "name": "blip_caption"
+        }
+    },
+    "vis_processor": {
+        "train": {
+            "image_size": 224,
+            "name": "blip2_image_train"
+        }
+    }
+}
+2023-08-17 09:50:31,062 [INFO] 
+======  Model Attributes  ======
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-17 09:50:31,063 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "finetuned": "",
+    "freeze_vit": true,
+    "image_size": 224,
+    "load_finetuned": false,
+    "load_pretrained": true,
+    "model_type": "pretrain_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained.pth",
+    "prompt": "",
+    "use_grad_checkpoint": false,
+    "vit_precision": "fp16"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_train.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_val.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_test.json
+2023-08-17 09:50:31,073 [INFO] Building datasets...
+2023-08-17 09:51:13,063 [INFO] freeze vision encoder
+2023-08-17 09:54:38,258 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained.pth
+2023-08-17 09:54:38,300 [INFO] Start training
+2023-08-17 09:54:57,077 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-17 09:54:57,080 [INFO] Loaded 566747 records for train split from the dataset.
+2023-08-17 09:54:57,080 [INFO] Loaded 5000 records for val split from the dataset.
+2023-08-17 09:54:57,080 [INFO] Loaded 5000 records for test split from the dataset.
+2023-08-17 09:54:57,147 [INFO] number of trainable parameters: 107133696
+2023-08-17 09:54:57,150 [INFO] Start training epoch 0, 8855 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+Train: data epoch: [0]  [   0/8855]  eta: 2 days, 15:57:25  lr: 0.000001  loss: 6.2723  time: 26.0018  data: 0.0000  max mem: 11493
+2023-08-17 09:55:23,301 [INFO] Reducer buckets have been rebuilt in this iteration.
+Train: data epoch: [0]  [  50/8855]  eta: 10:58:50  lr: 0.000003  loss: 4.4525  time: 4.0171  data: 0.0000  max mem: 13571
+Train: data epoch: [0]  [ 100/8855]  eta: 10:17:13  lr: 0.000006  loss: 4.0347  time: 3.9939  data: 0.0000  max mem: 13571
+Train: data epoch: [0]  [ 150/8855]  eta: 10:04:23  lr: 0.000008  loss: 4.0471  time: 3.9813  data: 0.0000  max mem: 13571
+Train: data epoch: [0]  [ 200/8855]  eta: 9:53:50  lr: 0.000011  loss: 3.6311  time: 3.9821  data: 0.0000  max mem: 13571
+Train: data epoch: [0]  [ 250/8855]  eta: 9:46:22  lr: 0.000013  loss: 3.8950  time: 3.9747  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 300/8855]  eta: 9:40:22  lr: 0.000016  loss: 3.1414  time: 4.0028  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 350/8855]  eta: 9:35:01  lr: 0.000018  loss: 2.7908  time: 3.9930  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 400/8855]  eta: 9:29:59  lr: 0.000021  loss: 2.7430  time: 3.9522  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 450/8855]  eta: 9:25:44  lr: 0.000023  loss: 2.5745  time: 4.0033  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 500/8855]  eta: 9:21:24  lr: 0.000026  loss: 2.7587  time: 3.9457  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 550/8855]  eta: 9:17:07  lr: 0.000028  loss: 2.6368  time: 3.9489  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 600/8855]  eta: 9:13:14  lr: 0.000031  loss: 2.6258  time: 3.9705  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 650/8855]  eta: 9:09:41  lr: 0.000033  loss: 2.4891  time: 4.0044  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 700/8855]  eta: 9:05:34  lr: 0.000036  loss: 2.7493  time: 3.9464  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 750/8855]  eta: 9:01:47  lr: 0.000038  loss: 2.5102  time: 3.9268  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 800/8855]  eta: 8:58:23  lr: 0.000041  loss: 2.3479  time: 3.9528  data: 0.0000  max mem: 13573
+Train: data epoch: [0]  [ 850/8855]  eta: 8:55:07  lr: 0.000043  loss: 2.6137  time: 4.0077  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [ 900/8855]  eta: 8:51:56  lr: 0.000046  loss: 2.6115  time: 4.0239  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [ 950/8855]  eta: 8:48:23  lr: 0.000048  loss: 2.4042  time: 3.9903  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1000/8855]  eta: 8:44:58  lr: 0.000051  loss: 2.3437  time: 4.0175  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1050/8855]  eta: 8:41:20  lr: 0.000053  loss: 2.4687  time: 3.9889  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1100/8855]  eta: 8:38:06  lr: 0.000055  loss: 2.7811  time: 4.0125  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1150/8855]  eta: 8:34:35  lr: 0.000058  loss: 2.2453  time: 3.9838  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1200/8855]  eta: 8:31:05  lr: 0.000060  loss: 2.8787  time: 3.9940  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1250/8855]  eta: 8:27:40  lr: 0.000063  loss: 2.3791  time: 3.9881  data: 0.0000  max mem: 13595
+Train: data epoch: [0]  [1300/8855]  eta: 8:24:11  lr: 0.000065  loss: 2.8749  time: 3.9488  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1350/8855]  eta: 8:20:47  lr: 0.000068  loss: 2.6387  time: 4.0004  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1400/8855]  eta: 8:17:18  lr: 0.000070  loss: 2.2948  time: 3.9957  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1450/8855]  eta: 8:13:46  lr: 0.000073  loss: 2.3564  time: 3.9435  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1500/8855]  eta: 8:10:22  lr: 0.000075  loss: 2.3302  time: 4.0250  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1550/8855]  eta: 8:06:50  lr: 0.000078  loss: 2.2767  time: 3.9655  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1600/8855]  eta: 8:03:17  lr: 0.000080  loss: 2.7784  time: 3.9382  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1650/8855]  eta: 7:59:52  lr: 0.000083  loss: 2.2863  time: 3.9847  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1700/8855]  eta: 7:56:30  lr: 0.000085  loss: 2.7725  time: 3.9993  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1750/8855]  eta: 7:53:05  lr: 0.000088  loss: 2.7257  time: 3.9305  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1800/8855]  eta: 7:49:42  lr: 0.000090  loss: 2.5914  time: 3.9501  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1850/8855]  eta: 7:46:16  lr: 0.000093  loss: 2.7195  time: 3.9428  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1900/8855]  eta: 7:42:51  lr: 0.000095  loss: 2.6970  time: 3.9691  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [1950/8855]  eta: 7:39:31  lr: 0.000098  loss: 2.5714  time: 3.9822  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2000/8855]  eta: 7:36:00  lr: 0.000100  loss: 2.5090  time: 3.9547  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2050/8855]  eta: 7:32:39  lr: 0.000100  loss: 2.8717  time: 3.9603  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2100/8855]  eta: 7:29:15  lr: 0.000100  loss: 2.6100  time: 3.9321  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2150/8855]  eta: 7:25:49  lr: 0.000100  loss: 2.4159  time: 3.9471  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2200/8855]  eta: 7:22:23  lr: 0.000100  loss: 2.2569  time: 3.9309  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2250/8855]  eta: 7:18:56  lr: 0.000100  loss: 2.1824  time: 3.9512  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2300/8855]  eta: 7:15:40  lr: 0.000100  loss: 2.5450  time: 4.0065  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2350/8855]  eta: 7:12:23  lr: 0.000100  loss: 2.2823  time: 4.0283  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2400/8855]  eta: 7:09:09  lr: 0.000100  loss: 2.5949  time: 4.1041  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2450/8855]  eta: 7:05:51  lr: 0.000100  loss: 2.3911  time: 3.9669  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2500/8855]  eta: 7:02:29  lr: 0.000100  loss: 2.2966  time: 3.9863  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2550/8855]  eta: 6:59:10  lr: 0.000100  loss: 2.6417  time: 4.0317  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2600/8855]  eta: 6:55:52  lr: 0.000100  loss: 1.9974  time: 3.9408  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2650/8855]  eta: 6:52:36  lr: 0.000100  loss: 2.5568  time: 4.0059  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2700/8855]  eta: 6:49:14  lr: 0.000100  loss: 2.4313  time: 3.9477  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2750/8855]  eta: 6:45:53  lr: 0.000100  loss: 2.2545  time: 3.9334  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2800/8855]  eta: 6:42:33  lr: 0.000100  loss: 2.4855  time: 3.9612  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2850/8855]  eta: 6:39:14  lr: 0.000100  loss: 2.1269  time: 3.9908  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2900/8855]  eta: 6:35:50  lr: 0.000100  loss: 2.3937  time: 3.9434  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [2950/8855]  eta: 6:32:30  lr: 0.000100  loss: 2.0252  time: 3.9959  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3000/8855]  eta: 6:29:11  lr: 0.000100  loss: 2.5236  time: 3.9490  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3050/8855]  eta: 6:25:50  lr: 0.000100  loss: 2.6508  time: 3.9646  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3100/8855]  eta: 6:22:29  lr: 0.000100  loss: 2.4383  time: 3.9929  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3150/8855]  eta: 6:19:09  lr: 0.000100  loss: 2.2950  time: 4.0051  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3200/8855]  eta: 6:15:43  lr: 0.000100  loss: 2.3150  time: 3.9261  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3250/8855]  eta: 6:12:23  lr: 0.000100  loss: 2.1061  time: 3.9885  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3300/8855]  eta: 6:09:03  lr: 0.000100  loss: 2.4753  time: 3.9962  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3350/8855]  eta: 6:05:44  lr: 0.000100  loss: 2.1444  time: 3.9696  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3400/8855]  eta: 6:02:23  lr: 0.000100  loss: 2.0465  time: 3.9731  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3450/8855]  eta: 5:59:04  lr: 0.000100  loss: 2.5014  time: 3.9666  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3500/8855]  eta: 5:55:44  lr: 0.000100  loss: 2.3577  time: 3.9706  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3550/8855]  eta: 5:52:27  lr: 0.000100  loss: 2.3992  time: 4.0021  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3600/8855]  eta: 5:49:07  lr: 0.000100  loss: 2.3958  time: 3.9877  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3650/8855]  eta: 5:45:45  lr: 0.000100  loss: 2.4255  time: 3.9266  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3700/8855]  eta: 5:42:25  lr: 0.000100  loss: 2.4501  time: 3.9382  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3750/8855]  eta: 5:39:08  lr: 0.000100  loss: 2.4271  time: 3.9644  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3800/8855]  eta: 5:35:48  lr: 0.000100  loss: 2.6321  time: 3.9697  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3850/8855]  eta: 5:32:27  lr: 0.000100  loss: 2.5253  time: 3.9495  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3900/8855]  eta: 5:29:08  lr: 0.000100  loss: 2.1334  time: 3.9896  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [3950/8855]  eta: 5:25:48  lr: 0.000100  loss: 2.1039  time: 3.9872  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4000/8855]  eta: 5:22:30  lr: 0.000100  loss: 2.3865  time: 3.9749  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4050/8855]  eta: 5:19:09  lr: 0.000100  loss: 2.7078  time: 3.9330  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4100/8855]  eta: 5:15:52  lr: 0.000100  loss: 2.6574  time: 4.0207  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4150/8855]  eta: 5:12:34  lr: 0.000100  loss: 2.3267  time: 4.0447  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4200/8855]  eta: 5:09:14  lr: 0.000100  loss: 2.1153  time: 3.9671  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4250/8855]  eta: 5:05:55  lr: 0.000100  loss: 2.2724  time: 4.0639  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4300/8855]  eta: 5:02:35  lr: 0.000100  loss: 2.1099  time: 3.9928  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4350/8855]  eta: 4:59:15  lr: 0.000100  loss: 2.3143  time: 3.9437  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4400/8855]  eta: 4:55:53  lr: 0.000100  loss: 2.3940  time: 3.9047  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4450/8855]  eta: 4:52:35  lr: 0.000100  loss: 2.0697  time: 3.9908  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4500/8855]  eta: 4:49:14  lr: 0.000100  loss: 2.8666  time: 3.9702  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4550/8855]  eta: 4:45:55  lr: 0.000100  loss: 2.3715  time: 3.9817  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4600/8855]  eta: 4:42:35  lr: 0.000100  loss: 2.3412  time: 4.0140  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4650/8855]  eta: 4:39:15  lr: 0.000100  loss: 2.2065  time: 3.9723  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4700/8855]  eta: 4:35:57  lr: 0.000100  loss: 2.1621  time: 4.0010  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4750/8855]  eta: 4:32:38  lr: 0.000100  loss: 2.6286  time: 3.9815  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4800/8855]  eta: 4:29:18  lr: 0.000100  loss: 2.3320  time: 3.9456  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4850/8855]  eta: 4:25:58  lr: 0.000100  loss: 2.0746  time: 3.9671  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4900/8855]  eta: 4:22:39  lr: 0.000100  loss: 2.5151  time: 3.9873  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [4950/8855]  eta: 4:19:18  lr: 0.000100  loss: 2.1425  time: 3.9480  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5000/8855]  eta: 4:15:57  lr: 0.000100  loss: 2.0420  time: 3.9345  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5050/8855]  eta: 4:12:38  lr: 0.000100  loss: 2.5055  time: 3.9874  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5100/8855]  eta: 4:09:20  lr: 0.000100  loss: 2.1225  time: 4.0139  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5150/8855]  eta: 4:06:01  lr: 0.000100  loss: 2.4164  time: 4.0070  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5200/8855]  eta: 4:02:41  lr: 0.000100  loss: 2.2206  time: 3.9410  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5250/8855]  eta: 3:59:22  lr: 0.000100  loss: 2.1065  time: 3.9305  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5300/8855]  eta: 3:56:03  lr: 0.000100  loss: 2.1776  time: 4.0291  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5350/8855]  eta: 3:52:44  lr: 0.000100  loss: 2.0817  time: 4.0309  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5400/8855]  eta: 3:49:24  lr: 0.000100  loss: 2.0997  time: 3.9282  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5450/8855]  eta: 3:46:04  lr: 0.000100  loss: 2.1703  time: 3.8840  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5500/8855]  eta: 3:42:44  lr: 0.000100  loss: 2.1445  time: 3.9303  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5550/8855]  eta: 3:39:26  lr: 0.000100  loss: 1.9719  time: 3.9905  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5600/8855]  eta: 3:36:06  lr: 0.000100  loss: 1.9857  time: 3.9705  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5650/8855]  eta: 3:32:47  lr: 0.000100  loss: 2.0864  time: 3.9687  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5700/8855]  eta: 3:29:27  lr: 0.000100  loss: 2.3604  time: 3.9555  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5750/8855]  eta: 3:26:08  lr: 0.000100  loss: 2.3127  time: 4.0070  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5800/8855]  eta: 3:22:49  lr: 0.000100  loss: 1.8803  time: 4.0157  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5850/8855]  eta: 3:19:29  lr: 0.000100  loss: 2.2682  time: 3.9494  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5900/8855]  eta: 3:16:10  lr: 0.000100  loss: 1.7719  time: 4.0102  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [5950/8855]  eta: 3:12:52  lr: 0.000100  loss: 2.5861  time: 4.0017  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6000/8855]  eta: 3:09:33  lr: 0.000100  loss: 2.1371  time: 4.0184  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6050/8855]  eta: 3:06:14  lr: 0.000100  loss: 2.4462  time: 4.0351  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6100/8855]  eta: 3:02:55  lr: 0.000100  loss: 2.2195  time: 3.9943  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6150/8855]  eta: 2:59:35  lr: 0.000100  loss: 2.4872  time: 3.9750  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6200/8855]  eta: 2:56:15  lr: 0.000100  loss: 2.3601  time: 3.9272  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6250/8855]  eta: 2:52:56  lr: 0.000100  loss: 2.1633  time: 3.9457  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6300/8855]  eta: 2:49:37  lr: 0.000100  loss: 2.1091  time: 4.0238  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6350/8855]  eta: 2:46:18  lr: 0.000100  loss: 2.2592  time: 3.9721  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6400/8855]  eta: 2:42:58  lr: 0.000100  loss: 2.3246  time: 3.9581  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6450/8855]  eta: 2:39:39  lr: 0.000100  loss: 2.3735  time: 3.9579  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6500/8855]  eta: 2:36:20  lr: 0.000100  loss: 2.2209  time: 3.9996  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6550/8855]  eta: 2:33:01  lr: 0.000100  loss: 2.6390  time: 3.9968  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6600/8855]  eta: 2:29:42  lr: 0.000100  loss: 2.1565  time: 4.0283  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6650/8855]  eta: 2:26:23  lr: 0.000100  loss: 2.2097  time: 3.9805  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6700/8855]  eta: 2:23:04  lr: 0.000100  loss: 2.0565  time: 3.9700  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6750/8855]  eta: 2:19:45  lr: 0.000100  loss: 2.5393  time: 4.0279  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6800/8855]  eta: 2:16:26  lr: 0.000100  loss: 2.0720  time: 3.9694  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6850/8855]  eta: 2:13:07  lr: 0.000100  loss: 1.8575  time: 4.0201  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6900/8855]  eta: 2:09:48  lr: 0.000100  loss: 2.2365  time: 3.9942  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [6950/8855]  eta: 2:06:29  lr: 0.000100  loss: 2.3799  time: 3.9714  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7000/8855]  eta: 2:03:09  lr: 0.000100  loss: 2.0933  time: 3.9100  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7050/8855]  eta: 1:59:49  lr: 0.000100  loss: 2.2965  time: 3.9533  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7100/8855]  eta: 1:56:30  lr: 0.000100  loss: 2.2322  time: 3.9657  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7150/8855]  eta: 1:53:11  lr: 0.000100  loss: 2.6506  time: 3.9716  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7200/8855]  eta: 1:49:51  lr: 0.000100  loss: 2.1167  time: 3.9985  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7250/8855]  eta: 1:46:32  lr: 0.000100  loss: 2.1497  time: 3.9843  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7300/8855]  eta: 1:43:13  lr: 0.000100  loss: 2.4573  time: 3.9520  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7350/8855]  eta: 1:39:54  lr: 0.000100  loss: 2.4103  time: 3.9774  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7400/8855]  eta: 1:36:35  lr: 0.000100  loss: 2.3825  time: 3.9552  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7450/8855]  eta: 1:33:15  lr: 0.000100  loss: 2.4083  time: 3.9668  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7500/8855]  eta: 1:29:56  lr: 0.000100  loss: 2.6056  time: 3.9867  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7550/8855]  eta: 1:26:37  lr: 0.000100  loss: 2.5411  time: 3.9706  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7600/8855]  eta: 1:23:18  lr: 0.000100  loss: 2.5722  time: 3.9977  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7650/8855]  eta: 1:19:59  lr: 0.000100  loss: 2.3490  time: 3.9619  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7700/8855]  eta: 1:16:40  lr: 0.000100  loss: 2.3125  time: 4.0014  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7750/8855]  eta: 1:13:21  lr: 0.000100  loss: 2.0177  time: 3.9883  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7800/8855]  eta: 1:10:01  lr: 0.000100  loss: 2.3737  time: 3.9331  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7850/8855]  eta: 1:06:42  lr: 0.000100  loss: 2.2656  time: 3.9653  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7900/8855]  eta: 1:03:23  lr: 0.000100  loss: 2.1730  time: 3.9631  data: 0.0000  max mem: 13602
+Train: data epoch: [0]  [7950/8855]  eta: 1:00:04  lr: 0.000100  loss: 2.4682  time: 3.9475  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8000/8855]  eta: 0:56:45  lr: 0.000100  loss: 2.2933  time: 3.9625  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8050/8855]  eta: 0:53:26  lr: 0.000100  loss: 2.5837  time: 4.0013  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8100/8855]  eta: 0:50:07  lr: 0.000100  loss: 2.3102  time: 3.9649  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8150/8855]  eta: 0:46:47  lr: 0.000100  loss: 1.9678  time: 3.9688  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8200/8855]  eta: 0:43:28  lr: 0.000100  loss: 2.2580  time: 4.0137  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8250/8855]  eta: 0:40:09  lr: 0.000100  loss: 2.0715  time: 3.9521  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8300/8855]  eta: 0:36:50  lr: 0.000100  loss: 2.1928  time: 3.9969  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8350/8855]  eta: 0:33:31  lr: 0.000100  loss: 2.4880  time: 3.9641  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8400/8855]  eta: 0:30:12  lr: 0.000100  loss: 2.1680  time: 4.0244  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8450/8855]  eta: 0:26:53  lr: 0.000100  loss: 2.0441  time: 3.9463  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8500/8855]  eta: 0:23:33  lr: 0.000100  loss: 2.3989  time: 4.0365  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8550/8855]  eta: 0:20:14  lr: 0.000100  loss: 2.3888  time: 3.9800  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8600/8855]  eta: 0:16:55  lr: 0.000100  loss: 1.9679  time: 3.9636  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8650/8855]  eta: 0:13:36  lr: 0.000100  loss: 2.3454  time: 4.0393  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8700/8855]  eta: 0:10:17  lr: 0.000100  loss: 2.4152  time: 3.9781  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8750/8855]  eta: 0:06:58  lr: 0.000100  loss: 2.3468  time: 3.9701  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8800/8855]  eta: 0:03:39  lr: 0.000100  loss: 2.0397  time: 3.9826  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8850/8855]  eta: 0:00:19  lr: 0.000100  loss: 2.0342  time: 3.9630  data: 0.0000  max mem: 13616
+Train: data epoch: [0]  [8854/8855]  eta: 0:00:03  lr: 0.000100  loss: 2.1486  time: 3.9872  data: 0.0000  max mem: 13616
+Train: data epoch: [0] Total time: 9:47:51 (3.9833 s / it)
+2023-08-17 19:42:49,201 [INFO] Averaged stats: lr: 0.0001  loss: 2.4148
+2023-08-17 19:42:49,255 [INFO] No validation splits found.
+2023-08-17 19:42:49,310 [INFO] Saving checkpoint at epoch 0 to /public/home/mswanghao/TorchProject/lavis/lavis/output/BLIP2/DRSL3_0_20Pretrain_stage2/20230817095/checkpoint_0.pth.
+2023-08-17 19:42:53,748 [INFO] No validation splits found.
+2023-08-17 19:42:53,749 [INFO] Training time 9:48:15

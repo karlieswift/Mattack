@@ -1,0 +1,799 @@
+WARNING:__main__:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss CE b=1e-06 start=0 end=10loss CE b=1e-06 start=0 end=10loss CE b=1e-06 start=0 end=10
+loss CE b=1e-06 start=0 end=10
+
+
+| distributed init (rank 1, world 4): env://| distributed init (rank 0, world 4): env://| distributed init (rank 3, world 4): env://| distributed init (rank 2, world 4): env://
+
+
+
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-17 23:50:23,202 [INFO] 
+=====  Running Parameters    =====
+2023-08-17 23:50:23,203 [INFO] {
+    "accum_grad_iters": 1,
+    "amp": true,
+    "batch_size_eval": 2,
+    "batch_size_train": 12,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "init_lr": 1e-05,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 1,
+    "max_len": 30,
+    "min_len": 8,
+    "min_lr": 0,
+    "num_beams": 5,
+    "num_workers": 4,
+    "output_dir": "output/BLIP2/Caption_coco_ce",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "captioning",
+    "test_splits": [
+        "test"
+    ],
+    "train_splits": [
+        "train"
+    ],
+    "valid_splits": [
+        "val"
+    ],
+    "warmup_lr": 1e-08,
+    "warmup_steps": 1000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-17 23:50:23,203 [INFO] 
+======  Dataset Attributes  ======
+2023-08-17 23:50:23,203 [INFO] 
+======== coco_caption =======
+2023-08-17 23:50:23,204 [INFO] {
+    "build_info": {
+        "annotations": {
+            "test": {
+                "md5": "3ff34b0ef2db02d01c37399f6a2a6cd1",
+                "storage": "coco/annotations/coco_karpathy_test.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_test.json"
+            },
+            "train": {
+                "md5": "aa31ac474cf6250ebb81d18348a07ed8",
+                "storage": "coco/annotations/coco_karpathy_train.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_train.json"
+            },
+            "val": {
+                "md5": "b273847456ef5580e33713b1f7de52a0",
+                "storage": "coco/annotations/coco_karpathy_val.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/datasets/coco_karpathy_val.json"
+            }
+        },
+        "images": {
+            "storage": "coco/images/"
+        }
+    },
+    "data_type": "images",
+    "dataset_card": "dataset_card/coco_caption.md",
+    "text_processor": {
+        "eval": {
+            "name": "blip_caption"
+        },
+        "train": {
+            "name": "blip_caption",
+            "prompt": "a photo of "
+        }
+    },
+    "vis_processor": {
+        "eval": {
+            "image_size": 364,
+            "name": "blip_image_eval"
+        },
+        "train": {
+            "image_size": 364,
+            "name": "blip2_image_train"
+        }
+    }
+}
+2023-08-17 23:50:23,204 [INFO] 
+======  Model Attributes  ======
+2023-08-17 23:50:23,204 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "freeze_vit": true,
+    "image_size": 364,
+    "load_finetuned": false,
+    "model_type": "caption_coco_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth",
+    "prompt": "a photo of",
+    "use_grad_checkpoint": true,
+    "vit_precision": "fp32"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_train.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_val.json
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/coco/annotations/coco_karpathy_test.json
+2023-08-17 23:50:23,220 [INFO] Building datasets...
+BlipImageEvalProcessor
+Position interpolate from 16x16 to 26x26
+2023-08-17 23:51:01,968 [INFO] freeze vision encoder
+2023-08-17 23:54:24,523 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-17 23:54:24,559 [INFO] Start training
+2023-08-17 23:54:46,283 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-17 23:54:46,284 [INFO] Loaded 566747 records for train split from the dataset.
+2023-08-17 23:54:46,284 [INFO] Loaded 5000 records for val split from the dataset.
+2023-08-17 23:54:46,284 [INFO] Loaded 5000 records for test split from the dataset.
+2023-08-17 23:54:46,342 [INFO] number of trainable parameters: 107133696
+2023-08-17 23:54:46,346 [INFO] Start training epoch 0, 11807 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+Train: data epoch: [0]  [    0/11807]  eta: 3 days, 8:07:53  lr: 0.000000  loss: 2.0273  time: 24.4325  data: 0.0000  max mem: 12755
+2023-08-17 23:55:10,844 [INFO] Reducer buckets have been rebuilt in this iteration.
+Train: data epoch: [0]  [   50/11807]  eta: 16:43:25  lr: 0.000001  loss: 2.3848  time: 4.7379  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  100/11807]  eta: 16:02:36  lr: 0.000001  loss: 2.1011  time: 4.7522  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  150/11807]  eta: 15:48:34  lr: 0.000002  loss: 1.6455  time: 4.7269  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  200/11807]  eta: 15:38:13  lr: 0.000002  loss: 1.6238  time: 4.7325  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  250/11807]  eta: 15:30:45  lr: 0.000003  loss: 2.0196  time: 4.7432  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  300/11807]  eta: 15:23:40  lr: 0.000003  loss: 1.8168  time: 4.7167  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  350/11807]  eta: 15:17:34  lr: 0.000004  loss: 1.9560  time: 4.7475  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  400/11807]  eta: 15:11:33  lr: 0.000004  loss: 1.7759  time: 4.7104  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  450/11807]  eta: 15:06:41  lr: 0.000005  loss: 2.2058  time: 4.7510  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  500/11807]  eta: 15:01:36  lr: 0.000005  loss: 2.0217  time: 4.7163  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  550/11807]  eta: 14:56:57  lr: 0.000006  loss: 2.1014  time: 4.7416  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  600/11807]  eta: 14:52:14  lr: 0.000006  loss: 2.0388  time: 4.7324  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  650/11807]  eta: 14:47:28  lr: 0.000007  loss: 2.0796  time: 4.7328  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  700/11807]  eta: 14:43:09  lr: 0.000007  loss: 1.6920  time: 4.7778  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  750/11807]  eta: 14:38:36  lr: 0.000008  loss: 1.7025  time: 4.7110  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  800/11807]  eta: 14:34:19  lr: 0.000008  loss: 1.8058  time: 4.7005  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  850/11807]  eta: 14:30:14  lr: 0.000009  loss: 2.1416  time: 4.7515  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  900/11807]  eta: 14:25:50  lr: 0.000009  loss: 2.2454  time: 4.7005  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [  950/11807]  eta: 14:21:34  lr: 0.000010  loss: 2.0109  time: 4.7293  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1000/11807]  eta: 14:17:16  lr: 0.000010  loss: 2.3736  time: 4.7115  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1050/11807]  eta: 14:13:12  lr: 0.000010  loss: 2.0609  time: 4.7552  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1100/11807]  eta: 14:09:04  lr: 0.000010  loss: 1.9285  time: 4.7610  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1150/11807]  eta: 14:05:00  lr: 0.000010  loss: 2.0716  time: 4.7158  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1200/11807]  eta: 14:00:55  lr: 0.000010  loss: 1.9790  time: 4.7509  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1250/11807]  eta: 13:56:52  lr: 0.000010  loss: 1.6531  time: 4.7460  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1300/11807]  eta: 13:52:44  lr: 0.000010  loss: 2.3817  time: 4.7260  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1350/11807]  eta: 13:48:32  lr: 0.000010  loss: 1.6689  time: 4.7099  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1400/11807]  eta: 13:44:22  lr: 0.000010  loss: 2.0461  time: 4.7273  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1450/11807]  eta: 13:40:16  lr: 0.000010  loss: 1.8505  time: 4.7356  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1500/11807]  eta: 13:36:14  lr: 0.000010  loss: 1.9448  time: 4.7337  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1550/11807]  eta: 13:32:10  lr: 0.000010  loss: 2.0835  time: 4.7456  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1600/11807]  eta: 13:28:03  lr: 0.000010  loss: 2.6513  time: 4.7201  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1650/11807]  eta: 13:23:57  lr: 0.000010  loss: 2.1867  time: 4.7126  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1700/11807]  eta: 13:19:51  lr: 0.000010  loss: 2.4051  time: 4.7413  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1750/11807]  eta: 13:15:46  lr: 0.000010  loss: 2.1592  time: 4.7075  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1800/11807]  eta: 13:11:48  lr: 0.000010  loss: 2.3778  time: 4.7639  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1850/11807]  eta: 13:07:57  lr: 0.000010  loss: 1.8686  time: 4.7722  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1900/11807]  eta: 13:04:00  lr: 0.000010  loss: 1.8556  time: 4.7411  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 1950/11807]  eta: 12:59:58  lr: 0.000010  loss: 2.1830  time: 4.7313  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2000/11807]  eta: 12:55:57  lr: 0.000010  loss: 1.8654  time: 4.7320  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2050/11807]  eta: 12:51:59  lr: 0.000010  loss: 1.9941  time: 4.7523  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2100/11807]  eta: 12:48:01  lr: 0.000010  loss: 2.0247  time: 4.7522  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2150/11807]  eta: 12:43:58  lr: 0.000010  loss: 2.1483  time: 4.7213  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2200/11807]  eta: 12:40:00  lr: 0.000010  loss: 2.0477  time: 4.7217  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2250/11807]  eta: 12:35:55  lr: 0.000010  loss: 1.8017  time: 4.7200  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2300/11807]  eta: 12:31:57  lr: 0.000010  loss: 2.3615  time: 4.7274  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2350/11807]  eta: 12:28:02  lr: 0.000010  loss: 2.0663  time: 4.7562  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2400/11807]  eta: 12:24:01  lr: 0.000010  loss: 2.0976  time: 4.7164  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2450/11807]  eta: 12:20:02  lr: 0.000010  loss: 1.7931  time: 4.7341  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2500/11807]  eta: 12:16:04  lr: 0.000010  loss: 1.9956  time: 4.7357  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2550/11807]  eta: 12:12:01  lr: 0.000010  loss: 1.9905  time: 4.7315  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2600/11807]  eta: 12:08:02  lr: 0.000010  loss: 2.0509  time: 4.7369  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2650/11807]  eta: 12:04:05  lr: 0.000010  loss: 1.7792  time: 4.7523  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2700/11807]  eta: 12:00:09  lr: 0.000010  loss: 2.4768  time: 4.7700  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2750/11807]  eta: 11:56:13  lr: 0.000010  loss: 1.9102  time: 4.7358  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2800/11807]  eta: 11:52:14  lr: 0.000010  loss: 1.9345  time: 4.7364  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2850/11807]  eta: 11:48:13  lr: 0.000010  loss: 1.9638  time: 4.7259  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2900/11807]  eta: 11:44:16  lr: 0.000010  loss: 1.7417  time: 4.7567  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 2950/11807]  eta: 11:40:21  lr: 0.000010  loss: 2.0759  time: 4.7410  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3000/11807]  eta: 11:36:23  lr: 0.000010  loss: 1.7469  time: 4.7281  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3050/11807]  eta: 11:32:26  lr: 0.000010  loss: 2.0723  time: 4.7317  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3100/11807]  eta: 11:28:30  lr: 0.000010  loss: 2.2963  time: 4.7438  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3150/11807]  eta: 11:24:31  lr: 0.000010  loss: 1.9089  time: 4.7259  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3200/11807]  eta: 11:20:35  lr: 0.000010  loss: 2.2658  time: 4.7354  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3250/11807]  eta: 11:16:33  lr: 0.000010  loss: 2.4461  time: 4.7086  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3300/11807]  eta: 11:12:32  lr: 0.000010  loss: 2.0805  time: 4.7443  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3350/11807]  eta: 11:08:35  lr: 0.000010  loss: 1.9710  time: 4.7585  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3400/11807]  eta: 11:04:37  lr: 0.000010  loss: 2.4602  time: 4.7209  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3450/11807]  eta: 11:00:38  lr: 0.000010  loss: 2.2242  time: 4.7186  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3500/11807]  eta: 10:56:41  lr: 0.000010  loss: 2.1195  time: 4.7759  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3550/11807]  eta: 10:52:43  lr: 0.000010  loss: 2.0982  time: 4.7321  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3600/11807]  eta: 10:48:47  lr: 0.000010  loss: 2.0695  time: 4.7639  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3650/11807]  eta: 10:44:51  lr: 0.000010  loss: 1.9084  time: 4.7307  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3700/11807]  eta: 10:40:53  lr: 0.000010  loss: 1.9251  time: 4.7472  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3750/11807]  eta: 10:36:55  lr: 0.000010  loss: 2.5361  time: 4.7680  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3800/11807]  eta: 10:32:57  lr: 0.000010  loss: 1.8480  time: 4.7282  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3850/11807]  eta: 10:28:58  lr: 0.000010  loss: 2.1100  time: 4.7190  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3900/11807]  eta: 10:25:02  lr: 0.000010  loss: 1.7186  time: 4.7315  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 3950/11807]  eta: 10:21:05  lr: 0.000010  loss: 2.0132  time: 4.7411  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4000/11807]  eta: 10:17:07  lr: 0.000010  loss: 2.0943  time: 4.7205  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4050/11807]  eta: 10:13:08  lr: 0.000010  loss: 2.1215  time: 4.7095  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4100/11807]  eta: 10:09:10  lr: 0.000010  loss: 1.8910  time: 4.7333  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4150/11807]  eta: 10:05:11  lr: 0.000010  loss: 2.1705  time: 4.6980  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4200/11807]  eta: 10:01:12  lr: 0.000010  loss: 2.0190  time: 4.7339  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4250/11807]  eta: 9:57:14  lr: 0.000010  loss: 2.0100  time: 4.7098  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4300/11807]  eta: 9:53:18  lr: 0.000010  loss: 2.3970  time: 4.7551  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4350/11807]  eta: 9:49:19  lr: 0.000010  loss: 2.2302  time: 4.7132  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4400/11807]  eta: 9:45:22  lr: 0.000010  loss: 2.2296  time: 4.7253  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4450/11807]  eta: 9:41:24  lr: 0.000010  loss: 2.0303  time: 4.7381  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4500/11807]  eta: 9:37:26  lr: 0.000010  loss: 2.0524  time: 4.7216  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4550/11807]  eta: 9:33:28  lr: 0.000010  loss: 2.2729  time: 4.7246  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4600/11807]  eta: 9:29:31  lr: 0.000010  loss: 2.3195  time: 4.7480  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4650/11807]  eta: 9:25:32  lr: 0.000010  loss: 2.0356  time: 4.7222  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4700/11807]  eta: 9:21:36  lr: 0.000010  loss: 2.1841  time: 4.7510  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4750/11807]  eta: 9:17:41  lr: 0.000010  loss: 2.3122  time: 4.7580  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4800/11807]  eta: 9:13:44  lr: 0.000010  loss: 2.1389  time: 4.7335  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4850/11807]  eta: 9:09:46  lr: 0.000010  loss: 1.8794  time: 4.7324  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4900/11807]  eta: 9:05:48  lr: 0.000010  loss: 2.2521  time: 4.7333  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 4950/11807]  eta: 9:01:51  lr: 0.000010  loss: 2.1357  time: 4.7472  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5000/11807]  eta: 8:57:54  lr: 0.000010  loss: 2.3452  time: 4.7122  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5050/11807]  eta: 8:53:56  lr: 0.000010  loss: 1.7784  time: 4.7212  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5100/11807]  eta: 8:49:58  lr: 0.000010  loss: 2.2709  time: 4.7490  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5150/11807]  eta: 8:46:01  lr: 0.000010  loss: 1.9178  time: 4.7457  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5200/11807]  eta: 8:42:03  lr: 0.000010  loss: 1.7553  time: 4.7061  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5250/11807]  eta: 8:38:06  lr: 0.000010  loss: 1.9614  time: 4.7470  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5300/11807]  eta: 8:34:08  lr: 0.000010  loss: 2.4696  time: 4.7125  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5350/11807]  eta: 8:30:10  lr: 0.000010  loss: 1.8598  time: 4.7253  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5400/11807]  eta: 8:26:12  lr: 0.000010  loss: 2.4293  time: 4.7121  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5450/11807]  eta: 8:22:16  lr: 0.000010  loss: 2.3226  time: 4.7240  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5500/11807]  eta: 8:18:20  lr: 0.000010  loss: 2.1352  time: 4.7369  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5550/11807]  eta: 8:14:21  lr: 0.000010  loss: 2.5566  time: 4.6804  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5600/11807]  eta: 8:10:24  lr: 0.000010  loss: 1.9176  time: 4.7585  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5650/11807]  eta: 8:06:28  lr: 0.000010  loss: 1.6830  time: 4.7348  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5700/11807]  eta: 8:02:30  lr: 0.000010  loss: 2.1540  time: 4.7186  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5750/11807]  eta: 7:58:32  lr: 0.000010  loss: 2.2071  time: 4.7304  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5800/11807]  eta: 7:54:36  lr: 0.000010  loss: 2.0834  time: 4.7516  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5850/11807]  eta: 7:50:37  lr: 0.000010  loss: 1.9515  time: 4.7193  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5900/11807]  eta: 7:46:39  lr: 0.000010  loss: 2.3856  time: 4.7183  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 5950/11807]  eta: 7:42:42  lr: 0.000010  loss: 2.0495  time: 4.7399  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6000/11807]  eta: 7:38:45  lr: 0.000010  loss: 2.4517  time: 4.7375  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6050/11807]  eta: 7:34:48  lr: 0.000010  loss: 2.3537  time: 4.7762  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6100/11807]  eta: 7:30:50  lr: 0.000010  loss: 2.4013  time: 4.7133  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6150/11807]  eta: 7:26:53  lr: 0.000010  loss: 2.0761  time: 4.7187  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6200/11807]  eta: 7:22:56  lr: 0.000010  loss: 1.9284  time: 4.7463  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6250/11807]  eta: 7:18:59  lr: 0.000010  loss: 1.8071  time: 4.7706  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6300/11807]  eta: 7:15:01  lr: 0.000010  loss: 1.5673  time: 4.7310  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6350/11807]  eta: 7:11:04  lr: 0.000010  loss: 2.1412  time: 4.7228  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6400/11807]  eta: 7:07:07  lr: 0.000010  loss: 2.3921  time: 4.7289  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6450/11807]  eta: 7:03:09  lr: 0.000010  loss: 2.2392  time: 4.6971  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6500/11807]  eta: 6:59:12  lr: 0.000010  loss: 2.0210  time: 4.7205  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6550/11807]  eta: 6:55:15  lr: 0.000010  loss: 1.7857  time: 4.7147  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6600/11807]  eta: 6:51:18  lr: 0.000010  loss: 1.6125  time: 4.7454  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6650/11807]  eta: 6:47:21  lr: 0.000010  loss: 2.0201  time: 4.7335  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6700/11807]  eta: 6:43:23  lr: 0.000010  loss: 2.3011  time: 4.7379  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6750/11807]  eta: 6:39:26  lr: 0.000010  loss: 2.0037  time: 4.7149  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6800/11807]  eta: 6:35:29  lr: 0.000010  loss: 2.0728  time: 4.7302  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6850/11807]  eta: 6:31:31  lr: 0.000010  loss: 2.2800  time: 4.7341  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6900/11807]  eta: 6:27:34  lr: 0.000010  loss: 1.9305  time: 4.7339  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 6950/11807]  eta: 6:23:37  lr: 0.000010  loss: 1.9098  time: 4.7334  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7000/11807]  eta: 6:19:40  lr: 0.000010  loss: 1.8846  time: 4.7318  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7050/11807]  eta: 6:15:43  lr: 0.000010  loss: 1.8477  time: 4.7495  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7100/11807]  eta: 6:11:46  lr: 0.000010  loss: 1.8188  time: 4.7452  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7150/11807]  eta: 6:07:48  lr: 0.000010  loss: 2.1748  time: 4.6915  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7200/11807]  eta: 6:03:50  lr: 0.000010  loss: 1.7026  time: 4.7078  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7250/11807]  eta: 5:59:53  lr: 0.000010  loss: 1.9271  time: 4.7534  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7300/11807]  eta: 5:55:56  lr: 0.000010  loss: 1.9899  time: 4.7655  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7350/11807]  eta: 5:51:59  lr: 0.000010  loss: 1.8270  time: 4.7464  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7400/11807]  eta: 5:48:02  lr: 0.000010  loss: 1.8557  time: 4.7205  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7450/11807]  eta: 5:44:04  lr: 0.000010  loss: 2.0926  time: 4.7166  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7500/11807]  eta: 5:40:07  lr: 0.000010  loss: 2.1628  time: 4.6876  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7550/11807]  eta: 5:36:10  lr: 0.000010  loss: 1.9834  time: 4.7249  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7600/11807]  eta: 5:32:13  lr: 0.000010  loss: 2.3845  time: 4.7374  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7650/11807]  eta: 5:28:15  lr: 0.000010  loss: 2.2998  time: 4.7330  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7700/11807]  eta: 5:24:18  lr: 0.000010  loss: 1.7565  time: 4.7059  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7750/11807]  eta: 5:20:21  lr: 0.000010  loss: 2.2781  time: 4.7361  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7800/11807]  eta: 5:16:24  lr: 0.000010  loss: 2.1190  time: 4.7192  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7850/11807]  eta: 5:12:26  lr: 0.000010  loss: 1.8485  time: 4.7199  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7900/11807]  eta: 5:08:29  lr: 0.000010  loss: 2.3841  time: 4.7243  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 7950/11807]  eta: 5:04:32  lr: 0.000010  loss: 2.3972  time: 4.7288  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8000/11807]  eta: 5:00:35  lr: 0.000010  loss: 2.2565  time: 4.7189  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8050/11807]  eta: 4:56:39  lr: 0.000010  loss: 2.4547  time: 4.7229  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8100/11807]  eta: 4:52:42  lr: 0.000010  loss: 1.6480  time: 4.7581  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8150/11807]  eta: 4:48:45  lr: 0.000010  loss: 2.4000  time: 4.7496  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8200/11807]  eta: 4:44:49  lr: 0.000010  loss: 2.3040  time: 4.7317  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8250/11807]  eta: 4:40:52  lr: 0.000010  loss: 2.2811  time: 4.7300  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8300/11807]  eta: 4:36:55  lr: 0.000010  loss: 2.0143  time: 4.7237  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8350/11807]  eta: 4:32:58  lr: 0.000010  loss: 2.2071  time: 4.7403  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8400/11807]  eta: 4:29:00  lr: 0.000010  loss: 2.0508  time: 4.7092  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8450/11807]  eta: 4:25:04  lr: 0.000010  loss: 2.4736  time: 4.7479  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8500/11807]  eta: 4:21:07  lr: 0.000010  loss: 1.8149  time: 4.7813  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8550/11807]  eta: 4:17:10  lr: 0.000010  loss: 2.3803  time: 4.7378  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8600/11807]  eta: 4:13:13  lr: 0.000010  loss: 2.0531  time: 4.6898  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8650/11807]  eta: 4:09:16  lr: 0.000010  loss: 2.3245  time: 4.7373  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8700/11807]  eta: 4:05:19  lr: 0.000010  loss: 2.3080  time: 4.7205  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8750/11807]  eta: 4:01:22  lr: 0.000010  loss: 2.1602  time: 4.7398  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8800/11807]  eta: 3:57:25  lr: 0.000010  loss: 2.0958  time: 4.7231  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8850/11807]  eta: 3:53:28  lr: 0.000010  loss: 1.6906  time: 4.6913  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8900/11807]  eta: 3:49:32  lr: 0.000010  loss: 1.8761  time: 4.7640  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 8950/11807]  eta: 3:45:35  lr: 0.000010  loss: 2.0199  time: 4.7541  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9000/11807]  eta: 3:41:38  lr: 0.000010  loss: 2.3925  time: 4.7323  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9050/11807]  eta: 3:37:41  lr: 0.000010  loss: 2.1580  time: 4.7375  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9100/11807]  eta: 3:33:44  lr: 0.000010  loss: 2.0823  time: 4.7218  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9150/11807]  eta: 3:29:47  lr: 0.000010  loss: 2.0384  time: 4.7302  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9200/11807]  eta: 3:25:50  lr: 0.000010  loss: 1.6927  time: 4.7316  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9250/11807]  eta: 3:21:54  lr: 0.000010  loss: 2.2693  time: 4.7346  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9300/11807]  eta: 3:17:57  lr: 0.000010  loss: 1.9131  time: 4.7514  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9350/11807]  eta: 3:14:00  lr: 0.000010  loss: 2.0587  time: 4.7005  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9400/11807]  eta: 3:10:03  lr: 0.000010  loss: 2.0954  time: 4.7384  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9450/11807]  eta: 3:06:06  lr: 0.000010  loss: 1.9967  time: 4.7334  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9500/11807]  eta: 3:02:09  lr: 0.000010  loss: 2.4333  time: 4.7065  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9550/11807]  eta: 2:58:12  lr: 0.000010  loss: 2.1079  time: 4.7117  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9600/11807]  eta: 2:54:15  lr: 0.000010  loss: 1.8828  time: 4.6981  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9650/11807]  eta: 2:50:18  lr: 0.000010  loss: 1.8297  time: 4.7631  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9700/11807]  eta: 2:46:21  lr: 0.000010  loss: 1.7688  time: 4.7265  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9750/11807]  eta: 2:42:24  lr: 0.000010  loss: 2.4344  time: 4.7178  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9800/11807]  eta: 2:38:27  lr: 0.000010  loss: 2.2457  time: 4.7301  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9850/11807]  eta: 2:34:30  lr: 0.000010  loss: 2.2866  time: 4.7189  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9900/11807]  eta: 2:30:33  lr: 0.000010  loss: 2.0831  time: 4.7268  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [ 9950/11807]  eta: 2:26:36  lr: 0.000010  loss: 1.9374  time: 4.7079  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10000/11807]  eta: 2:22:39  lr: 0.000010  loss: 2.2455  time: 4.7463  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10050/11807]  eta: 2:18:42  lr: 0.000010  loss: 1.9238  time: 4.7627  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10100/11807]  eta: 2:14:45  lr: 0.000010  loss: 2.0362  time: 4.7242  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10150/11807]  eta: 2:10:48  lr: 0.000010  loss: 2.2174  time: 4.7280  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10200/11807]  eta: 2:06:52  lr: 0.000010  loss: 1.7757  time: 4.7512  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10250/11807]  eta: 2:02:55  lr: 0.000010  loss: 2.1661  time: 4.7303  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10300/11807]  eta: 1:58:58  lr: 0.000010  loss: 2.3158  time: 4.7245  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10350/11807]  eta: 1:55:01  lr: 0.000010  loss: 2.1128  time: 4.6930  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10400/11807]  eta: 1:51:04  lr: 0.000010  loss: 2.2655  time: 4.7789  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10450/11807]  eta: 1:47:07  lr: 0.000010  loss: 1.8257  time: 4.7607  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10500/11807]  eta: 1:43:11  lr: 0.000010  loss: 1.8644  time: 4.7360  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10550/11807]  eta: 1:39:14  lr: 0.000010  loss: 2.5102  time: 4.7217  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10600/11807]  eta: 1:35:17  lr: 0.000010  loss: 2.3308  time: 4.6929  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10650/11807]  eta: 1:31:20  lr: 0.000010  loss: 2.0840  time: 4.7390  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10700/11807]  eta: 1:27:23  lr: 0.000010  loss: 2.2591  time: 4.7329  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10750/11807]  eta: 1:23:26  lr: 0.000010  loss: 1.9111  time: 4.7152  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10800/11807]  eta: 1:19:29  lr: 0.000010  loss: 2.0894  time: 4.7036  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10850/11807]  eta: 1:15:32  lr: 0.000010  loss: 2.3801  time: 4.7164  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10900/11807]  eta: 1:11:36  lr: 0.000010  loss: 2.2588  time: 4.7584  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [10950/11807]  eta: 1:07:39  lr: 0.000010  loss: 1.8758  time: 4.7552  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11000/11807]  eta: 1:03:42  lr: 0.000010  loss: 1.8564  time: 4.7853  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11050/11807]  eta: 0:59:45  lr: 0.000010  loss: 2.7892  time: 4.7324  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11100/11807]  eta: 0:55:48  lr: 0.000010  loss: 2.2351  time: 4.7616  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11150/11807]  eta: 0:51:51  lr: 0.000010  loss: 2.1158  time: 4.7368  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11200/11807]  eta: 0:47:55  lr: 0.000010  loss: 2.0698  time: 4.7245  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11250/11807]  eta: 0:43:58  lr: 0.000010  loss: 2.0902  time: 4.7352  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11300/11807]  eta: 0:40:01  lr: 0.000010  loss: 2.0010  time: 4.7470  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11350/11807]  eta: 0:36:04  lr: 0.000010  loss: 2.2325  time: 4.7062  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11400/11807]  eta: 0:32:07  lr: 0.000010  loss: 2.4482  time: 4.7640  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11450/11807]  eta: 0:28:10  lr: 0.000010  loss: 2.2042  time: 4.7387  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11500/11807]  eta: 0:24:14  lr: 0.000010  loss: 2.4342  time: 4.7143  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11550/11807]  eta: 0:20:17  lr: 0.000010  loss: 2.3064  time: 4.7279  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11600/11807]  eta: 0:16:20  lr: 0.000010  loss: 2.0499  time: 4.7681  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11650/11807]  eta: 0:12:23  lr: 0.000010  loss: 1.7858  time: 4.7244  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11700/11807]  eta: 0:08:26  lr: 0.000010  loss: 2.3191  time: 4.7108  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11750/11807]  eta: 0:04:29  lr: 0.000010  loss: 1.5378  time: 4.7652  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11800/11807]  eta: 0:00:33  lr: 0.000010  loss: 1.8849  time: 4.7406  data: 0.0000  max mem: 14496
+Train: data epoch: [0]  [11806/11807]  eta: 0:00:04  lr: 0.000010  loss: 1.9018  time: 4.7249  data: 0.0000  max mem: 14496
+Train: data epoch: [0] Total time: 15:32:03 (4.7365 s / it)
+2023-08-18 15:26:50,121 [INFO] Averaged stats: lr: 0.0000  loss: 2.0953
+2023-08-18 15:26:50,161 [INFO] Evaluating on val.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+Evaluation  [  0/625]  eta: 1:12:38    time: 6.9737  data: 0.7236  max mem: 14496
+Evaluation  [ 10/625]  eta: 0:45:07    time: 4.4025  data: 0.0665  max mem: 14496
+Evaluation  [ 20/625]  eta: 0:42:54    time: 4.1193  data: 0.0009  max mem: 14496
+Evaluation  [ 30/625]  eta: 0:40:56    time: 3.9771  data: 0.0009  max mem: 14496
+Evaluation  [ 40/625]  eta: 0:40:07    time: 3.9700  data: 0.0008  max mem: 14496
+Evaluation  [ 50/625]  eta: 0:40:04    time: 4.2633  data: 0.0008  max mem: 14496
+Evaluation  [ 60/625]  eta: 0:38:49    time: 4.1371  data: 0.0009  max mem: 14496
+Evaluation  [ 70/625]  eta: 0:38:17    time: 4.0315  data: 0.0008  max mem: 14496
+Evaluation  [ 80/625]  eta: 0:37:14    time: 4.0272  data: 0.0008  max mem: 14496
+Evaluation  [ 90/625]  eta: 0:36:32    time: 3.9502  data: 0.0008  max mem: 14496
+Evaluation  [100/625]  eta: 0:35:46    time: 4.0408  data: 0.0007  max mem: 14496
+Evaluation  [110/625]  eta: 0:35:02    time: 4.0096  data: 0.0008  max mem: 14496
+Evaluation  [120/625]  eta: 0:34:25    time: 4.0994  data: 0.0008  max mem: 14496
+Evaluation  [130/625]  eta: 0:33:55    time: 4.2864  data: 0.0007  max mem: 14496
+Evaluation  [140/625]  eta: 0:33:04    time: 4.1036  data: 0.0007  max mem: 14496
+Evaluation  [150/625]  eta: 0:32:21    time: 3.9278  data: 0.0007  max mem: 14496
+Evaluation  [160/625]  eta: 0:31:38    time: 4.0270  data: 0.0007  max mem: 14496
+Evaluation  [170/625]  eta: 0:30:54    time: 3.9786  data: 0.0008  max mem: 14496
+Evaluation  [180/625]  eta: 0:30:16    time: 4.0719  data: 0.0008  max mem: 14496
+Evaluation  [190/625]  eta: 0:29:31    time: 4.0444  data: 0.0008  max mem: 14496
+Evaluation  [200/625]  eta: 0:28:54    time: 4.0738  data: 0.0009  max mem: 14496
+Evaluation  [210/625]  eta: 0:28:09    time: 4.0716  data: 0.0009  max mem: 14496
+Evaluation  [220/625]  eta: 0:27:22    time: 3.7994  data: 0.0010  max mem: 14496
+Evaluation  [230/625]  eta: 0:26:45    time: 3.9726  data: 0.0019  max mem: 14496
+Evaluation  [240/625]  eta: 0:26:07    time: 4.2360  data: 0.0026  max mem: 14496
+Evaluation  [250/625]  eta: 0:25:28    time: 4.2039  data: 0.0018  max mem: 14496
+Evaluation  [260/625]  eta: 0:24:42    time: 3.9601  data: 0.0009  max mem: 14496
+Evaluation  [270/625]  eta: 0:24:03    time: 3.9560  data: 0.0008  max mem: 14496
+Evaluation  [280/625]  eta: 0:23:30    time: 4.4213  data: 0.0008  max mem: 14496
+Evaluation  [290/625]  eta: 0:22:57    time: 4.7181  data: 0.0008  max mem: 14496
+Evaluation  [300/625]  eta: 0:22:19    time: 4.5916  data: 0.0008  max mem: 14496
+Evaluation  [310/625]  eta: 0:21:35    time: 4.1415  data: 0.0008  max mem: 14496
+Evaluation  [320/625]  eta: 0:20:54    time: 3.9925  data: 0.0009  max mem: 14496
+Evaluation  [330/625]  eta: 0:20:11    time: 4.0333  data: 0.0008  max mem: 14496
+Evaluation  [340/625]  eta: 0:19:33    time: 4.1749  data: 0.0007  max mem: 14496
+Evaluation  [350/625]  eta: 0:18:53    time: 4.3793  data: 0.0008  max mem: 14496
+Evaluation  [360/625]  eta: 0:18:11    time: 4.1833  data: 0.0009  max mem: 14496
+Evaluation  [370/625]  eta: 0:17:33    time: 4.2889  data: 0.0009  max mem: 14496
+Evaluation  [380/625]  eta: 0:16:51    time: 4.2358  data: 0.0007  max mem: 14496
+Evaluation  [390/625]  eta: 0:16:10    time: 4.0565  data: 0.0008  max mem: 14496
+Evaluation  [400/625]  eta: 0:15:27    time: 4.0154  data: 0.0009  max mem: 14496
+Evaluation  [410/625]  eta: 0:14:44    time: 3.8186  data: 0.0010  max mem: 14496
+Evaluation  [420/625]  eta: 0:14:02    time: 3.8614  data: 0.0012  max mem: 14496
+Evaluation  [430/625]  eta: 0:13:21    time: 4.0838  data: 0.0014  max mem: 14496
+Evaluation  [440/625]  eta: 0:12:38    time: 3.8990  data: 0.0011  max mem: 14496
+Evaluation  [450/625]  eta: 0:11:56    time: 3.6862  data: 0.0020  max mem: 14496
+Evaluation  [460/625]  eta: 0:11:15    time: 4.0412  data: 0.0020  max mem: 14496
+Evaluation  [470/625]  eta: 0:10:35    time: 4.2446  data: 0.0008  max mem: 14496
+Evaluation  [480/625]  eta: 0:09:53    time: 3.9356  data: 0.0008  max mem: 14496
+Evaluation  [490/625]  eta: 0:09:11    time: 3.8200  data: 0.0008  max mem: 14496
+Evaluation  [500/625]  eta: 0:08:30    time: 4.0143  data: 0.0012  max mem: 14496
+Evaluation  [510/625]  eta: 0:07:49    time: 3.8654  data: 0.0012  max mem: 14496
+Evaluation  [520/625]  eta: 0:07:07    time: 3.7791  data: 0.0009  max mem: 14496
+Evaluation  [530/625]  eta: 0:06:27    time: 4.0504  data: 0.0008  max mem: 14496
+Evaluation  [540/625]  eta: 0:05:46    time: 4.0399  data: 0.0008  max mem: 14496
+Evaluation  [550/625]  eta: 0:05:05    time: 3.9827  data: 0.0007  max mem: 14496
+Evaluation  [560/625]  eta: 0:04:24    time: 4.1459  data: 0.0010  max mem: 14496
+Evaluation  [570/625]  eta: 0:03:44    time: 4.2356  data: 0.0010  max mem: 14496
+Evaluation  [580/625]  eta: 0:03:03    time: 4.3127  data: 0.0007  max mem: 14496
+Evaluation  [590/625]  eta: 0:02:23    time: 4.3410  data: 0.0009  max mem: 14496
+Evaluation  [600/625]  eta: 0:01:42    time: 4.1854  data: 0.0009  max mem: 14496
+Evaluation  [610/625]  eta: 0:01:01    time: 4.2507  data: 0.0008  max mem: 14496
+Evaluation  [620/625]  eta: 0:00:20    time: 4.3291  data: 0.0009  max mem: 14496
+Evaluation  [624/625]  eta: 0:00:04    time: 4.1977  data: 0.0028  max mem: 14496
+Evaluation Total time: 0:42:38 (4.0936 s / it)
+2023-08-18 16:09:28,693 [WARNING] rank 0 starts merging results.
+result file saved to /public/home/mswanghao/TorchProject/lavis/lavis/output/BLIP2/Caption_coco_ce/20230817235/result/val_epoch0.json
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:13 │
+│ 46 in do_open                                                                │
+│                                                                              │
+│   1343 │   │                                                                 │
+│   1344 │   │   try:                                                          │
+│   1345 │   │   │   try:                                                      │
+│ ❱ 1346 │   │   │   │   h.request(req.get_method(), req.selector, req.data, h │
+│   1347 │   │   │   │   │   │     encode_chunked=req.has_header('Transfer-enc │
+│   1348 │   │   │   except OSError as err: # timeout error                    │
+│   1349 │   │   │   │   raise URLError(err)                                   │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:1285  │
+│ in request                                                                   │
+│                                                                              │
+│   1282 │   def request(self, method, url, body=None, headers={}, *,          │
+│   1283 │   │   │   │   encode_chunked=False):                                │
+│   1284 │   │   """Send a complete request to the server."""                  │
+│ ❱ 1285 │   │   self._send_request(method, url, body, headers, encode_chunked │
+│   1286 │                                                                     │
+│   1287 │   def _send_request(self, method, url, body, headers, encode_chunke │
+│   1288 │   │   # Honor explicitly requested Host: and Accept-Encoding: heade │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:1331  │
+│ in _send_request                                                             │
+│                                                                              │
+│   1328 │   │   │   # RFC 2616 Section 3.7.1 says that text default has a     │
+│   1329 │   │   │   # default charset of iso-8859-1.                          │
+│   1330 │   │   │   body = _encode(body, 'body')                              │
+│ ❱ 1331 │   │   self.endheaders(body, encode_chunked=encode_chunked)          │
+│   1332 │                                                                     │
+│   1333 │   def getresponse(self):                                            │
+│   1334 │   │   """Get the response from the server.                          │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:1280  │
+│ in endheaders                                                                │
+│                                                                              │
+│   1277 │   │   │   self.__state = _CS_REQ_SENT                               │
+│   1278 │   │   else:                                                         │
+│   1279 │   │   │   raise CannotSendHeader()                                  │
+│ ❱ 1280 │   │   self._send_output(message_body, encode_chunked=encode_chunked │
+│   1281 │                                                                     │
+│   1282 │   def request(self, method, url, body=None, headers={}, *,          │
+│   1283 │   │   │   │   encode_chunked=False):                                │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:1040  │
+│ in _send_output                                                              │
+│                                                                              │
+│   1037 │   │   self._buffer.extend((b"", b""))                               │
+│   1038 │   │   msg = b"\r\n".join(self._buffer)                              │
+│   1039 │   │   del self._buffer[:]                                           │
+│ ❱ 1040 │   │   self.send(msg)                                                │
+│   1041 │   │                                                                 │
+│   1042 │   │   if message_body is not None:                                  │
+│   1043                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:980   │
+│ in send                                                                      │
+│                                                                              │
+│    977 │   │                                                                 │
+│    978 │   │   if self.sock is None:                                         │
+│    979 │   │   │   if self.auto_open:                                        │
+│ ❱  980 │   │   │   │   self.connect()                                        │
+│    981 │   │   │   else:                                                     │
+│    982 │   │   │   │   raise NotConnected()                                  │
+│    983                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:1447  │
+│ in connect                                                                   │
+│                                                                              │
+│   1444 │   │   def connect(self):                                            │
+│   1445 │   │   │   "Connect to a host on a given (SSL) port."                │
+│   1446 │   │   │                                                             │
+│ ❱ 1447 │   │   │   super().connect()                                         │
+│   1448 │   │   │                                                             │
+│   1449 │   │   │   if self._tunnel_host:                                     │
+│   1450 │   │   │   │   server_hostname = self._tunnel_host                   │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/http/client.py:946   │
+│ in connect                                                                   │
+│                                                                              │
+│    943 │                                                                     │
+│    944 │   def connect(self):                                                │
+│    945 │   │   """Connect to the host and port specified in __init__."""     │
+│ ❱  946 │   │   self.sock = self._create_connection(                          │
+│    947 │   │   │   (self.host,self.port), self.timeout, self.source_address) │
+│    948 │   │   # Might fail in OSs that don't implement TCP_NODELAY          │
+│    949 │   │   try:                                                          │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/socket.py:823 in     │
+│ create_connection                                                            │
+│                                                                              │
+│   820 │                                                                      │
+│   821 │   host, port = address                                               │
+│   822 │   err = None                                                         │
+│ ❱ 823 │   for res in getaddrinfo(host, port, 0, SOCK_STREAM):                │
+│   824 │   │   af, socktype, proto, canonname, sa = res                       │
+│   825 │   │   sock = None                                                    │
+│   826 │   │   try:                                                           │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/socket.py:954 in     │
+│ getaddrinfo                                                                  │
+│                                                                              │
+│   951 │   # We override this function since we want to translate the numeric │
+│   952 │   # and socket type values to enum constants.                        │
+│   953 │   addrlist = []                                                      │
+│ ❱ 954 │   for res in _socket.getaddrinfo(host, port, family, type, proto, fl │
+│   955 │   │   af, socktype, proto, canonname, sa = res                       │
+│   956 │   │   addrlist.append((_intenum_converter(af, AddressFamily),        │
+│   957 │   │   │   │   │   │    _intenum_converter(socktype, SocketKind),     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /public/home/mswanghao/TorchProject/lavis/train.py:116 in <module>           │
+│                                                                              │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│ ❱ 116 │   main()                                                             │
+│   117                                                                        │
+│   118                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/train.py:112 in main               │
+│                                                                              │
+│   109 │   runner = get_runner_class(cfg)(                                    │
+│   110 │   │   cfg=cfg, job_id=job_id, task=task, model=model, datasets=datas │
+│   111 │   )                                                                  │
+│ ❱ 112 │   runner.train()                                                     │
+│   113                                                                        │
+│   114                                                                        │
+│   115 if __name__ == "__main__":                                             │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:380   │
+│ in train                                                                     │
+│                                                                              │
+│   377 │   │   │   │   for split_name in self.valid_splits:                   │
+│   378 │   │   │   │   │   logging.info("Evaluating on {}.".format(split_name │
+│   379 │   │   │   │   │                                                      │
+│ ❱ 380 │   │   │   │   │   val_log = self.eval_epoch(                         │
+│   381 │   │   │   │   │   │   split_name=split_name, cur_epoch=cur_epoch     │
+│   382 │   │   │   │   │   )                                                  │
+│   383 │   │   │   │   │   if val_log is not None:                            │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/ │
+│ autograd/grad_mode.py:28 in decorate_context                                 │
+│                                                                              │
+│    25 │   │   @functools.wraps(func)                                         │
+│    26 │   │   def decorate_context(*args, **kwargs):                         │
+│    27 │   │   │   with self.__class__():                                     │
+│ ❱  28 │   │   │   │   return func(*args, **kwargs)                           │
+│    29 │   │   return cast(F, decorate_context)                               │
+│    30 │                                                                      │
+│    31 │   def _wrap_generator(self, func):                                   │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/runners/runner_base.py:472   │
+│ in eval_epoch                                                                │
+│                                                                              │
+│   469 │   │   results = self.task.evaluation(model, data_loader)             │
+│   470 │   │                                                                  │
+│   471 │   │   if results is not None:                                        │
+│ ❱ 472 │   │   │   return self.task.after_evaluation(                         │
+│   473 │   │   │   │   val_result=results,                                    │
+│   474 │   │   │   │   split_name=split_name,                                 │
+│   475 │   │   │   │   epoch=cur_epoch,                                       │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/captioning.py:74 in    │
+│ after_evaluation                                                             │
+│                                                                              │
+│    71 │   │   )                                                              │
+│    72 │   │                                                                  │
+│    73 │   │   if self.report_metric:                                         │
+│ ❱  74 │   │   │   metrics = self._report_metrics(                            │
+│    75 │   │   │   │   eval_result_file=eval_result_file, split_name=split_na │
+│    76 │   │   │   )                                                          │
+│    77 │   │   else:                                                          │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/common/dist_utils.py:112 in  │
+│ wrapper                                                                      │
+│                                                                              │
+│   109 │   def wrapper(*args, **kwargs):                                      │
+│   110 │   │   rank, _ = get_dist_info()                                      │
+│   111 │   │   if rank == 0:                                                  │
+│ ❱ 112 │   │   │   return func(*args, **kwargs)                               │
+│   113 │                                                                      │
+│   114 │   return wrapper                                                     │
+│   115                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/captioning.py:87 in    │
+│ _report_metrics                                                              │
+│                                                                              │
+│    84 │   │                                                                  │
+│    85 │   │   # TODO better way to define this                               │
+│    86 │   │   coco_gt_root = os.path.join(registry.get_path("cache_root"), " │
+│ ❱  87 │   │   coco_val = coco_caption_eval(coco_gt_root, eval_result_file, s │
+│    88 │   │                                                                  │
+│    89 │   │   agg_metrics = coco_val.eval["CIDEr"] + coco_val.eval["Bleu_4"] │
+│    90 │   │   log_stats = {split_name: {k: v for k, v in coco_val.eval.items │
+│                                                                              │
+│ /public/home/mswanghao/TorchProject/lavis/lavis/tasks/captioning.py:119 in   │
+│ coco_caption_eval                                                            │
+│                                                                              │
+│   116 │   │   "test": "coco_karpathy_test_gt.json",                          │
+│   117 │   }                                                                  │
+│   118 │                                                                      │
+│ ❱ 119 │   download_url(urls[split], coco_gt_root)                            │
+│   120 │   annotation_file = os.path.join(coco_gt_root, filenames[split])     │
+│   121 │                                                                      │
+│   122 │   # create coco object and coco_result object                        │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torchv │
+│ ision/datasets/utils.py:129 in download_url                                  │
+│                                                                              │
+│   126 │   │   _download_file_from_remote_location(fpath, url)                │
+│   127 │   else:                                                              │
+│   128 │   │   # expand redirect chain if needed                              │
+│ ❱ 129 │   │   url = _get_redirect_url(url, max_hops=max_redirect_hops)       │
+│   130 │   │                                                                  │
+│   131 │   │   # check if file is located on Google Drive                     │
+│   132 │   │   file_id = _get_google_drive_file_id(url)                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torchv │
+│ ision/datasets/utils.py:77 in _get_redirect_url                              │
+│                                                                              │
+│    74 │   headers = {"Method": "HEAD", "User-Agent": USER_AGENT}             │
+│    75 │                                                                      │
+│    76 │   for _ in range(max_hops + 1):                                      │
+│ ❱  77 │   │   with urllib.request.urlopen(urllib.request.Request(url, header │
+│    78 │   │   │   if response.url == url or response.url is None:            │
+│    79 │   │   │   │   return url                                             │
+│    80                                                                        │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:21 │
+│ 4 in urlopen                                                                 │
+│                                                                              │
+│    211 │   │   _opener = opener = build_opener()                             │
+│    212 │   else:                                                             │
+│    213 │   │   opener = _opener                                              │
+│ ❱  214 │   return opener.open(url, data, timeout)                            │
+│    215                                                                       │
+│    216 def install_opener(opener):                                           │
+│    217 │   global _opener                                                    │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:51 │
+│ 7 in open                                                                    │
+│                                                                              │
+│    514 │   │   │   req = meth(req)                                           │
+│    515 │   │                                                                 │
+│    516 │   │   sys.audit('urllib.Request', req.full_url, req.data, req.heade │
+│ ❱  517 │   │   response = self._open(req, data)                              │
+│    518 │   │                                                                 │
+│    519 │   │   # post-process response                                       │
+│    520 │   │   meth_name = protocol+"_response"                              │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:53 │
+│ 4 in _open                                                                   │
+│                                                                              │
+│    531 │   │   │   return result                                             │
+│    532 │   │                                                                 │
+│    533 │   │   protocol = req.type                                           │
+│ ❱  534 │   │   result = self._call_chain(self.handle_open, protocol, protoco │
+│    535 │   │   │   │   │   │   │   │     '_open', req)                       │
+│    536 │   │   if result:                                                    │
+│    537 │   │   │   return result                                             │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:49 │
+│ 4 in _call_chain                                                             │
+│                                                                              │
+│    491 │   │   handlers = chain.get(kind, ())                                │
+│    492 │   │   for handler in handlers:                                      │
+│    493 │   │   │   func = getattr(handler, meth_name)                        │
+│ ❱  494 │   │   │   result = func(*args)                                      │
+│    495 │   │   │   if result is not None:                                    │
+│    496 │   │   │   │   return result                                         │
+│    497                                                                       │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:13 │
+│ 89 in https_open                                                             │
+│                                                                              │
+│   1386 │   │   │   self._check_hostname = check_hostname                     │
+│   1387 │   │                                                                 │
+│   1388 │   │   def https_open(self, req):                                    │
+│ ❱ 1389 │   │   │   return self.do_open(http.client.HTTPSConnection, req,     │
+│   1390 │   │   │   │   context=self._context, check_hostname=self._check_hos │
+│   1391 │   │                                                                 │
+│   1392 │   │   https_request = AbstractHTTPHandler.do_request_               │
+│                                                                              │
+│ /public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/urllib/request.py:13 │
+│ 49 in do_open                                                                │
+│                                                                              │
+│   1346 │   │   │   │   h.request(req.get_method(), req.selector, req.data, h │
+│   1347 │   │   │   │   │   │     encode_chunked=req.has_header('Transfer-enc │
+│   1348 │   │   │   except OSError as err: # timeout error                    │
+│ ❱ 1349 │   │   │   │   raise URLError(err)                                   │
+│   1350 │   │   │   r = h.getresponse()                                       │
+│   1351 │   │   except:                                                       │
+│   1352 │   │   │   h.close()                                                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+URLError: <urlopen error [Errno -2] Name or service not known>
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 19481 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 19482 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 19483 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 19480) of binary: /public/home/mswanghao/anaconda3/envs/LLM/bin/python
+Traceback (most recent call last):
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 723, in <module>
+    main()
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 719, in main
+    run(args)
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/run.py", line 710, in run
+    elastic_launch(
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/public/home/mswanghao/anaconda3/envs/LLM/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 259, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-08-18_16:09:55
+  host      : b05r3n11
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 19480)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

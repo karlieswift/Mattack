@@ -1,0 +1,146 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+loss CE b=0.0001 start=0 end=6loss CE b=0.0001 start=0 end=6loss CE b=0.0001 start=0 end=6loss CE b=0.0001 start=0 end=6
+
+
+
+| distributed init (rank 3, world 4): env://
+| distributed init (rank 1, world 4): env://| distributed init (rank 2, world 4): env://
+
+| distributed init (rank 0, world 4): env://
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+[W Module.cpp:513] Warning: Disabling benchmark mode for MIOpen is NOT supported. Overriding value to True (function operator())
+2023-08-23 14:34:02,270 [INFO] 
+=====  Running Parameters    =====
+2023-08-23 14:34:02,273 [INFO] {
+    "accum_grad_iters": 1,
+    "amp": true,
+    "batch_size_eval": 2,
+    "batch_size_train": 12,
+    "device": "cuda",
+    "dist_backend": "nccl",
+    "dist_url": "env://",
+    "distributed": true,
+    "evaluate": false,
+    "gpu": 0,
+    "inference_method": "generate",
+    "init_lr": 1e-05,
+    "lr_layer_decay": 0.95,
+    "lr_sched": "linear_warmup_cosine_lr",
+    "max_epoch": 5,
+    "max_len": 10,
+    "min_len": 1,
+    "min_lr": 0,
+    "num_beams": 5,
+    "num_workers": 4,
+    "output_dir": "output_vqacsu/BLIP2/CE",
+    "rank": 0,
+    "resume_ckpt_path": null,
+    "seed": 42,
+    "task": "vqa",
+    "train_splits": [
+        "train"
+    ],
+    "warmup_lr": 1e-08,
+    "warmup_steps": 1000,
+    "weight_decay": 0.05,
+    "world_size": 4
+}
+2023-08-23 14:34:02,273 [INFO] 
+======  Dataset Attributes  ======
+2023-08-23 14:34:02,274 [INFO] 
+======== vg_vqa =======
+2023-08-23 14:34:02,274 [INFO] {
+    "build_info": {
+        "annotations": {
+            "train": {
+                "storage": "vg/annotations/vg_qa.json",
+                "url": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/datasets/visual_genome/vg_qa.json"
+            }
+        },
+        "images": {
+            "storage": "vg/images/"
+        }
+    },
+    "data_type": "images",
+    "text_processor": {
+        "train": {
+            "name": "blip_question"
+        }
+    },
+    "vis_processor": {
+        "train": {
+            "image_size": 400,
+            "name": "blip_image_train"
+        }
+    }
+}
+2023-08-23 14:34:02,275 [INFO] 
+======  Model Attributes  ======
+2023-08-23 14:34:02,275 [INFO] {
+    "arch": "blip2_opt",
+    "drop_path_rate": 0,
+    "finetuned": "",
+    "freeze_vit": true,
+    "image_size": 400,
+    "load_finetuned": false,
+    "load_pretrained": true,
+    "model_type": "pretrain_opt2.7b",
+    "num_query_token": 32,
+    "opt_model": "facebook/opt-2.7b",
+    "pretrained": "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth",
+    "prompt": "",
+    "use_grad_checkpoint": false,
+    "vit_model": "eva_clip_g",
+    "vit_precision": "fp32"
+}
+Using downloaded and verified file: /public/home/mswanghao/.cache/lavis/vg/annotations/vg_qa.json
+2023-08-23 14:34:02,346 [INFO] Building datasets...
+BlipQuestionProcessor
+Position interpolate from 16x16 to 28x28
+2023-08-23 14:34:41,099 [INFO] freeze vision encoder
+pretrain_path: https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-23 14:38:03,935 [INFO] load checkpoint from https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth
+2023-08-23 14:38:03,966 [INFO] Start training
+2023-08-23 14:38:25,464 [INFO] dataset_ratios not specified, datasets will be concatenated (map-style datasets) or chained (webdataset.DataPipeline).
+2023-08-23 14:38:25,484 [INFO] Loaded 13756 records for train split from the dataset.
+2023-08-23 14:38:25,538 [INFO] number of trainable parameters: 107133696
+2023-08-23 14:38:25,539 [INFO] Start training epoch 0, 286 iters per inner epoch.
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+MIOpen(HIP): Warning [ForwardBackwardDataGetWorkSpaceSizeWinograd] /MIOpen/src/sqlite_db.cpp:108: open memvfs: unable to open database file
+Train: data epoch: [0]  [  0/286]  eta: 2:02:27  lr: 0.000000  loss: 2.9624  time: 25.6888  data: 0.0000  max mem: 12541
+2023-08-23 14:38:51,288 [INFO] Reducer buckets have been rebuilt in this iteration.
+Train: data epoch: [0]  [ 50/286]  eta: 0:21:17  lr: 0.000001  loss: 3.0259  time: 5.0151  data: 0.0000  max mem: 13811
+Train: data epoch: [0]  [100/286]  eta: 0:16:10  lr: 0.000001  loss: 2.8233  time: 5.0240  data: 0.0000  max mem: 13811
+Train: data epoch: [0]  [150/286]  eta: 0:11:39  lr: 0.000002  loss: 2.4485  time: 5.0000  data: 0.0000  max mem: 13811
+Train: data epoch: [0]  [200/286]  eta: 0:07:19  lr: 0.000002  loss: 1.5176  time: 5.0083  data: 0.0000  max mem: 13811
+Train: data epoch: [0]  [250/286]  eta: 0:03:03  lr: 0.000003  loss: 1.0437  time: 5.0194  data: 0.0000  max mem: 13811
+Train: data epoch: [0]  [285/286]  eta: 0:00:05  lr: 0.000003  loss: 0.5835  time: 4.9891  data: 0.0000  max mem: 13811
+Train: data epoch: [0] Total time: 0:24:12 (5.0798 s / it)
+2023-08-23 15:02:38,412 [INFO] Averaged stats: lr: 0.0000  loss: 2.1503
+2023-08-23 15:02:38,454 [INFO] No validation splits found.
+2023-08-23 15:02:38,510 [INFO] Saving checkpoint at epoch 0 to /public/home/mswanghao/TorchProject/lavis/lavis/output_vqacsu/BLIP2/CE/20230823143/checkpoint_0.pth.
+2023-08-23 15:02:42,966 [INFO] Start training
+2023-08-23 15:02:43,011 [INFO] Start training epoch 1, 286 iters per inner epoch.
+Train: data epoch: [1]  [  0/286]  eta: 0:44:50  lr: 0.000009  loss: 0.5327  time: 9.4056  data: 0.0000  max mem: 13811
+Train: data epoch: [1]  [ 50/286]  eta: 0:20:05  lr: 0.000009  loss: 0.4228  time: 5.0270  data: 0.0000  max mem: 13811
+Train: data epoch: [1]  [100/286]  eta: 0:15:41  lr: 0.000009  loss: 0.4791  time: 5.0207  data: 0.0000  max mem: 13811
+Train: data epoch: [1]  [150/286]  eta: 0:11:25  lr: 0.000009  loss: 0.6185  time: 5.0032  data: 0.0000  max mem: 13811
+Train: data epoch: [1]  [200/286]  eta: 0:07:12  lr: 0.000009  loss: 0.7082  time: 5.0155  data: 0.0000  max mem: 13811
+Train: data epoch: [1]  [250/286]  eta: 0:03:00  lr: 0.000009  loss: 0.5947  time: 5.0039  data: 0.0000  max mem: 13811
+Train: data epoch: [1]  [285/286]  eta: 0:00:05  lr: 0.000009  loss: 0.3857  time: 4.9912  data: 0.0000  max mem: 13811
+Train: data epoch: [1] Total time: 0:23:56 (5.0232 s / it)
+2023-08-23 15:26:39,652 [INFO] Averaged stats: lr: 0.0000  loss: 0.5319
+2023-08-23 15:26:39,696 [INFO] No validation splits found.
+2023-08-23 15:26:39,752 [INFO] Saving checkpoint at epoch 1 to /public/home/mswanghao/TorchProject/lavis/lavis/output_vqacsu/BLIP2/CE/20230823143/checkpoint_1.pth.
+2023-08-23 15:26:43,884 [INFO] Start training
+2023-08-23 15:26:43,929 [INFO] Start training epoch 2, 286 iters per inner epoch.
+Train: data epoch: [2]  [  0/286]  eta: 0:43:41  lr: 0.000007  loss: 0.4389  time: 9.1650  data: 0.0001  max mem: 13811
+Train: data epoch: [2]  [ 50/286]  eta: 0:20:03  lr: 0.000007  loss: 0.4046  time: 5.0227  data: 0.0000  max mem: 13811
+slurmstepd: error: *** JOB 13125372 ON b05r3n17 CANCELLED AT 2023-08-23T15:32:57 ***
