@@ -29,11 +29,14 @@ python -m pip install -r requirements.txt
 
 #### Prepare data
 
-Then:
+download train datasets.
 
 ```
-cd datasets
 python download_vg.py
+```
+download attack datasets. you can choose any open source dataset.
+```
+url: https://www.kaggle.com/datasets/prasunroy/natural-images
 ```
 
 ### Training
@@ -73,7 +76,8 @@ python attack_vaq.py
 ### Attack results
 
 ####  no-target attack
-BIM attack parameters alpha = 0.1 epsilon = 0.2
+BIM attack parameters alpha = 0.1 epsilon = 0.2  
+no-target attack succeeded in the 4th attack. 
 
  image(number of attacks)   |                                               answer                                                
 ------------|:---------------------------------------------------------------------------------------------------:
@@ -92,8 +96,11 @@ BIM attack parameters alpha = 0.1 epsilon = 0.2
 
  
 ####  target attack
-BIM attack parameters alpha = 0.1 epsilon = 0.2
-Young people in the rain
+
+
+BIM attack parameters alpha = 0.1 epsilon = 0.2  
+target:Young people in the rain.   
+target attack succeeded in the 10th attack. 
 
 image(number of attacks)   |                                               answer                                                
 ------------|:---------------------------------------------------------------------------------------------------:
