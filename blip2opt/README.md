@@ -16,7 +16,6 @@ This repository contains the code and data for the following paper:
 
 ## Requirements
 
-- Python 3 (tested with Python 3.9)
 - Install required packages:
 
 ```bash
@@ -56,12 +55,12 @@ torchrun --nproc_per_node=4  train.py --cfg-path blip2opt/projects/blip2/train/c
 
 set in file train.py
 
-```
-set loss function. loss_name="DRSL3"
-parameters of modified Cross Entropy Loss Function in DRSL Loss. b = 1e-6
-The start largest value of non target softmax output by the model. start = 0
-The end largest value of non target softmax output by the model. end = 10
-```
+ 
+- set loss function. loss_name="DRSL3"
+- parameters of modified Cross Entropy Loss Function in DRSL Loss. b = 1e-6
+- The start largest value of non target softmax output by the model. start = 0
+- The end largest value of non target softmax output by the model. end = 10
+ 
 
 ```bash
 torchrun --nproc_per_node=4  train.py --cfg-path blip2opt/projects/blip2/train/caption_coco_vqa_ft.yaml
@@ -76,8 +75,8 @@ python attack_vaq.py
 ### Attack results
 
 ####  no-target attack
-BIM attack parameters alpha = 0.1 epsilon = 0.2  
-no-target attack succeeded in the 4th attack. 
+- BIM attack parameters alpha = 0.1 epsilon = 0.2  
+- no-target attack succeeded in the 4th attack. 
 
  image(number of attacks)   |                                               answer                                                
 ------------|:---------------------------------------------------------------------------------------------------:
@@ -98,9 +97,9 @@ no-target attack succeeded in the 4th attack.
 ####  target attack
 
 
-BIM attack parameters alpha = 0.1 epsilon = 0.2  
-target:Young people in the rain.   
-target attack succeeded in the 10th attack. 
+- BIM attack parameters alpha = 0.1 epsilon = 0.2  
+- target:Young people in the rain.   
+- target attack succeeded in the 10th attack. 
 
 image(number of attacks)   |                                               answer                                                
 ------------|:---------------------------------------------------------------------------------------------------:
