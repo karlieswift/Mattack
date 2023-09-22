@@ -91,17 +91,17 @@ python adv_vitgpt2.py
 
  image(number of attacks)   |                                               answer                                                
 ------------|:---------------------------------------------------------------------------------------------------:
-![find wild](attackedImages/1695372382/1.jpg)|  A dog and a cat are sitting on a couch.
-![find wild](attackedImages/1695372382/2.jpg)|  A small dog is sitting on a lap top.
-![find wild](attackedImages/1695372382/3.jpg)|  A cat is sitting in a car seat.
-![find wild](attackedImages/1695372382/4.jpg)|  A cat is wearing a tie and a toothbrush.
-![find wild](attackedImages/1695372382/5.jpg)|  A small white kitten is holding a toothbrush.
-![find wild](attackedImages/1695372382/6.jpg)|  A small toothbrush is sticking out of a person's mouth.
-![find wild](attackedImages/1695372382/7.jpg)|  A toothbrush with a toothpaste in it's mouth.
-![find wild](attackedImages/1695372382/8.jpg)|  A toothbrush with a toothpaste in it's mouth.
-![find wild](attackedImages/1695372382/9.jpg)|  A toothbrush with a toothpaste in it's mouth.
-![find wild](attackedImages/1695372382/10.jpg)|  A toothbrush with a toothpaste in it's mouth.
-![find wild](attackedImages/1695372382/11.jpg)|  A toothbrush with a toothpaste in it's mouth.
+![find wild](attackImage/1695372382/1.jpg)|  A dog and a cat are sitting on a couch.
+![find wild](attackImage/1695372382/2.jpg)|  A small dog is sitting on a lap top.
+![find wild](attackImage/1695372382/3.jpg)|  A cat is sitting in a car seat.
+![find wild](attackImage/1695372382/4.jpg)|  A cat is wearing a tie and a toothbrush.
+![find wild](attackImage/1695372382/5.jpg)|  A small white kitten is holding a toothbrush.
+![find wild](attackImage/1695372382/6.jpg)|  A small toothbrush is sticking out of a person's mouth.
+![find wild](attackImage/1695372382/7.jpg)|  A toothbrush with a toothpaste in it's mouth.
+![find wild](attackImage/1695372382/8.jpg)|  A toothbrush with a toothpaste in it's mouth.
+![find wild](attackImage/1695372382/9.jpg)|  A toothbrush with a toothpaste in it's mouth.
+![find wild](attackImage/1695372382/10.jpg)|  A toothbrush with a toothpaste in it's mouth.
+![find wild](attackImage/1695372382/11.jpg)|  A toothbrush with a toothpaste in it's mouth.
 
  
  
@@ -115,17 +115,17 @@ python adv_vitgpt2.py
 
  image(number of attacks)   |                                               answer                                                
 ------------|:---------------------------------------------------------------------------------------------------:
-![find wild](attackedImages/1695366683/1.jpg)| A man on a snowboard is in the air on a snowy slope.
-![find wild](attackedImages/1695366683/2.jpg)| A man is sitting on a snowboard in the snow.
-![find wild](attackedImages/1695366683/3.jpg)| A man sitting on a beach with a surfboard.
-![find wild](attackedImages/1695366683/4.jpg)| A man sitting on a bed with a laptop on it.
-![find wild](attackedImages/1695366683/5.jpg)| A man sitting on a bed with a dog on it.
-![find wild](attackedImages/1695366683/6.jpg)| A dog is sitting on a couch with a dog in the background.
-![find wild](attackedImages/1695366683/7.jpg)| A dog is sitting on a couch with a dog on the couch.
-![find wild](attackedImages/1695366683/8.jpg)| A dog is sitting on a couch with a dog in the background.
-![find wild](attackedImages/1695366683/9.jpg)| A dog sitting on a couch with a dog on the other side of it.
-![find wild](attackedImages/1695366683/10.jpg)| A dog is sitting on a couch with a dog in the background.
-![find wild](attackedImages/1695366683/11.jpg)| A dog sitting on a couch with a dog in the background.
+![find wild](attackImage/1695366683/1.jpg)| A man on a snowboard is in the air on a snowy slope.
+![find wild](attackImage/1695366683/2.jpg)| A man is sitting on a snowboard in the snow.
+![find wild](attackImage/1695366683/3.jpg)| A man sitting on a beach with a surfboard.
+![find wild](attackImage/1695366683/4.jpg)| A man sitting on a bed with a laptop on it.
+![find wild](attackImage/1695366683/5.jpg)| A man sitting on a bed with a dog on it.
+![find wild](attackImage/1695366683/6.jpg)| A dog is sitting on a couch with a dog in the background.
+![find wild](attackImage/1695366683/7.jpg)| A dog is sitting on a couch with a dog on the couch.
+![find wild](attackImage/1695366683/8.jpg)| A dog is sitting on a couch with a dog in the background.
+![find wild](attackImage/1695366683/9.jpg)| A dog sitting on a couch with a dog on the other side of it.
+![find wild](attackImage/1695366683/10.jpg)| A dog is sitting on a couch with a dog in the background.
+![find wild](attackImage/1695366683/11.jpg)| A dog sitting on a couch with a dog in the background.
  
  
 
