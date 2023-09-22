@@ -1,0 +1,17 @@
+accelerate==0.20.3
+bert-score==0.3.13
+datasets==2.13.0
+einops==0.6.1
+evaluate==0.4.0
+imageio==2.31.1
+img2dataset==1.41.0
+nltk==3.8.1
+rouge-score==0.1.2
+timm==0.4.12
+tokenizers==0.13.3
+torch==1.10.2+rocm4.0.1
+torchaudio==0.9.1
+torchvision==0.10.1+rocm4.1
+tqdm==4.65.0
+transformers==4.30.2
+webdataset==0.2.48
