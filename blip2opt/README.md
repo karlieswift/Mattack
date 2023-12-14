@@ -75,7 +75,7 @@ python attack_vaq.py
 ### Attack results
 
 ####  no-target attack
-- BIM attack parameters alpha = 0.1 epsilon = 0.2  
+- BIM attack parameters alpha = 0.5 epsilon = 1 
 - no-target attack succeeded in the 4th attack. 
 
  image(number of attacks)   |                                               answer                                                
@@ -97,7 +97,7 @@ python attack_vaq.py
 ####  target attack
 
 
-- BIM attack parameters alpha = 0.1 epsilon = 0.2  
+- BIM attack parameters alpha = 0.5 epsilon = 1  
 - target:Young people in the rain.   
 - target attack succeeded in the 10th attack. 
 
