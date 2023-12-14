@@ -86,7 +86,7 @@ python adv_vitgpt2.py
 
 
 ####  no-target attack
-- BIM attack parameters alpha = 0.02 epsilon = 1 
+- BIM attack parameters alpha = 0.01 epsilon = 0.5
 - no-target attack succeeded in the 4th attack. 
 
  image(number of attacks)   |                                               answer                                                
@@ -108,7 +108,7 @@ python adv_vitgpt2.py
 ####  target attack
 
 
-- BIM attack parameters alpha = 0.02 epsilon = 1 
+- BIM attack parameters alpha = 0.01 epsilon = 0.5 
 - target:A dog and a cat are sitting on a couch.
 - target attack succeeded in the 5th attack. 
  
