@@ -1,9 +1,8 @@
-# Distribution-restrained Softmax Loss for the Safety of Large Language Models
-[Author]()* ,   
-
+# Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+Hao Wang, Xin Zhang, Jinzhe Jiang, Yaqian Zhao, Chen Li
  
 This repository contains the code and data for the following paper:  
-<a href='https://github.com/karlieswift/Mattack'><img src='https://img.shields.io/badge/Project-Page-Green'></a>  <a href='https://arxiv.org'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>  
+<a href='https://github.com/karlieswift/Mattack'><img src='https://img.shields.io/badge/Project-Page-Green'></a>  <a href='https://arxiv.org/abs/2402.03627'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>  
 ## Introduction
 
 The rapid development of multimodal models has greatly improved the development of artificial intelligence, especially the rapid development of large models, which has improved the rapid development of various fields. However, the robustness of multimodal models is indeed weak. This article proposes a relatively robust loss function by attacking multimodal models([vitgpt2](https://huggingface.co/nlpconnect/vit-gpt2-image-captioning) [blip2opt](https://github.com/salesforce/LAVIS/tree/main/lavis/models/blip2_models)).
