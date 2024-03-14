@@ -2,7 +2,7 @@
 
 This repository contains the code and data for the following paper:
 
-[PRSL: Partially Recentralization Softmax Loss for Vision-Language Models Robustness]([https://arxiv.org/](https://arxiv.org/abs/2402.03627))
+[PRSL: Partially Recentralization Softmax Loss for Vision-Language Models Robustness](https://arxiv.org/abs/2402.03627)
 
 ```
 @inproceedings{ 
