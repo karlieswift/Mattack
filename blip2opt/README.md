@@ -2,7 +2,7 @@
 
 This repository contains the code and data for the following paper:
 
-[DRSL: Distribution-restrained Softmax Loss for the Safety of Large Language Models](https://arxiv.org/)
+[PRSL: Partially Recentralization Softmax Loss for Vision-Language Models Robustness](https://arxiv.org/abs/2402.03627)
 
 ```
 @inproceedings{ 
