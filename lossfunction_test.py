@@ -2,7 +2,7 @@
 @Env: /anaconda3/python3.10
 @Time: 2023/8/1-18:54
 @Auth: karlieswift
-@File: loss.py
+@File: lossfunction_test.py
 @Desc: Loss function performance testing.
 """
 
