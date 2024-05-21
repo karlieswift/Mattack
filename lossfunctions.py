@@ -9,6 +9,29 @@
 import torch.nn as nn
 import torch
 
+
+class NewLoss(nn.Module):
+    def __init__(self,a=1,b=0.005):
+        super(NewLoss, self).__init__()
+        self.a=a
+        self.b=b
+        self.cross_entropy = nn.CrossEntropyLoss()
+    def forward(self, pred, labels):
+        ce = self.cross_entropy(pred, labels)
+        labels_index = []
+        # 取出非目标索引
+        for i in labels:
+            labels_index.append([False if x_i == i else True for x_i in range(pred.shape[1])])
+        # 取出非目标索引对应的值
+        neg_pre=pred[torch.tensor(labels_index)].reshape(-1, pred.shape[1] - 1)
+        # 非目标索引对应的值-均值
+        # neg_pre=F.log_softmax(neg_pre,dim=1) #这一行代码加不加一样，可以化简（减少幂指数运算）
+        neg_pre_mean=neg_pre.mean(dim=1).reshape(neg_pre.shape[0],-1).repeat(1, neg_pre.shape[1])
+        # 平方求和
+        neg_loss=(neg_pre-neg_pre_mean)**2
+        loss = self.a * ce + self.b * neg_loss.sum()
+        return loss
+
 class DRSL(nn.Module):
     def __init__(self, a=1, b=0.001):
         super(DRSL, self).__init__()
