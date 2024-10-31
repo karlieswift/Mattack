@@ -45,7 +45,7 @@ a detailed tutorials on datasets can be found in [datasets](https://huggingface.
 
 
 ```
-cd datasets
+cd downloadData
 python load_coco.py
 ```
 
